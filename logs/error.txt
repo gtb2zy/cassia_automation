@@ -1,0 +1,7 @@
+2018-04-19 18:25:55,328 - tools - ERROR - Config file read failed!
+2018-04-19 18:26:56,880 - tools - ERROR - Config file read failed!
+2018-04-19 18:27:41,273 - tools - ERROR - Config file read failed!
+2018-04-19 18:28:06,775 - tools - ERROR - Config file read failed!
+2018-04-19 19:05:25,628 - main - ERROR - 配置文件格式错误
+2018-04-19 19:07:25,081 - main - ERROR - 配置文件格式错误
+2018-04-19 19:08:18,495 - main - ERROR - 配置文件格式错误
