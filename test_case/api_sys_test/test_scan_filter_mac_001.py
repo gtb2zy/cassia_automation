@@ -10,9 +10,7 @@ import threading
 
 path = os.getcwd().split('APItest')[0] + 'APItest/lib/'
 sys.path.append(path)
-from api import api
 import tools
-from logs import set_logger
 
 
 class testcase(unittest.TestCase):
@@ -27,7 +25,7 @@ class testcase(unittest.TestCase):
         self.flag1 = None
         self.flag2 = None
         self.logger.info('测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描')
-        self.timer = Timer(self.timeout, self.set_timeout)
+        self.timer = Timer(5, self.set_timeout)
         self.timer.start()
 
     def tearDown(self):
@@ -36,8 +34,12 @@ class testcase(unittest.TestCase):
     # 测试方法
     def test_scan_filter_mac(self):
         if self.model.startswith('S') or self.model.startswith('s'):
-            threading.Thread(target=self.chip0_scan, args=(1,)).start()
-            threading.Thread(target=self.chip0_scan, args=(1, self.filters['filter_mac'])).start()
+            a= threading.Thread(target=self.chip0_scan, args=(1,))
+            a.setDaemon(True)
+            a.start()
+            b = threading.Thread(target=self.chip0_scan, args=(1, self.filters['filter_mac']))
+            b.setDaemon(True)
+            b.start()
             while True:
                 if self.flag1 and self.flag2:
                     self.assertTrue(True)
@@ -45,12 +47,17 @@ class testcase(unittest.TestCase):
                     break
                 elif self.timeout_flag:
                     self.logger.info('fail\n')
-                    self.fail('Case failed,start scan timeout.')
-                    self.logger.error("Case failed,start scan timeout.")
+                    self.fail('Case failed,case test timeout.')
+                    self.logger.error("Case failed,case test timeout.")
                     break
         else:
-            threading.Thread(target=self.chip0_scan, args=(1,)).start()
-            threading.Thread(target=self.chip1_scan, args=(1, self.filters['filter_mac'])).start()
+            a = threading.Thread(target=self.chip0_scan, args=(1,))
+            b = threading.Thread(target=self.chip0_scan, args=(1, self.filters['filter_mac']))
+            a.start()
+            b.setDaemon(True)
+            b.start()
+            a.setDaemon(True)
+
             while True:
                 if self.flag1 and self.flag2:
                     self.assertTrue(True)
@@ -58,7 +65,10 @@ class testcase(unittest.TestCase):
                     break
                 elif self.timeout_flag:
                     self.logger.info('fail\n')
-                    self.fail('Case failed,start scan timeout.')
+                    try:
+                        self.fail('Case failed,start scan timeout.')
+                    except:
+                        print('Case failed,start scan timeout.')
                     self.logger.error("Case failed,start scan timeout.")
                     break
 
