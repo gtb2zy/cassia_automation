@@ -6,6 +6,7 @@
 				"job1": {
 					"data_file": "sys_test_data.xlsx",
 					"host": "http://172.16.30.100/api",
+					"local_host":"http://172.16.40.70",
 					"hub": "CC:1B:E0:E0:DB:D0",
 					"model": "E1000",
 					"user": "tester",
@@ -19,13 +20,12 @@
 						"filter_rssi": "-30"
 					},
 					"case_path": "api_sys_test",
-					"case": [
-						"test_scan*.py"
-					]
+					"case": ["test_scan*.py"]
 				},
 				"job2": {
 					"data_file": "sys_test_data.xlsx",
 					"host": "http://172.16.30.100/api",
+					"local_host":"http://172.16.40.70",
 					"hub": "CC:1B:E0:E0:DB:D0",
 					"model": "E1000",
 					"user": "tester",
@@ -43,6 +43,7 @@
 				"job3": {
 					"data_file": "sys_test_data.xlsx",
 					"host": "http://172.16.30.100/api",
+					"local_host":"http://172.16.40.70",
 					"hub": "CC:1B:E0:E0:DB:D0",
 					"model": "E1000",
 					"user": "tester",
@@ -64,7 +65,7 @@
 	"mail_attr":{
 		"mail_host":"smtp.qq.com",
 		"mail_user":"yuanzhen0632@qq.com",
-		"mail_pass":"kqitmeabknujbeij",
+		"mail_pass":"kpvzakhbxmiebfag",
 		"mail_port":465,
 		"mail_sender":"yuanzhen0632@qq.com",
 		"mail_recv":"['yuanzhen@cassianetworks.com',]",

@@ -3262,3 +3262,71 @@
 2018-04-24 18:52:31,113 - test_scan_scanmode_005 - DEBUG - Step 2:chip1 start active scan success 
 2018-04-24 18:52:31,113 - test_scan_scanmode_005 - INFO - pass
 
+2018-04-24 19:25:46,361 - tools - DEBUG - Read config success.
+2018-04-24 19:25:46,382 - tools - DEBUG - Read config success.
+2018-04-24 19:25:46,382 - tools - DEBUG - Read config success.
+2018-04-24 19:25:46,382 - tools - DEBUG - Read config success.
+2018-04-24 19:25:46,384 - test_scan_on_cloud_local_001 - INFO - 测试chip0 local扫描的同时进行cloud扫描
+2018-04-24 19:26:48,266 - tools - DEBUG - Read config success.
+2018-04-24 19:26:48,280 - tools - DEBUG - Read config success.
+2018-04-24 19:26:48,280 - tools - DEBUG - Read config success.
+2018-04-24 19:26:48,280 - tools - DEBUG - Read config success.
+2018-04-24 19:26:48,282 - test_scan_on_cloud_local_001 - INFO - 测试chip0 local扫描的同时进行cloud扫描
+2018-04-24 19:26:52,511 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-24 19:26:52,968 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start local scan success.
+2018-04-24 19:27:18,288 - test_scan_on_cloud_local_001 - INFO - fail
+
+2018-04-24 19:29:31,388 - tools - DEBUG - Read config success.
+2018-04-24 19:29:31,401 - tools - DEBUG - Read config success.
+2018-04-24 19:29:31,401 - tools - DEBUG - Read config success.
+2018-04-24 19:29:31,402 - tools - DEBUG - Read config success.
+2018-04-24 19:29:31,403 - test_scan_on_cloud_local_001 - INFO - 测试chip0 local扫描的同时进行cloud扫描
+2018-04-24 19:29:35,321 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-24 19:29:36,317 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start local scan success.
+2018-04-24 19:29:36,317 - test_scan_on_cloud_local_001 - INFO - pass
+
+2018-04-24 19:31:07,528 - tools - DEBUG - Read config success.
+2018-04-24 19:31:07,544 - tools - DEBUG - Read config success.
+2018-04-24 19:31:07,545 - tools - DEBUG - Read config success.
+2018-04-24 19:31:07,545 - tools - DEBUG - Read config success.
+2018-04-24 19:31:07,548 - test_scan_on_cloud_local_001 - INFO - 测试chip0 local扫描的同时进行cloud扫描
+2018-04-24 19:31:11,583 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start local scan success.
+2018-04-24 19:31:12,263 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-24 19:31:12,264 - test_scan_on_cloud_local_001 - INFO - pass
+
+2018-04-24 19:31:44,652 - tools - DEBUG - Read config success.
+2018-04-24 19:31:44,664 - tools - DEBUG - Read config success.
+2018-04-24 19:31:44,664 - tools - DEBUG - Read config success.
+2018-04-24 19:31:44,664 - tools - DEBUG - Read config success.
+2018-04-24 19:31:44,666 - test_scan_on_cloud_local_001 - INFO - 测试chip0 local扫描的同时进行cloud扫描
+2018-04-24 19:31:48,711 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start local scan success.
+2018-04-24 19:31:48,846 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-24 19:31:48,846 - test_scan_on_cloud_local_001 - INFO - pass
+
+2018-04-24 19:35:15,920 - tools - DEBUG - Read config success.
+2018-04-24 19:35:15,932 - tools - DEBUG - Read config success.
+2018-04-24 19:35:15,933 - tools - DEBUG - Read config success.
+2018-04-24 19:35:15,933 - tools - DEBUG - Read config success.
+2018-04-24 19:35:15,934 - test_scan_on_cloud_local_002 - INFO - 测试chip1 local扫描的同时进行cloud扫描
+2018-04-24 19:35:20,133 - test_scan_on_cloud_local_002 - DEBUG - Step 1:chip0 start local scan success.
+2018-04-24 19:35:21,891 - test_scan_on_cloud_local_002 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-24 19:35:21,891 - test_scan_on_cloud_local_002 - INFO - pass
+
+2018-04-24 19:38:23,818 - tools - DEBUG - Read config success.
+2018-04-24 19:38:23,830 - tools - DEBUG - Read config success.
+2018-04-24 19:38:23,830 - tools - DEBUG - Read config success.
+2018-04-24 19:38:23,830 - tools - DEBUG - Read config success.
+2018-04-24 19:38:23,831 - test_scan_on_cloud_local_003 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-04-24 19:38:28,087 - test_scan_on_cloud_local_003 - DEBUG - Step 1:chip0 start local scan success.
+2018-04-24 19:38:29,868 - test_scan_on_cloud_local_003 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-24 19:38:29,868 - test_scan_on_cloud_local_003 - INFO - pass
+
+2018-04-24 19:39:36,156 - tools - DEBUG - Read config success.
+2018-04-24 19:39:36,168 - tools - DEBUG - Read config success.
+2018-04-24 19:39:36,169 - tools - DEBUG - Read config success.
+2018-04-24 19:39:36,169 - tools - DEBUG - Read config success.
+2018-04-24 19:39:36,170 - test_scan_on_cloud_local - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-04-24 19:39:40,069 - test_scan_on_cloud_local - DEBUG - Step 1:chip0 start local scan success.
+2018-04-24 19:39:41,221 - test_scan_on_cloud_local - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-24 19:39:41,221 - test_scan_on_cloud_local - INFO - pass
+

@@ -931,3 +931,25 @@ test_scan_scanmode_004-pass
 test_scan_scanmode_005-测试两个芯片同时开启被动扫描
 test_scan_scanmode_005-pass
 
+test_scan_on_cloud_local_001-测试chip0 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_001-测试chip0 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_001-fail
+
+test_scan_on_cloud_local_001-测试chip0 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_001-pass
+
+test_scan_on_cloud_local_001-测试chip0 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_001-pass
+
+test_scan_on_cloud_local_001-测试chip0 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_001-pass
+
+test_scan_on_cloud_local_002-测试chip1 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_002-pass
+
+test_scan_on_cloud_local_003-测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+test_scan_on_cloud_local_003-pass
+
+test_scan_on_cloud_local-测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+test_scan_on_cloud_local-pass
+

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-测试点：测试chip0 local扫描的同时进行cloud扫描
+测试点：测试chip1 local扫描的同时进行cloud扫描
 
 '''
 import unittest, json, sys, os, json
@@ -24,7 +24,7 @@ class testcase(unittest.TestCase):
         self.timeout_flag = None
         self.flag1 = None
         self.flag2 = None
-        self.logger.info('测试chip0 local扫描的同时进行cloud扫描')
+        self.logger.info('测试chip1 local扫描的同时进行cloud扫描')
         self.timer = Timer(self.timeout, self.set_timeout)
         self.timer.start()
 
@@ -51,7 +51,7 @@ class testcase(unittest.TestCase):
 
     def local_scan(self):
         #step1:start chip0 local scan.
-        with closing(self.local_sdk.scan()) as self.sse2:
+        with closing(self.local_sdk.scan(chip = 1)) as self.sse2:
             count = 0
             for message in self.sse2:
                 if message.startswith('data'):
@@ -65,7 +65,7 @@ class testcase(unittest.TestCase):
 
     def cloud_scan(self):
         #step2:start chip0 cloud scan.
-        with closing(self.cloud_sdk.scan()) as self.sse1:
+        with closing(self.cloud_sdk.scan(chip = 1)) as self.sse1:
             count = 0
             for message in self.sse1:
                 if message.startswith('data'):
