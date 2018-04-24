@@ -577,3 +577,8 @@ test_scan_filter_name_011-pass
 test_scan_filter_name_012-测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
 test_scan_filter_name_012-pass
 
+test_scan_chip_001-测试在不同芯片之间，按先后顺序，能否成功开启扫描
+test_scan_chip_001-case pass
+
+test_scan_chip_002-测试两块芯片同时开启扫描能否成功
+test_scan_scanmode_001-测试设备的主被动扫描切换功能

@@ -1978,3 +1978,128 @@
 2018-04-23 19:42:26,920 - test_scan_filter_name_012 - INFO - pass
 
 2018-04-23 19:42:35,934 - test_scan_filter_mac_012 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-04-24 10:06:41,008 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,023 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,070 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,070 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,086 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,086 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,102 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,102 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,117 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,117 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,133 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,148 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,148 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,148 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,164 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,164 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,180 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,180 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,180 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,180 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,180 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,180 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,180 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,195 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,195 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,195 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,195 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,195 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,211 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,211 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,211 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,211 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,211 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,211 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,211 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,227 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,227 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,227 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,227 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,227 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,243 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,243 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,243 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,243 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,258 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,258 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,258 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,258 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,258 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,258 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,258 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,258 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,273 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,273 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,273 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,273 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,289 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,289 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,289 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,289 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,305 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,305 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,305 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,305 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,305 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,305 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,305 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,305 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,320 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,320 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,320 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,320 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,336 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,336 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,336 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,336 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,336 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,336 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,336 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,336 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,352 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,352 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,352 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,352 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,352 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,352 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,352 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,367 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,367 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,367 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,367 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,367 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,383 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,383 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,383 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,383 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,383 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,398 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,398 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,398 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,398 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,398 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,398 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,398 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,414 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,414 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,414 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,414 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,414 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,414 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,414 - tools - DEBUG - Read config success.
+2018-04-24 10:06:41,430 - test_scan_chip_001 - INFO - 测试在不同芯片之间，按先后顺序，能否成功开启扫描
+2018-04-24 10:06:41,492 - test_scan_chip_001 - DEBUG - step1:chip 0 start scan,then stop scan success
+2018-04-24 10:06:41,602 - test_scan_chip_001 - DEBUG - step2:chip 1 start scan,then stop scan success
+2018-04-24 10:06:41,696 - test_scan_chip_001 - DEBUG - step3:chip 0 start scan,then change to chip1 scan success
+2018-04-24 10:06:41,805 - test_scan_chip_001 - DEBUG - step4:chip 1 start scan,then change to chip0 scan success
+2018-04-24 10:06:41,899 - test_scan_chip_001 - DEBUG - step5:chip 0 start scan,then change to chip1 scan success.
+2018-04-24 10:06:41,899 - test_scan_chip_001 - INFO - case pass
+
+2018-04-24 10:06:41,899 - test_scan_chip_002 - INFO - 测试两块芯片同时开启扫描能否成功
+2018-04-24 10:07:11,905 - test_scan_scanmode_001 - INFO - 测试设备的主被动扫描切换功能
+2018-04-24 10:07:14,210 - test_scan_scanmode_001 - DEBUG - Step1:passive scan start success
+2018-04-24 10:07:14,313 - test_scan_scanmode_001 - DEBUG - Step1:Active scan start success
+2018-04-24 10:07:17,147 - test_scan_scanmode_001 - DEBUG - Step3:passive scan start success
+2018-04-24 10:07:17,252 - test_scan_scanmode_001 - DEBUG - Step1:Active scan start success

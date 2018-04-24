@@ -1,7 +1,6 @@
-import threading
 from unittest import TestLoader, TestSuite
 import HTMLTestRunner
-import time, os, sys, json
+import time, os, json
 from lib.logs import set_logger
 from lib.sendReport import send_report
 
