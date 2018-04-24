@@ -16,7 +16,7 @@ from logs import set_logger
 
 class testcase(unittest.TestCase):
     logger = set_logger(__name__)
-    sdk = tools.get_cloud_api()
+    sdk = tools.get_api()
     model = tools.get_model()
     filters = tools.get_filter()
     timeout = tools.read_job_config()['case_timeout']
@@ -52,12 +52,13 @@ class testcase(unittest.TestCase):
                     self.logger.error("Case failed,start scan timeout.")
                     break
         else:
-            a = threading.Thread(target=self.chip1_scan, args=(1,)).start()
-            b = threading.Thread(target=self.chip0_scan, args=(1, self.filters['filter_mac'])).start()
-            a.start()
+            a = threading.Thread(target=self.chip1_scan, args=(1,))
+            b = threading.Thread(target=self.chip0_scan, args=(1, self.filters['filter_mac']))
+            a.setDaemon(True)
             b.setDaemon(True)
             b.start()
-            a.setDaemon(True)
+            a.start()
+
             while True:
                 if self.flag1 and self.flag2:
                     self.assertTrue(True)

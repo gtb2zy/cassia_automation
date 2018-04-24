@@ -11,15 +11,14 @@ from threading import Timer
 import threading
 path = os.getcwd().split('APItest')[0] + 'APItest/lib/'
 sys.path.append(path)
-from api import api
 from logs import set_logger
-from tools import get_cloud_api
+from tools import get_api
 from tools import get_model
 
 
 class testcase(unittest.TestCase):
     logger = set_logger(__name__)
-    sdk = get_cloud_api()
+    sdk = get_api()
     model = get_model()
 
     def setUp(self):

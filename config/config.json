@@ -1,80 +1,62 @@
 {
 	"test_plans":{
-		"test_plan1":{
-			"comment":"test_plan1",
-			"jobs":{
-				"job1":{
-					"data_file":"sys_test_data.xlsx",
-					"host":"http://172.16.30.100/api",
-					"local_host":"http://172.16.30.100/api",
-					"hub":"CC:1B:E0:E0:DB:D0",
-					"model":"E1000",
-					"user":"tester",
-					"pwd":"10b83f9a2e823c47",
-					"local":"False",
-					"case_timeout":30,
-					"filter":{
-						"filter_name":"Cassia_S1000",
-						"filter_mac":"CC:1B:E0:E8:0D:E3",
-						"filter_uuid":"1000",
-						"filter_rssi":"-30"},
-					"case_path":"api_sys_test/scan",
-					"case":["test_scan*.py"]
+		"test_plan1": {
+			"comment": "test_plan1",
+			"jobs": {
+				"job1": {
+					"data_file": "sys_test_data.xlsx",
+					"host": "http://172.16.30.100/api",
+					"hub": "CC:1B:E0:E0:DB:D0",
+					"model": "E1000",
+					"user": "tester",
+					"pwd": "10b83f9a2e823c47",
+					"local": "False",
+					"case_timeout": 30,
+					"filter": {
+						"filter_name": "Cassia_S1000",
+						"filter_mac": "CC:1B:E0:E8:0D:E3",
+						"filter_uuid": "1000",
+						"filter_rssi": "-30"
+					},
+					"case_path": "api_sys_test",
+					"case": [
+						"test_scan*.py"
+					]
 				},
-				"job2":{
-					"data_file":"sys_test_data.xlsx",
-					"host":"http://172.16.30.100/api",
-					"hub":"CC:1B:E0:E0:DB:D0",
-					"model":"E1000",
-					"user":"tester",
-					"pwd":"10b83f9a2e823c47",
-					"local":"False",
-					"case_timeout":30,
-					"filter":{
-						"filter_name":"Cassia_S1000",
-						"filter_mac":"CC:1B:E0:E8:0D:E3",
-						"filter_uuid":"1000",
-						"filter_rssi":"-30"},
-						"case":[]
+				"job2": {
+					"data_file": "sys_test_data.xlsx",
+					"host": "http://172.16.30.100/api",
+					"hub": "CC:1B:E0:E0:DB:D0",
+					"model": "E1000",
+					"user": "tester",
+					"pwd": "10b83f9a2e823c47",
+					"local": "False",
+					"case_timeout": 30,
+					"filter": {
+						"filter_name": "Cassia_S1000",
+						"filter_mac": "CC:1B:E0:E8:0D:E3",
+						"filter_uuid": "1000",
+						"filter_rssi": "-30"
+					},
+					"case": []
 				},
-				"job3":{
-					"data_file":"sys_test_data.xlsx",
-					"host":"http://172.16.30.100/api",
-					"hub":"CC:1B:E0:E0:DB:D0",
-					"model":"E1000",
-					"user":"tester",
-					"pwd":"10b83f9a2e823c47",
-					"local":"False",
-					"case_timeout":30,
-					"filter":{
-						"filter_name":"Cassia_S1000",
-						"filter_mac":"CC:1B:E0:E8:0D:E3",
-						"filter_uuid":"1000",
-						"filter_rssi":"-30"},
-					"case_path":"api_sys_test",
-					"case":[]
-				}
-			}
-		},
-		"test_plan2":{
-			"comment":"test_plan1",
-			"jobs":{
-				"job1":{
-					"data_file":"sys_test_data.xlsx",
-					"host":"http://172.16.30.100/api",
-					"hub":"CC:1B:E0:E0:DB:D0",
-					"model":"E1000",
-					"user":"tester",
-					"pwd":"10b83f9a2e823c47",
-					"local":"False",
-					"case_timeout":30,
-					"filter":{
-						"filter_name":"Cassia_S1000",
-						"filter_mac":"CC:1B:E0:E8:0D:E3",
-						"filter_uuid":"1000",
-						"filter_rssi":"-30"},
-					"case_path":"api_sys_test",
-					"case":["test_scan_filter*.py"]
+				"job3": {
+					"data_file": "sys_test_data.xlsx",
+					"host": "http://172.16.30.100/api",
+					"hub": "CC:1B:E0:E0:DB:D0",
+					"model": "E1000",
+					"user": "tester",
+					"pwd": "10b83f9a2e823c47",
+					"local": "False",
+					"case_timeout": 30,
+					"filter": {
+						"filter_name": "Cassia_S1000",
+						"filter_mac": "CC:1B:E0:E8:0D:E3",
+						"filter_uuid": "1000",
+						"filter_rssi": "-30"
+					},
+					"case_path": "api_sys_test",
+					"case": []
 				}
 			}
 		}
@@ -85,7 +67,7 @@
 		"mail_pass":"kqitmeabknujbeij",
 		"mail_port":465,
 		"mail_sender":"yuanzhen0632@qq.com",
-		"mail_recv":"['yuanzhen0632@qq.com',]",
+		"mail_recv":"['yuanzhen@cassianetworks.com',]",
 		"mail_text":"测试邮件发送。。。"
 	}
 }

@@ -757,3 +757,177 @@ test_scan_filter_mac_001-测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
 test_scan_filter_mac_001-fail
 
 test_scan_filter_mac_001-Case failed,start scan timeout.
+test_scan_on_cloud_local_001-测试chip0 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_001-测试chip0 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_001-测试chip0 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_001-fail
+
+test_scan_filter_name_012-测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
+test_scan_filter_name_012-pass
+
+test_scan_filter_name_012-测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
+test_scan_filter_name_012-pass
+
+test_scan_chip_001-测试在不同芯片之间，按先后顺序，能否成功开启扫描
+test_scan_chip_001-case pass
+
+test_scan_filter_mac_001-测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
+test_scan_filter_mac_002-测试chip0不加过虑被动扫描，chip1 filter mac 主动扫描
+test_scan_filter_mac_002-fail
+
+test_scan_filter_mac_003-测试chip0不加过虑被动扫描，chip1 filter mac 被动扫描
+test_scan_filter_mac_003-fail
+
+test_scan_filter_mac_004-测试chip0不加过虑主动扫描，chip1 filter mac 被动扫描
+test_scan_filter_mac_004-fail
+
+test_scan_filter_mac_005-测试chip0 filter mac主动扫描，chip1 不加过虑主动扫描
+test_scan_filter_mac_005-fail
+
+test_scan_filter_mac_006-测试chip0 filter mac被动扫描，chip1 不加过虑主动扫描
+test_scan_filter_mac_006-fail
+
+test_scan_filter_mac_007-测试chip0 filter mac被动扫描，chip1 不加过虑被动扫描
+test_scan_filter_mac_007-fail
+
+test_scan_filter_mac_008-测试chip0 filter mac主动扫描，chip1 不加过虑被动扫描
+test_scan_filter_mac_008-fail
+
+test_scan_filter_mac_009-测试chip0 filter mac主动扫描，chip1 filter mac 主动扫描
+test_scan_filter_mac_009-fail
+
+test_scan_filter_mac_010-测试chip0 filter mac主动扫描，chip1 filter mac 被动扫描
+test_scan_filter_mac_010-fail
+
+test_scan_filter_mac_011-测试chip0  filter mac被动扫描，chip1 filter mac 主动扫描
+test_scan_filter_mac_011-fail
+
+test_scan_filter_mac_012-测试chip0  filter mac被动扫描，chip1 filter mac 被动扫描
+test_scan_filter_mac_012-fail
+
+test_scan_filter_name_003-测试chip0不加过虑被动扫描，chip1 filter name 被动扫描
+test_scan_filter_name_003-pass
+
+test_scan_filter_name_004-测试chip0不加过虑主动扫描，chip1 filter name 被动扫描
+test_scan_filter_name_004-pass
+
+test_scan_filter_name_005-测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+test_scan_filter_name_005-pass
+
+test_scan_filter_name_006-测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+test_scan_filter_name_006-pass
+
+test_scan_filter_name_007-测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+test_scan_filter_name_007-pass
+
+test_scan_filter_name_008-测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+test_scan_filter_name_008-pass
+
+test_scan_filter_name_009-测试chip0 chip1 filter name主动扫描，chip1 filter name 主动扫描
+test_scan_filter_name_009-pass
+
+test_scan_filter_name_010-测试chip0 chip1 filter name主动扫描，chip1 filter name 被动扫描
+test_scan_filter_name_010-pass
+
+test_scan_filter_name_011-测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
+test_scan_filter_name_011-pass
+
+test_scan_filter_name_012-测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
+test_scan_filter_name_012-pass
+
+test_scan_on_cloud_local_001-测试chip0 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_001-fail
+
+test_scan_chip_001-测试在不同芯片之间，按先后顺序，能否成功开启扫描
+test_scan_chip_001-case pass
+
+test_scan_chip_002-测试两块芯片同时开启扫描能否成功
+test_scan_chip_002-pass
+test_scan_filter_mac_001-测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
+test_scan_filter_mac_002-测试chip0不加过虑被动扫描，chip1 filter mac 主动扫描
+test_scan_filter_mac_002-fail
+
+test_scan_filter_mac_003-测试chip0不加过虑被动扫描，chip1 filter mac 被动扫描
+test_scan_filter_mac_003-fail
+
+test_scan_filter_mac_004-测试chip0不加过虑主动扫描，chip1 filter mac 被动扫描
+test_scan_filter_mac_004-fail
+
+test_scan_filter_mac_005-测试chip0 filter mac主动扫描，chip1 不加过虑主动扫描
+test_scan_filter_mac_005-fail
+
+test_scan_filter_mac_006-测试chip0 filter mac被动扫描，chip1 不加过虑主动扫描
+test_scan_filter_mac_006-fail
+
+test_scan_filter_mac_007-测试chip0 filter mac被动扫描，chip1 不加过虑被动扫描
+test_scan_filter_mac_007-fail
+
+test_scan_filter_mac_008-测试chip0 filter mac主动扫描，chip1 不加过虑被动扫描
+test_scan_filter_mac_008-fail
+
+test_scan_filter_mac_009-测试chip0 filter mac主动扫描，chip1 filter mac 主动扫描
+test_scan_filter_mac_009-fail
+
+test_scan_filter_mac_010-测试chip0 filter mac主动扫描，chip1 filter mac 被动扫描
+test_scan_filter_mac_010-fail
+
+test_scan_filter_mac_011-测试chip0  filter mac被动扫描，chip1 filter mac 主动扫描
+test_scan_filter_mac_011-fail
+
+test_scan_filter_mac_012-测试chip0  filter mac被动扫描，chip1 filter mac 被动扫描
+test_scan_filter_mac_012-fail
+
+test_scan_filter_name_001-测试chip0不加过虑主动扫描，chip1 filter name 主动扫描
+test_scan_filter_name_001-pass
+
+test_scan_filter_name_002-测试chip0不加过虑被动扫描，chip1 filter name 主动扫描
+test_scan_filter_name_002-pass
+
+test_scan_filter_name_003-测试chip0不加过虑被动扫描，chip1 filter name 被动扫描
+test_scan_filter_name_003-pass
+
+test_scan_filter_name_004-测试chip0不加过虑主动扫描，chip1 filter name 被动扫描
+test_scan_filter_name_004-pass
+
+test_scan_filter_name_005-测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+test_scan_filter_name_005-pass
+
+test_scan_filter_name_006-测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+test_scan_filter_name_006-pass
+
+test_scan_filter_name_007-测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+test_scan_filter_name_007-pass
+
+test_scan_filter_name_008-测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+test_scan_filter_name_008-pass
+
+test_scan_filter_name_009-测试chip0 chip1 filter name主动扫描，chip1 filter name 主动扫描
+test_scan_filter_name_009-pass
+
+test_scan_filter_name_010-测试chip0 chip1 filter name主动扫描，chip1 filter name 被动扫描
+test_scan_filter_name_010-pass
+
+test_scan_filter_name_011-测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
+test_scan_filter_name_011-pass
+
+test_scan_filter_name_012-测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
+test_scan_filter_name_012-pass
+
+test_scan_on_cloud_local_001-测试chip0 local扫描的同时进行cloud扫描
+test_scan_on_cloud_local_001-fail
+
+test_scan_scanmode_001-测试设备的主被动扫描切换功能
+test_scan_scanmode_001-pass
+
+test_scan_scanmode_002-测试0芯片主动扫描同时，让1芯片被动扫
+test_scan_scanmode_002-pass
+
+test_scan_scanmode_003-测试0芯片被动扫描同时，让1芯片主动扫
+test_scan_scanmode_003-pass
+
+test_scan_scanmode_004-测试两个芯片同时开启主动扫描
+test_scan_scanmode_004-pass
+
+test_scan_scanmode_005-测试两个芯片同时开启被动扫描
+test_scan_scanmode_005-pass
+

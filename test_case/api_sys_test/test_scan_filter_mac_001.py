@@ -15,7 +15,7 @@ import tools
 
 class testcase(unittest.TestCase):
     logger = tools.set_logger(__name__)
-    sdk = tools.get_cloud_api()
+    sdk = tools.get_api()
     model = tools.get_model()
     filters = tools.get_filter()
     timeout = tools.read_job_config()['case_timeout']
@@ -53,10 +53,10 @@ class testcase(unittest.TestCase):
         else:
             a = threading.Thread(target=self.chip0_scan, args=(1,))
             b = threading.Thread(target=self.chip0_scan, args=(1, self.filters['filter_mac']))
-            a.start()
-            b.setDaemon(True)
-            b.start()
             a.setDaemon(True)
+            b.setDaemon(True)
+            a.start()
+            b.start()
 
             while True:
                 if self.flag1 and self.flag2:

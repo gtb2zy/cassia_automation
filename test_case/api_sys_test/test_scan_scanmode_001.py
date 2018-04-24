@@ -9,13 +9,13 @@ from contextlib import closing
 from threading import Timer
 path = os.getcwd().split('APItest')[0] + 'APItest/lib/'
 sys.path.append(path)
-from tools import get_cloud_api, get_model
+from tools import get_api, get_model
 from logs import set_logger
 
 
 class testcase(unittest.TestCase):
     logger = set_logger(__name__)
-    api = get_cloud_api()
+    api = get_api()
     model = get_model()
 
     def setUp(self):
