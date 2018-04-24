@@ -33,8 +33,12 @@ class testcase(unittest.TestCase):
     #测试方法
     def test_scan_filter_name(self):
         if self.model.startswith('S') or self.model.startswith('s'):
-            threading.Thread(target=self.chip0_scan,args = (0,self.filters['filter_name'])).start()
-            threading.Thread(target=self.chip0_scan,args = (1,)).start()
+            a = threading.Thread(target=self.chip0_scan,args = (0,self.filters['filter_name'])).start()
+            b = threading.Thread(target=self.chip0_scan,args = (1,)).start()
+            a.start()
+            b.setDaemon(True)
+            b.start()
+            a.setDaemon(True)
             while True:
                 if self.flag1 and self.flag2:
                     self.assertTrue(True)
@@ -46,8 +50,12 @@ class testcase(unittest.TestCase):
                     self.logger.error("Case failed,start scan timeout.")
                     break       
         else:
-            threading.Thread(target=self.chip0_scan,args = (0,self.filters['filter_name'])).start()
-            threading.Thread(target=self.chip1_scan,args = (1,)).start()
+            a = threading.Thread(target=self.chip0_scan,args = (0,self.filters['filter_name'])).start()
+            b = threading.Thread(target=self.chip1_scan,args = (1,)).start()
+            a.start()
+            b.setDaemon(True)
+            b.start()
+            a.setDaemon(True)
             while True:
                 if self.flag1 and self.flag2:
                     self.assertTrue(True)

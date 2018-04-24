@@ -9,20 +9,19 @@ from contextlib import closing
 from threading import Timer
 path = os.getcwd().split('APItest')[0]+'APItest/lib/'
 sys.path.append(path)
-from api import api
 from logs import set_logger
-from tools import get_api
-from tools import get_model
+from tools import get_api,get_model,read_job_config
 
 class testcase(unittest.TestCase):
 
 	logger = set_logger(__name__)
 	sdk = get_api()
 	model = get_model()
+	timeout = read_job_config()['case_timeout']
 
 	def setUp(self):
 		self.logger.info('测试在不同芯片之间，按先后顺序，能否成功开启扫描')
-		self.timer = Timer(30,self.close)
+		self.timer = Timer(self.timeout,self.close)
 		self.timer.start()
 	def tearDown(self):
 		self.timer.cancel()

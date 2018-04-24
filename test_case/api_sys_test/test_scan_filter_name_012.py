@@ -25,7 +25,7 @@ class testcase(unittest.TestCase):
         self.flag1 = None
         self.flag2 = None
         self.logger.info('测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描')
-        self.timer = Timer(self.timeout, self.set_timeout)
+        self.timer = Timer(10, self.set_timeout)
         self.timer.start()
 
     def tearDown(self):
@@ -34,8 +34,12 @@ class testcase(unittest.TestCase):
     #测试方法
     def test_scan_filter_name(self):
         if self.model.startswith('S') or self.model.startswith('s'):
-            threading.Thread(target=self.chip0_scan,args = (0,self.filters['filter_name'])).start()
-            threading.Thread(target=self.chip0_scan,args = (0,self.filters['filter_name'])).start()
+            a = threading.Thread(target=self.chip0_scan,args = (0,self.filters['filter_name'])).start()
+            b = threading.Thread(target=self.chip0_scan,args = (0,self.filters['filter_name'])).start()
+            a.start()
+            b.setDaemon(True)
+            b.start()
+            a.setDaemon(True)
             while True:
                 if self.flag1 and self.flag2:
                     self.assertTrue(True)
@@ -47,8 +51,12 @@ class testcase(unittest.TestCase):
                     self.logger.error("Case failed,start scan timeout.")
                     break       
         else:
-            threading.Thread(target=self.chip0_scan,args = (0,self.filters['filter_name'])).start()
-            threading.Thread(target=self.chip1_scan,args = (0,self.filters['filter_name'])).start()
+            a = threading.Thread(target=self.chip0_scan,args = (0,self.filters['filter_name'])).start()
+            b = threading.Thread(target=self.chip1_scan,args = (0,self.filters['filter_name'])).start()
+            a.start()
+            b.setDaemon(True)
+            b.start()
+            a.setDaemon(True)
             while True:
                 if self.flag1 and self.flag2:
                     self.assertTrue(True)
@@ -56,9 +64,10 @@ class testcase(unittest.TestCase):
                     break
                 elif self.timeout_flag:
                     self.logger.info('fail\n')
-                    self.fail('Case failed,start scan timeout.')
+                    self.fail('Case failed,case timeout.')
                     self.logger.error("Case failed,start scan timeout.")
-                    break
+                    # break
+                    sys.exit(1)
 
     def chip0_scan(self,active = 0,filter_name = None):
         #step1:chip 1 start passive scan,then start chip0 scan.

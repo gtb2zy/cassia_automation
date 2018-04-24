@@ -66,9 +66,7 @@ class testcase(unittest.TestCase):
                     else:
                         self.logger.error('step 1:start active scan fail,%s' % message)
                 else:
-                    self.logger.debug(
-                        "step 1:chip 1 start active scan."
-                    )
+                    self.logger.debug("step 1:chip 1 start active scan.")
                     break
 
     def chip1_scan(self):

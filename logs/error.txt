@@ -5,3 +5,5 @@
 2018-04-19 19:05:25,628 - main - ERROR - 配置文件格式错误
 2018-04-19 19:07:25,081 - main - ERROR - 配置文件格式错误
 2018-04-19 19:08:18,495 - main - ERROR - 配置文件格式错误
+2018-04-24 15:33:58,577 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
+2018-04-24 15:34:26,783 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.

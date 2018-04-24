@@ -62,5 +62,5 @@ def main():
                 html_test_runner.run(suite)
                 send_report(test_plan_comments[i]).send()
 
-
-main()
+if __name__ == '__main__':
+    main()

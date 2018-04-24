@@ -9,7 +9,6 @@ from contextlib import closing
 from threading import Timer
 path = os.getcwd().split('APItest')[0] + 'APItest/lib/'
 sys.path.append(path)
-from api import api
 from tools import get_cloud_api, get_model
 from logs import set_logger
 
