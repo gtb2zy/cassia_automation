@@ -3330,3 +3330,341 @@
 2018-04-24 19:39:41,221 - test_scan_on_cloud_local - DEBUG - Step 1:chip0 start cloud scan success.
 2018-04-24 19:39:41,221 - test_scan_on_cloud_local - INFO - pass
 
+2018-04-25 09:45:11,440 - tools - DEBUG - Read config success.
+2018-04-25 09:45:11,485 - tools - DEBUG - Read config success.
+2018-04-25 09:45:11,485 - tools - DEBUG - Read config success.
+2018-04-25 09:45:11,485 - tools - DEBUG - Read config success.
+2018-04-25 09:45:11,487 - test_scan_on_cloud_local_005 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-04-25 09:45:11,491 - test_scan_on_cloud_local_005 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-04-25 09:45:13,012 - test_scan_on_cloud_local_005 - DEBUG - Step 1: start local scan success.
+2018-04-25 09:45:16,013 - test_scan_on_cloud_local_005 - DEBUG - Step 2: stop local scan success.
+2018-04-25 09:45:17,505 - test_scan_on_cloud_local_005 - DEBUG - Step 3:start cloud scan success.
+2018-04-25 15:35:54,868 - tools - DEBUG - Read config success.
+2018-04-25 15:35:54,887 - tools - DEBUG - Read config success.
+2018-04-25 15:35:54,887 - tools - DEBUG - Read config success.
+2018-04-25 15:35:54,888 - tools - DEBUG - Read config success.
+2018-04-25 15:35:54,889 - test_scan_filter_mac_001 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
+2018-04-25 15:35:59,556 - test_scan_filter_mac_001 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-04-25 15:35:59,895 - test_scan_filter_mac_001 - INFO - fail
+
+2018-04-25 15:35:59,895 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
+2018-04-25 15:36:12,365 - tools - DEBUG - Read config success.
+2018-04-25 15:36:12,378 - tools - DEBUG - Read config success.
+2018-04-25 15:36:12,378 - tools - DEBUG - Read config success.
+2018-04-25 15:36:12,378 - tools - DEBUG - Read config success.
+2018-04-25 15:36:12,379 - test_scan_filter_mac_001 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
+2018-04-25 15:36:26,609 - tools - DEBUG - Read config success.
+2018-04-25 15:36:26,621 - tools - DEBUG - Read config success.
+2018-04-25 15:36:26,621 - tools - DEBUG - Read config success.
+2018-04-25 15:36:26,621 - tools - DEBUG - Read config success.
+2018-04-25 15:36:26,622 - test_scan_filter_mac_001 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
+2018-04-25 15:37:04,822 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,778 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,787 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,832 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,832 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,840 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,853 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,860 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,868 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,868 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,869 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,876 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,883 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,883 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,884 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,890 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,898 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,899 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,899 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,906 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,914 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,914 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,914 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,923 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,931 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,931 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,931 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,939 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,946 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,947 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,947 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,954 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,962 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,962 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,962 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,969 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,985 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,985 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,986 - tools - DEBUG - Read config success.
+2018-04-26 09:42:27,993 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,001 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,001 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,001 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,008 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,015 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,016 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,016 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,023 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,031 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,031 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,031 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,038 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,045 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,045 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,045 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,053 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,063 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,063 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,063 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,070 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,080 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,080 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,081 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,093 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,104 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,105 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,105 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,113 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,122 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,122 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,122 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,132 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,140 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,141 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,141 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,150 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,159 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,159 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,160 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,168 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,176 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,177 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,177 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,183 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,190 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,191 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,191 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,197 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,206 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,207 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,207 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,215 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,224 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,225 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,225 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,232 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,241 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,241 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,242 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,250 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,258 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,258 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,258 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,263 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,271 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,271 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,272 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,279 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,287 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,288 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,288 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,295 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,307 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,308 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,308 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,314 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,322 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,323 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,323 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,329 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,337 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,345 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,353 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,358 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,365 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,371 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,378 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,383 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,390 - tools - DEBUG - Read config success.
+2018-04-26 09:42:28,394 - test_scan_chip_001 - INFO - 测试在不同芯片之间，按先后顺序，能否成功开启扫描
+2018-04-26 09:42:28,489 - test_scan_chip_001 - DEBUG - step1:chip 0 start scan,then stop scan success
+2018-04-26 09:42:28,589 - test_scan_chip_001 - DEBUG - step2:chip 1 start scan,then stop scan success
+2018-04-26 09:42:28,691 - test_scan_chip_001 - DEBUG - step3:chip 0 start scan,then change to chip1 scan success
+2018-04-26 09:42:28,790 - test_scan_chip_001 - DEBUG - step4:chip 1 start scan,then change to chip0 scan success
+2018-04-26 09:42:28,890 - test_scan_chip_001 - DEBUG - step5:chip 0 start scan,then change to chip1 scan success.
+2018-04-26 09:42:28,891 - test_scan_chip_001 - INFO - case pass
+
+2018-04-26 09:42:28,891 - test_scan_chip_002 - INFO - 测试两块芯片同时开启扫描能否成功
+2018-04-26 09:42:36,876 - test_scan_chip_002 - DEBUG - step2:start chip0 scan success.
+2018-04-26 09:42:36,876 - test_scan_chip_002 - INFO - pass
+2018-04-26 09:42:36,876 - test_scan_filter_mac_001 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
+2018-04-26 09:42:41,524 - test_scan_filter_mac_001 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-04-26 09:42:41,882 - test_scan_filter_mac_001 - INFO - fail
+
+2018-04-26 09:42:41,882 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
+2018-04-26 09:42:41,882 - test_scan_filter_mac_002 - INFO - 测试chip0不加过虑被动扫描，chip1 filter mac 主动扫描
+2018-04-26 09:42:48,001 - test_scan_filter_mac_002 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-04-26 09:43:11,888 - test_scan_filter_mac_002 - INFO - fail
+
+2018-04-26 09:43:11,888 - test_scan_filter_mac_003 - INFO - 测试chip0不加过虑被动扫描，chip1 filter mac 被动扫描
+2018-04-26 09:43:17,203 - test_scan_filter_mac_003 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-04-26 09:43:41,895 - test_scan_filter_mac_003 - INFO - fail
+
+2018-04-26 09:43:41,895 - test_scan_filter_mac_004 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 被动扫描
+2018-04-26 09:43:45,890 - test_scan_filter_mac_004 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-04-26 09:43:46,292 - test_scan_filter_mac_001 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-04-26 09:44:11,902 - test_scan_filter_mac_004 - INFO - fail
+
+2018-04-26 09:44:11,903 - test_scan_filter_mac_006 - INFO - 测试chip0 filter mac被动扫描，chip1 不加过虑主动扫描
+2018-04-26 09:44:18,283 - test_scan_filter_mac_006 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-04-26 09:44:19,541 - test_scan_filter_mac_002 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-04-26 09:44:41,909 - test_scan_filter_mac_006 - INFO - fail
+
+2018-04-26 09:44:41,909 - test_scan_filter_mac_007 - INFO - 测试chip0 filter mac被动扫描，chip1 不加过虑被动扫描
+2018-04-26 09:44:48,564 - test_scan_filter_mac_007 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-04-26 09:45:11,915 - test_scan_filter_mac_007 - INFO - fail
+
+2018-04-26 09:45:11,915 - test_scan_filter_mac_008 - INFO - 测试chip0 filter mac主动扫描，chip1 不加过虑被动扫描
+2018-04-26 09:45:20,005 - test_scan_filter_mac_008 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-04-26 09:45:32,850 - test_scan_filter_mac_003 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-04-26 09:45:32,850 - test_scan_filter_mac_006 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-04-26 09:45:41,922 - test_scan_filter_mac_008 - INFO - fail
+
+2018-04-26 09:45:41,922 - test_scan_filter_mac_009 - INFO - 测试chip0 filter mac主动扫描，chip1 filter mac 主动扫描
+2018-04-26 09:45:58,031 - test_scan_filter_mac_007 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-04-26 09:46:03,046 - test_scan_filter_mac_004 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-04-26 09:46:11,929 - test_scan_filter_mac_009 - INFO - fail
+
+2018-04-26 09:46:11,929 - test_scan_filter_mac_010 - INFO - 测试chip0 filter mac主动扫描，chip1 filter mac 被动扫描
+2018-04-26 09:46:32,242 - test_scan_filter_mac_008 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-04-26 09:46:41,936 - test_scan_filter_mac_010 - INFO - fail
+
+2018-04-26 09:46:41,936 - test_scan_filter_mac_011 - INFO - 测试chip0  filter mac被动扫描，chip1 filter mac 主动扫描
+2018-04-26 09:47:08,372 - test_scan_filter_mac_009 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-04-26 09:47:11,943 - test_scan_filter_mac_011 - INFO - fail
+
+2018-04-26 09:47:11,943 - test_scan_filter_mac_012 - INFO - 测试chip0  filter mac被动扫描，chip1 filter mac 被动扫描
+2018-04-26 09:47:20,482 - test_scan_filter_mac_010 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-04-26 09:47:35,547 - test_scan_filter_mac_009 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-04-26 09:47:41,950 - test_scan_filter_mac_012 - INFO - fail
+
+2018-04-26 09:47:41,950 - test_scan_filter_name_001 - INFO - 测试chip0不加过虑主动扫描，chip1 filter name 主动扫描
+2018-04-26 09:47:44,405 - test_scan_filter_name_001 - DEBUG - Step 2:chip1 start scan with filter name success.
+2018-04-26 09:47:46,517 - test_scan_filter_name_001 - DEBUG - Step 1:chip0 start scan with no filter name success.
+2018-04-26 09:47:46,517 - test_scan_filter_name_001 - INFO - pass
+
+2018-04-26 09:47:46,517 - test_scan_filter_name_002 - INFO - 测试chip0不加过虑被动扫描，chip1 filter name 主动扫描
+2018-04-26 09:47:48,440 - test_scan_filter_name_002 - DEBUG - Step 2:chip1 start scan with filter name success.
+2018-04-26 09:47:51,903 - test_scan_filter_name_002 - DEBUG - Step 1:chip0 start scan with no filter name success.
+2018-04-26 09:47:51,903 - test_scan_filter_name_002 - INFO - pass
+
+2018-04-26 09:47:51,903 - test_scan_filter_name_003 - INFO - 测试chip0不加过虑被动扫描，chip1 filter name 被动扫描
+2018-04-26 09:47:54,229 - test_scan_filter_name_003 - DEBUG - Step 2:chip1 start scan with filter name success.
+2018-04-26 09:47:56,859 - test_scan_filter_name_003 - DEBUG - Step 1:chip0 start scan with no filter name success.
+2018-04-26 09:47:56,859 - test_scan_filter_name_003 - INFO - pass
+
+2018-04-26 09:47:56,859 - test_scan_filter_name_004 - INFO - 测试chip0不加过虑主动扫描，chip1 filter name 被动扫描
+2018-04-26 09:47:58,988 - test_scan_filter_name_004 - DEBUG - Step 2:chip1 start scan with filter name success.
+2018-04-26 09:48:00,807 - test_scan_filter_name_004 - DEBUG - Step 1:chip0 start scan with no filter name success.
+2018-04-26 09:48:00,807 - test_scan_filter_name_004 - INFO - pass
+
+2018-04-26 09:48:00,807 - test_scan_filter_name_005 - INFO - 测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+2018-04-26 09:48:02,337 - test_scan_filter_name_005 - DEBUG - Step 1:chip0 start scan with filter name success.
+2018-04-26 09:48:05,687 - test_scan_filter_mac_011 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-04-26 09:48:07,185 - test_scan_filter_name_005 - DEBUG - Step 2:chip1 start scan with no filter name success.
+2018-04-26 09:48:07,185 - test_scan_filter_name_005 - INFO - pass
+
+2018-04-26 09:48:07,185 - test_scan_filter_name_006 - INFO - 测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+2018-04-26 09:48:08,905 - test_scan_filter_name_006 - DEBUG - Step 1:chip0 start scan with filter name success.
+2018-04-26 09:48:13,058 - test_scan_filter_name_006 - DEBUG - Step 2:chip1 start scan with no filter name success.
+2018-04-26 09:48:13,058 - test_scan_filter_name_006 - INFO - pass
+
+2018-04-26 09:48:13,058 - test_scan_filter_name_007 - INFO - 测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+2018-04-26 09:48:14,884 - test_scan_filter_name_007 - DEBUG - Step 1:chip0 start scan with filter name success.
+2018-04-26 09:48:16,712 - test_scan_filter_mac_010 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-04-26 09:48:20,373 - test_scan_filter_name_007 - DEBUG - Step 2:chip1 start scan with no filter name success.
+2018-04-26 09:48:20,373 - test_scan_filter_name_007 - INFO - pass
+
+2018-04-26 09:48:20,373 - test_scan_filter_name_008 - INFO - 测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+2018-04-26 09:48:21,698 - test_scan_filter_name_008 - DEBUG - Step 1:chip0 start scan with filter name success.
+2018-04-26 09:48:21,796 - test_scan_filter_mac_011 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-04-26 09:48:27,976 - test_scan_filter_name_008 - DEBUG - Step 2:chip1 start scan with no filter name success.
+2018-04-26 09:48:27,976 - test_scan_filter_name_008 - INFO - pass
+
+2018-04-26 09:48:27,976 - test_scan_filter_name_009 - INFO - 测试chip0 chip1 filter name主动扫描，chip1 filter name 主动扫描
+2018-04-26 09:48:29,703 - test_scan_filter_name_009 - DEBUG - Step 2:chip1 start scan with filter name success.
+2018-04-26 09:48:30,514 - test_scan_filter_name_009 - DEBUG - Step 1:chip0 start scan with filter name success.
+2018-04-26 09:48:30,514 - test_scan_filter_name_009 - INFO - pass
+
+2018-04-26 09:48:30,514 - test_scan_filter_name_010 - INFO - 测试chip0 chip1 filter name主动扫描，chip1 filter name 被动扫描
+2018-04-26 09:48:32,358 - test_scan_filter_name_010 - DEBUG - Step 2:chip1 start scan with filter name success.
+2018-04-26 09:48:32,550 - test_scan_filter_name_010 - DEBUG - Step 1:chip0 start scan with filter name success.
+2018-04-26 09:48:32,550 - test_scan_filter_name_010 - INFO - pass
+
+2018-04-26 09:48:32,550 - test_scan_filter_name_011 - INFO - 测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
+2018-04-26 09:48:34,180 - test_scan_filter_name_011 - DEBUG - Step 1:chip0 start scan with filter name success.
+2018-04-26 09:48:34,888 - test_scan_filter_name_011 - DEBUG - Step 2:chip1 start scan with filter name success.
+2018-04-26 09:48:34,888 - test_scan_filter_name_011 - INFO - pass
+
+2018-04-26 09:48:34,888 - test_scan_filter_name_012 - INFO - 测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
+2018-04-26 09:48:36,705 - test_scan_filter_name_012 - DEBUG - Step 1:chip0 start scan with filter name success.
+2018-04-26 09:48:37,713 - test_scan_filter_name_012 - DEBUG - Step 2:chip1 start scan with filter name success.
+2018-04-26 09:48:37,713 - test_scan_filter_name_012 - INFO - pass
+
+2018-04-26 09:48:37,713 - test_scan_on_cloud_local_001 - INFO - 测试chip0 local扫描的同时进行cloud扫描
+2018-04-26 09:48:41,657 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start local scan success.
+2018-04-26 09:48:42,284 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-26 09:48:42,284 - test_scan_on_cloud_local_001 - INFO - pass
+
+2018-04-26 09:48:42,284 - test_scan_on_cloud_local_002 - INFO - 测试chip1 local扫描的同时进行cloud扫描
+2018-04-26 09:48:46,295 - test_scan_on_cloud_local_002 - DEBUG - Step 1:chip0 start local scan success.
+2018-04-26 09:48:49,887 - test_scan_on_cloud_local_002 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-26 09:48:49,887 - test_scan_on_cloud_local_002 - INFO - pass
+
+2018-04-26 09:48:49,887 - test_scan_on_cloud_local_003 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-04-26 09:48:54,221 - test_scan_on_cloud_local_003 - DEBUG - Step 1:chip0 start local scan success.
+2018-04-26 09:48:56,532 - test_scan_on_cloud_local_003 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-26 09:48:56,532 - test_scan_on_cloud_local_003 - INFO - pass
+
+2018-04-26 09:48:56,532 - test_scan_on_cloud_local_004 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-04-26 09:49:00,246 - test_scan_on_cloud_local_004 - DEBUG - Step 1:chip0 start local scan success.
+2018-04-26 09:49:01,193 - test_scan_on_cloud_local_004 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-04-26 09:49:01,193 - test_scan_on_cloud_local_004 - INFO - pass
+
+2018-04-26 09:49:01,193 - test_scan_on_cloud_local_005 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-04-26 09:49:01,194 - test_scan_on_cloud_local_005 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-04-26 09:49:02,477 - test_scan_on_cloud_local_005 - DEBUG - Step 1: start local scan success.
+2018-04-26 09:49:05,479 - test_scan_on_cloud_local_005 - DEBUG - Step 2: stop local scan success.
+2018-04-26 09:49:06,816 - test_scan_on_cloud_local_005 - DEBUG - Step 3:start cloud scan success.
+2018-04-26 09:49:06,817 - test_scan_scanmode_001 - INFO - 测试设备的主被动扫描切换功能
+2018-04-26 09:49:06,917 - test_scan_filter_mac_012 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-04-26 09:49:09,757 - test_scan_scanmode_001 - DEBUG - Step1:passive scan start success
+2018-04-26 09:49:09,960 - test_scan_scanmode_001 - DEBUG - Step1:Active scan start success
+2018-04-26 09:49:11,986 - test_scan_filter_mac_012 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-04-26 09:49:13,099 - test_scan_scanmode_001 - DEBUG - Step3:passive scan start success
+2018-04-26 09:49:13,202 - test_scan_scanmode_001 - DEBUG - Step1:Active scan start success
+2018-04-26 09:49:17,655 - test_scan_scanmode_001 - DEBUG - Step1:passive scan start success
+2018-04-26 09:49:17,857 - test_scan_scanmode_001 - DEBUG - Step1:Active scan start success
+2018-04-26 09:49:22,775 - test_scan_scanmode_001 - DEBUG - Step3:passive scan start success
+2018-04-26 09:49:22,979 - test_scan_scanmode_001 - DEBUG - Step1:Active scan start success
+2018-04-26 09:49:22,980 - test_scan_scanmode_001 - INFO - pass
+
+2018-04-26 09:49:22,980 - test_scan_scanmode_002 - INFO - 测试0芯片主动扫描同时，让1芯片被动扫
+2018-04-26 09:49:29,970 - test_scan_scanmode_002 - DEBUG - step 2:start chip0 start scan passive success.
+2018-04-26 09:49:29,970 - test_scan_scanmode_002 - INFO - pass
+
+2018-04-26 09:49:29,970 - test_scan_scanmode_003 - INFO - 测试0芯片被动扫描同时，让1芯片主动扫
+2018-04-26 09:49:34,537 - test_scan_scanmode_003 - DEBUG - step 1:chip 1 start passive scan.
+2018-04-26 09:49:34,537 - test_scan_scanmode_003 - INFO - pass
+
+2018-04-26 09:49:34,537 - test_scan_scanmode_004 - INFO - 测试两个芯片同时开启主动扫描
+2018-04-26 09:49:34,639 - test_scan_scanmode_004 - DEBUG - step2:start chip0 scan active success.
+2018-04-26 09:49:34,740 - test_scan_scanmode_004 - DEBUG - step 1:chip 1 start active scan.
+2018-04-26 09:49:34,740 - test_scan_scanmode_004 - INFO - pass
+
+2018-04-26 09:49:34,740 - test_scan_scanmode_005 - INFO - 测试两个芯片同时开启被动扫描
+2018-04-26 09:49:38,792 - test_scan_scanmode_005 - DEBUG - Step 1:chip0 start passive scan success.
+2018-04-26 09:49:41,520 - test_scan_scanmode_005 - DEBUG - Step 2:chip1 start active scan success 
+2018-04-26 09:49:41,520 - test_scan_scanmode_005 - INFO - pass
+

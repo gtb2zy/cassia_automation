@@ -2,7 +2,7 @@ import json,os,sys
 import unittest,ddt,datetime,time
 from contextlib import closing	
 import sseclient,threading
-path = os.getcwd().split('APItest')[0] + 'APItest/lib/'
+path = os.getcwd().split('cassia_automation')[0] + 'cassia_automation/lib/'
 sys.path.append(path)
 from ExcelUtil import ExcelUtil
 from tools import read_job_config,get_api
@@ -12,7 +12,7 @@ class test_api(unittest.TestCase):
 
 	conf = read_job_config()
 	sdk = get_api()
-	path = os.getcwd().split('APItest')[0]+'APItest/'
+	path = os.getcwd().split('cassia_automation')[0]+'cassia_automation/'
 	testdata = ExcelUtil(path + 'test_data/' +conf['data_file'])
 	dd = testdata.get_all()
 

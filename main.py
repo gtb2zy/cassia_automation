@@ -7,7 +7,7 @@ from lib.sendReport import send_report
 
 # 代码svn仓库路径为：https://168.168.10.200/svn/QA_versions/自动化测试平台
 def main():
-    path = os.getcwd().split('APItest')[0] + 'APItest/'
+    path = os.getcwd().split('cassia_automation')[0] + 'cassia_automation/'
     logger = set_logger('main')
     reports_dir = path + 'reports/'
     test_plan_names = []

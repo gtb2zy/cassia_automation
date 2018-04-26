@@ -8,7 +8,7 @@ from contextlib import closing
 from threading import Timer
 import threading
 
-path = os.getcwd().split('APItest')[0] + 'APItest/lib/'
+path = os.getcwd().split('cassia_automation')[0] + 'cassia_automation/lib/'
 sys.path.append(path)
 from tools import get_api, get_model, get_filter,read_job_config
 from logs import set_logger

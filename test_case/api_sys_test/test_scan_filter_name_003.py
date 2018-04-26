@@ -7,7 +7,7 @@ import unittest, json, sys, os, json
 from contextlib import closing
 from threading import Timer
 import threading
-path = os.getcwd().split('APItest')[0] + 'APItest/lib/'
+path = os.getcwd().split('cassia_automation')[0] + 'cassia_automation/lib/'
 sys.path.append(path)
 import tools
 from logs import set_logger
