@@ -9,3 +9,7 @@
 2018-04-24 15:34:26,783 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
 2018-04-25 15:35:59,895 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
 2018-04-26 09:42:41,882 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
+2018-04-26 19:17:21,925 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
+2018-05-03 15:48:30,681 - tools - ERROR - Config file read failed!
+2018-05-03 15:49:34,701 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
+2018-05-03 15:54:47,626 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.

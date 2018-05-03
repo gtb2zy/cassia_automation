@@ -19,6 +19,8 @@ class testcase(unittest.TestCase):
     model = tools.get_model()
     filters = tools.get_filter()
     timeout = tools.read_job_config()['case_timeout']
+    filter_count = int(tools.read_job_config()['filter_count'])
+    unfilter_count = int(tools.read_job_config()['unfilter_count'])
 
     def setUp(self):
         self.timeout_flag = None

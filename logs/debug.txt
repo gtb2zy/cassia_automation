@@ -3668,3 +3668,1250 @@
 2018-04-26 09:49:41,520 - test_scan_scanmode_005 - DEBUG - Step 2:chip1 start active scan success 
 2018-04-26 09:49:41,520 - test_scan_scanmode_005 - INFO - pass
 
+2018-04-26 18:49:13,264 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,268 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,313 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,313 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,314 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,328 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,330 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,338 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,339 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,339 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,341 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,349 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,349 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,350 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,352 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,360 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,360 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,360 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,362 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,374 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,374 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,374 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,384 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,392 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,392 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,393 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,395 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,403 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,403 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,403 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,405 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,413 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,413 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,413 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,415 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,432 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,432 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,432 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,434 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,443 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,443 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,443 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,445 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,453 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,453 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,453 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,455 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,463 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,463 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,463 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,465 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,474 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,474 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,474 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,476 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,484 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,484 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,484 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,486 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,494 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,494 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,494 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,496 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,506 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,506 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,506 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,508 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,516 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,516 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,517 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,518 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,526 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,526 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,526 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,528 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,536 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,536 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,536 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,538 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,546 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,546 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,547 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,548 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,556 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,556 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,557 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,558 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,566 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,566 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,566 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,568 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,576 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,576 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,576 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,578 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,586 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,586 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,586 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,588 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,596 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,596 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,596 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,598 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,606 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,606 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,606 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,608 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,616 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,616 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,616 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,618 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,626 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,626 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,626 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,628 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,636 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,636 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,636 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,638 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,646 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,646 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,646 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,648 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,658 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,660 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,667 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,669 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,677 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,679 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,687 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,689 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,697 - tools - DEBUG - Read config success.
+2018-04-26 18:49:13,700 - test_scan_chip_001 - INFO - 测试在不同芯片之间，按先后顺序，能否成功开启扫描
+2018-04-26 18:49:13,779 - test_scan_chip_001 - DEBUG - step1:chip 0 start scan,then stop scan success
+2018-04-26 18:49:13,877 - test_scan_chip_001 - DEBUG - step2:chip 1 start scan,then stop scan success
+2018-04-26 18:49:13,978 - test_scan_chip_001 - DEBUG - step3:chip 0 start scan,then change to chip1 scan success
+2018-04-26 18:49:14,082 - test_scan_chip_001 - DEBUG - step4:chip 1 start scan,then change to chip0 scan success
+2018-04-26 18:49:14,180 - test_scan_chip_001 - DEBUG - step5:chip 0 start scan,then change to chip1 scan success.
+2018-04-26 18:49:14,181 - test_scan_chip_001 - INFO - case pass
+
+2018-04-26 18:49:14,181 - test_scan_chip_002 - INFO - 测试两块芯片同时开启扫描能否成功
+2018-04-26 18:56:12,249 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,254 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,273 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,273 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,275 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,285 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,287 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,296 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,296 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,296 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,298 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,307 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,307 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,307 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,309 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,317 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,317 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,317 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,319 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,327 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,327 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,327 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,329 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,337 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,337 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,337 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,339 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,347 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,347 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,347 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,349 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,356 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,357 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,357 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,358 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,366 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,366 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,366 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,367 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,374 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,375 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,375 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,377 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,384 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,384 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,385 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,386 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,395 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,395 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,395 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,397 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,406 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,406 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,406 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,408 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,416 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,416 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,416 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,418 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,426 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,426 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,426 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,428 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,436 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,436 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,436 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,438 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,448 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,448 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,448 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,450 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,458 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,458 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,458 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,460 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,468 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,468 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,468 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,470 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,477 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,477 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,478 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,479 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,487 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,487 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,488 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,490 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,498 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,499 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,499 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,501 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,508 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,509 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,509 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,511 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,518 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,519 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,519 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,520 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,528 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,529 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,529 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,531 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,539 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,539 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,539 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,541 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,548 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,548 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,548 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,550 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,559 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,559 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,559 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,561 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,569 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,569 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,569 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,571 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,579 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,579 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,579 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,581 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,590 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,592 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,599 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,601 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,610 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,612 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,619 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,621 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,629 - tools - DEBUG - Read config success.
+2018-04-26 18:56:12,632 - test_scan_chip_001 - INFO - 测试在不同芯片之间，按先后顺序，能否成功开启扫描
+2018-04-26 18:56:12,780 - test_scan_chip_001 - DEBUG - step1:chip 0 start scan,then stop scan success
+2018-04-26 18:56:12,882 - test_scan_chip_001 - DEBUG - step2:chip 1 start scan,then stop scan success
+2018-04-26 18:56:12,984 - test_scan_chip_001 - DEBUG - step3:chip 0 start scan,then change to chip1 scan success
+2018-04-26 18:56:13,084 - test_scan_chip_001 - DEBUG - step4:chip 1 start scan,then change to chip0 scan success
+2018-04-26 18:56:13,185 - test_scan_chip_001 - DEBUG - step5:chip 0 start scan,then change to chip1 scan success.
+2018-04-26 18:56:13,186 - test_scan_chip_001 - INFO - case pass
+
+2018-04-26 18:56:13,186 - test_scan_chip_002 - INFO - 测试两块芯片同时开启扫描能否成功
+2018-04-26 18:56:19,074 - test_scan_chip_002 - DEBUG - step2:start chip0 scan success.
+2018-04-26 18:56:19,074 - test_scan_chip_002 - INFO - pass
+2018-04-26 18:56:19,074 - test_scan_filter_mac_001 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
+2018-04-26 19:01:10,140 - tools - DEBUG - Read config success.
+2018-04-26 19:01:10,155 - tools - DEBUG - Read config success.
+2018-04-26 19:01:10,155 - tools - DEBUG - Read config success.
+2018-04-26 19:01:10,155 - tools - DEBUG - Read config success.
+2018-04-26 19:01:10,156 - test_scan_filter_mac_005 - INFO - 测试chip0 filter mac主动扫描，chip1 不加过虑主动扫描
+2018-04-26 19:01:14,671 - test_scan_filter_mac_005 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-04-26 19:01:40,162 - test_scan_filter_mac_005 - INFO - fail
+
+2018-04-26 19:17:01,434 - tools - DEBUG - Read config success.
+2018-04-26 19:17:01,447 - tools - DEBUG - Read config success.
+2018-04-26 19:17:01,447 - tools - DEBUG - Read config success.
+2018-04-26 19:17:01,447 - tools - DEBUG - Read config success.
+2018-04-26 19:17:01,448 - test_scan_filter_mac_005 - INFO - 测试chip0 filter mac主动扫描，chip1 不加过虑主动扫描
+2018-04-26 19:17:10,033 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,037 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,049 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,049 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,051 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,058 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,060 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,070 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,071 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,071 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,073 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,082 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,082 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,083 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,086 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,094 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,094 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,094 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,096 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,104 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,104 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,104 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,106 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,113 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,114 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,114 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,115 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,124 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,124 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,124 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,127 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,136 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,136 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,137 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,140 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,148 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,148 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,149 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,151 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,159 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,160 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,160 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,162 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,170 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,170 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,171 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,174 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,182 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,182 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,183 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,185 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,193 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,193 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,194 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,195 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,204 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,204 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,204 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,207 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,216 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,217 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,217 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,220 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,230 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,231 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,232 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,235 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,244 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,244 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,244 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,246 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,259 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,260 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,260 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,263 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,274 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,275 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,275 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,278 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,287 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,287 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,288 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,290 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,301 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,302 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,302 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,304 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,312 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,313 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,313 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,315 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,322 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,322 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,323 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,325 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,334 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,335 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,335 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,336 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,346 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,347 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,347 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,348 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,366 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,367 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,367 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,370 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,380 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,381 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,381 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,384 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,394 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,394 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,395 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,397 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,408 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,408 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,408 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,410 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,418 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,418 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,418 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,420 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,439 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,440 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,451 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,452 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,466 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,468 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,484 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,486 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,494 - tools - DEBUG - Read config success.
+2018-04-26 19:17:10,497 - test_scan_chip_001 - INFO - 测试在不同芯片之间，按先后顺序，能否成功开启扫描
+2018-04-26 19:17:10,632 - test_scan_chip_001 - DEBUG - step1:chip 0 start scan,then stop scan success
+2018-04-26 19:17:10,733 - test_scan_chip_001 - DEBUG - step2:chip 1 start scan,then stop scan success
+2018-04-26 19:17:10,833 - test_scan_chip_001 - DEBUG - step3:chip 0 start scan,then change to chip1 scan success
+2018-04-26 19:17:10,934 - test_scan_chip_001 - DEBUG - step4:chip 1 start scan,then change to chip0 scan success
+2018-04-26 19:17:11,035 - test_scan_chip_001 - DEBUG - step5:chip 0 start scan,then change to chip1 scan success.
+2018-04-26 19:17:11,036 - test_scan_chip_001 - INFO - case pass
+
+2018-04-26 19:17:11,036 - test_scan_chip_002 - INFO - 测试两块芯片同时开启扫描能否成功
+2018-04-26 19:17:16,919 - test_scan_chip_002 - DEBUG - step2:start chip0 scan success.
+2018-04-26 19:17:16,919 - test_scan_chip_002 - INFO - pass
+2018-04-26 19:17:16,920 - test_scan_filter_mac_001 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
+2018-04-26 19:17:21,071 - test_scan_filter_mac_001 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-04-26 19:17:21,925 - test_scan_filter_mac_001 - INFO - fail
+
+2018-04-26 19:17:21,925 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
+2018-04-26 19:17:21,926 - test_scan_filter_mac_002 - INFO - 测试chip0不加过虑被动扫描，chip1 filter mac 主动扫描
+2018-05-03 15:48:05,801 - tools - DEBUG - Read config success.
+2018-05-03 15:48:05,861 - tools - DEBUG - Read config success.
+2018-05-03 15:48:05,862 - tools - DEBUG - Read config success.
+2018-05-03 15:48:05,862 - tools - DEBUG - Read config success.
+2018-05-03 15:48:30,681 - tools - ERROR - Config file read failed!
+2018-05-03 15:49:22,911 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,923 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,941 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,941 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,943 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,951 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,961 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,969 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,969 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,969 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,969 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,969 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,977 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,986 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,986 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,986 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,986 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,986 - tools - DEBUG - Read config success.
+2018-05-03 15:49:22,994 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,001 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,001 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,001 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,002 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,002 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,009 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,018 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,018 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,018 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,018 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,018 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,026 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,037 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,037 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,037 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,037 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,037 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,045 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,053 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,054 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,054 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,054 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,054 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,062 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,071 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,071 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,071 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,071 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,071 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,079 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,087 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,087 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,088 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,088 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,088 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,096 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,104 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,105 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,105 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,105 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,105 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,113 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,122 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,122 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,122 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,122 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,122 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,131 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,140 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,140 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,140 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,140 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,140 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,148 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,156 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,157 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,157 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,157 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,157 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,165 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,173 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,173 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,173 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,173 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,173 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,181 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,193 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,193 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,193 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,193 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,193 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,199 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,207 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,207 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,207 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,207 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,208 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,214 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,225 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,225 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,225 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,225 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,225 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,232 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,241 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,241 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,241 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,241 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,241 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,248 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,255 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,255 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,255 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,255 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,256 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,262 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,269 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,269 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,270 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,270 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,270 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,276 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,283 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,284 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,284 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,284 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,284 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,290 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,298 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,298 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,298 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,299 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,299 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,305 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,313 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,313 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,313 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,313 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,313 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,320 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,329 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,329 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,329 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,329 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,329 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,335 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,345 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,346 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,346 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,346 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,346 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,352 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,359 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,360 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,360 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,360 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,360 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,366 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,374 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,374 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,375 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,375 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,375 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,381 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,389 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,389 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,389 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,390 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,390 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,396 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,404 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,404 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,405 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,405 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,405 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,412 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,423 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,423 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,423 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,424 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,424 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,434 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,447 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,448 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,448 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,448 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,449 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,458 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,467 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,468 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,468 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,468 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,468 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,479 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,486 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,487 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,487 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,487 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,487 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,494 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,502 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,503 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,503 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,503 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,503 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,510 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,519 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,519 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,519 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,519 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,519 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,527 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,535 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,535 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,535 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,535 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,535 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,542 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,550 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,550 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,550 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,551 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,551 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,553 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,561 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,561 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,561 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,563 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,571 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,572 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,572 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,573 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,587 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,588 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,588 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,590 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,598 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,599 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,599 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,601 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,611 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,611 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,611 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,613 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,621 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,623 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,632 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,634 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,644 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,646 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,654 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,656 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,664 - tools - DEBUG - Read config success.
+2018-05-03 15:49:23,668 - test_scan_chip_001 - INFO - 测试在不同芯片之间，按先后顺序，能否成功开启扫描
+2018-05-03 15:49:23,824 - test_scan_chip_001 - DEBUG - step1:chip 0 start scan,then stop scan success
+2018-05-03 15:49:23,928 - test_scan_chip_001 - DEBUG - step2:chip 1 start scan,then stop scan success
+2018-05-03 15:49:24,029 - test_scan_chip_001 - DEBUG - step3:chip 0 start scan,then change to chip1 scan success
+2018-05-03 15:49:24,129 - test_scan_chip_001 - DEBUG - step4:chip 1 start scan,then change to chip0 scan success
+2018-05-03 15:49:24,229 - test_scan_chip_001 - DEBUG - step5:chip 0 start scan,then change to chip1 scan success.
+2018-05-03 15:49:24,230 - test_scan_chip_001 - INFO - case pass
+
+2018-05-03 15:49:24,230 - test_scan_chip_002 - INFO - 测试两块芯片同时开启扫描能否成功
+2018-05-03 15:49:29,694 - test_scan_chip_002 - DEBUG - step2:start chip0 scan success.
+2018-05-03 15:49:29,694 - test_scan_chip_002 - INFO - pass
+2018-05-03 15:49:29,694 - test_scan_filter_mac_001 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
+2018-05-03 15:49:33,034 - test_scan_filter_mac_001 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-05-03 15:49:34,701 - test_scan_filter_mac_001 - INFO - fail
+
+2018-05-03 15:49:34,701 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
+2018-05-03 15:49:34,701 - test_scan_filter_mac_002 - INFO - 测试chip0不加过虑被动扫描，chip1 filter mac 主动扫描
+2018-05-03 15:49:39,505 - test_scan_filter_mac_002 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-05-03 15:50:04,707 - test_scan_filter_mac_002 - INFO - fail
+
+2018-05-03 15:50:04,707 - test_scan_filter_mac_003 - INFO - 测试chip0不加过虑被动扫描，chip1 filter mac 被动扫描
+2018-05-03 15:50:09,817 - test_scan_filter_mac_003 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-05-03 15:50:34,714 - test_scan_filter_mac_003 - INFO - fail
+
+2018-05-03 15:50:34,714 - test_scan_filter_mac_004 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 被动扫描
+2018-05-03 15:50:38,090 - test_scan_filter_mac_004 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-05-03 15:50:53,007 - test_scan_filter_mac_001 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:50:53,023 - test_scan_filter_mac_002 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:51:04,721 - test_scan_filter_mac_004 - INFO - fail
+
+2018-05-03 15:51:04,721 - test_scan_filter_mac_005 - INFO - 测试chip0 filter mac主动扫描，chip1 不加过虑主动扫描
+2018-05-03 15:51:09,091 - test_scan_filter_mac_005 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-05-03 15:51:34,728 - test_scan_filter_mac_005 - INFO - fail
+
+2018-05-03 15:51:34,728 - test_scan_filter_mac_006 - INFO - 测试chip0 filter mac被动扫描，chip1 不加过虑主动扫描
+2018-05-03 15:51:38,593 - test_scan_filter_mac_006 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-05-03 15:52:04,735 - test_scan_filter_mac_006 - INFO - fail
+
+2018-05-03 15:52:04,735 - test_scan_filter_mac_007 - INFO - 测试chip0 filter mac被动扫描，chip1 不加过虑被动扫描
+2018-05-03 15:52:08,693 - test_scan_filter_mac_007 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-05-03 15:52:24,400 - test_scan_filter_mac_005 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:52:34,437 - test_scan_filter_mac_003 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:52:34,741 - test_scan_filter_mac_007 - INFO - fail
+
+2018-05-03 15:52:34,741 - test_scan_filter_mac_008 - INFO - 测试chip0 filter mac主动扫描，chip1 不加过虑被动扫描
+2018-05-03 15:52:41,025 - test_scan_filter_mac_008 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-05-03 15:52:52,589 - test_scan_filter_mac_004 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:53:04,748 - test_scan_filter_mac_008 - INFO - fail
+
+2018-05-03 15:53:04,748 - test_scan_filter_mac_009 - INFO - 测试chip0 filter mac主动扫描，chip1 filter mac 主动扫描
+2018-05-03 15:53:34,755 - test_scan_filter_mac_009 - INFO - fail
+
+2018-05-03 15:53:34,755 - test_scan_filter_mac_010 - INFO - 测试chip0 filter mac主动扫描，chip1 filter mac 被动扫描
+2018-05-03 15:53:36,729 - test_scan_filter_mac_007 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:53:51,770 - test_scan_filter_mac_009 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:53:54,886 - test_scan_filter_mac_006 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:54:04,763 - test_scan_filter_mac_010 - INFO - fail
+
+2018-05-03 15:54:04,763 - test_scan_filter_mac_011 - INFO - 测试chip0  filter mac被动扫描，chip1 filter mac 主动扫描
+2018-05-03 15:54:04,928 - test_scan_filter_mac_008 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:54:28,000 - test_scan_filter_mac_009 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:54:35,524 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,529 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,540 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,540 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,542 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,551 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,552 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,569 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,570 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,570 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,570 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,570 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,572 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,580 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,580 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,580 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,581 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,581 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,584 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,594 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,595 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,595 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,595 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,596 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,599 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,607 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,608 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,608 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,608 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,608 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,610 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,619 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,619 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,619 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,619 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,620 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,621 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,629 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,630 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,630 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,630 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,630 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,632 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,639 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,639 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,641 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,641 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,641 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,641 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,650 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,650 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,651 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,651 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,651 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,652 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,660 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,660 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,660 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,660 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,660 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,662 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,671 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,671 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,671 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,671 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,671 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,673 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,681 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,681 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,681 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,681 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,681 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,683 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,690 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,691 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,691 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,691 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,691 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,693 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,700 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,700 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,701 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,701 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,701 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,703 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,716 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,716 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,716 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,716 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,716 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,718 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,728 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,728 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,729 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,729 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,729 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,730 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,738 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,739 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,739 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,739 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,739 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,741 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,748 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,749 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,749 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,749 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,749 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,751 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,757 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,758 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,758 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,758 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,758 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,759 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,768 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,768 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,768 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,769 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,769 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,770 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,778 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,779 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,779 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,779 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,779 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,781 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,789 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,789 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,789 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,790 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,790 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,791 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,799 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,799 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,799 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,800 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,800 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,801 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,815 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,815 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,815 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,816 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,816 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,817 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,826 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,826 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,826 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,827 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,827 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,828 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,836 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,836 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,836 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,836 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,836 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,838 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,846 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,846 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,846 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,847 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,847 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,848 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,857 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,857 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,857 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,857 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,858 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,859 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,867 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,867 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,867 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,868 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,868 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,869 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,877 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,877 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,877 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,878 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,878 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,879 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,887 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,887 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,887 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,887 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,888 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,889 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,898 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,898 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,898 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,898 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,898 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,900 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,908 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,908 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,908 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,909 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,909 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,910 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,918 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,918 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,918 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,919 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,919 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,920 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,928 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,928 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,928 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,928 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,929 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,930 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,938 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,938 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,938 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,938 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,939 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,940 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,949 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,949 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,949 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,950 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,950 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,951 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,960 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,960 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,960 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,962 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,970 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,970 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,970 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,972 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,983 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,983 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,983 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,985 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,993 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,993 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,993 - tools - DEBUG - Read config success.
+2018-05-03 15:54:35,995 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,003 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,003 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,003 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,005 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,014 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,015 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,023 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,025 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,034 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,036 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,044 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,046 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,054 - tools - DEBUG - Read config success.
+2018-05-03 15:54:36,057 - test_scan_chip_001 - INFO - 测试在不同芯片之间，按先后顺序，能否成功开启扫描
+2018-05-03 15:54:36,131 - test_scan_chip_001 - DEBUG - step1:chip 0 start scan,then stop scan success
+2018-05-03 15:54:36,232 - test_scan_chip_001 - DEBUG - step2:chip 1 start scan,then stop scan success
+2018-05-03 15:54:36,333 - test_scan_chip_001 - DEBUG - step3:chip 0 start scan,then change to chip1 scan success
+2018-05-03 15:54:36,436 - test_scan_chip_001 - DEBUG - step4:chip 1 start scan,then change to chip0 scan success
+2018-05-03 15:54:36,537 - test_scan_chip_001 - DEBUG - step5:chip 0 start scan,then change to chip1 scan success.
+2018-05-03 15:54:36,537 - test_scan_chip_001 - INFO - case pass
+
+2018-05-03 15:54:36,538 - test_scan_chip_002 - INFO - 测试两块芯片同时开启扫描能否成功
+2018-05-03 15:54:42,620 - test_scan_chip_002 - DEBUG - step2:start chip0 scan success.
+2018-05-03 15:54:42,620 - test_scan_chip_002 - INFO - pass
+2018-05-03 15:54:42,620 - test_scan_filter_mac_001 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描
+2018-05-03 15:54:46,452 - test_scan_filter_mac_001 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-05-03 15:54:47,626 - test_scan_filter_mac_001 - INFO - fail
+
+2018-05-03 15:54:47,626 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
+2018-05-03 15:54:47,626 - test_scan_filter_mac_002 - INFO - 测试chip0不加过虑被动扫描，chip1 filter mac 主动扫描
+2018-05-03 15:54:53,519 - test_scan_filter_mac_002 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-05-03 15:55:17,633 - test_scan_filter_mac_002 - INFO - fail
+
+2018-05-03 15:55:17,634 - test_scan_filter_mac_003 - INFO - 测试chip0不加过虑被动扫描，chip1 filter mac 被动扫描
+2018-05-03 15:55:22,995 - test_scan_filter_mac_003 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-05-03 15:55:44,350 - test_scan_filter_mac_002 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:55:44,350 - test_scan_filter_mac_001 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:55:47,640 - test_scan_filter_mac_003 - INFO - fail
+
+2018-05-03 15:55:47,641 - test_scan_filter_mac_004 - INFO - 测试chip0不加过虑主动扫描，chip1 filter mac 被动扫描
+2018-05-03 15:55:51,596 - test_scan_filter_mac_004 - DEBUG - Step 1:chip0 start scan with no filter mac success.
+2018-05-03 15:56:17,646 - test_scan_filter_mac_004 - INFO - fail
+
+2018-05-03 15:56:17,646 - test_scan_filter_mac_005 - INFO - 测试chip0 filter mac主动扫描，chip1 不加过虑主动扫描
+2018-05-03 15:56:19,446 - test_scan_filter_mac_003 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:56:22,381 - test_scan_filter_mac_005 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-05-03 15:56:26,491 - test_scan_filter_mac_004 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:56:47,653 - test_scan_filter_mac_005 - INFO - fail
+
+2018-05-03 15:56:47,654 - test_scan_filter_mac_006 - INFO - 测试chip0 filter mac被动扫描，chip1 不加过虑主动扫描
+2018-05-03 15:56:51,572 - test_scan_filter_mac_006 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-05-03 15:57:17,659 - test_scan_filter_mac_006 - INFO - fail
+
+2018-05-03 15:57:17,659 - test_scan_filter_mac_007 - INFO - 测试chip0 filter mac被动扫描，chip1 不加过虑被动扫描
+2018-05-03 15:57:20,743 - test_scan_filter_mac_005 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:57:21,861 - test_scan_filter_mac_007 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-05-03 15:57:47,666 - test_scan_filter_mac_007 - INFO - fail
+
+2018-05-03 15:57:47,666 - test_scan_filter_mac_008 - INFO - 测试chip0 filter mac主动扫描，chip1 不加过虑被动扫描
+2018-05-03 15:57:53,266 - test_scan_filter_mac_008 - DEBUG - Step 2:chip1 start scan with no filter mac success.
+2018-05-03 15:58:07,015 - test_scan_filter_mac_007 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:58:11,021 - test_scan_filter_mac_006 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:58:17,674 - test_scan_filter_mac_008 - INFO - fail
+
+2018-05-03 15:58:17,674 - test_scan_filter_mac_009 - INFO - 测试chip0 filter mac主动扫描，chip1 filter mac 主动扫描
+2018-05-03 15:58:37,144 - test_scan_filter_mac_009 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:58:39,152 - test_scan_filter_mac_008 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:58:47,681 - test_scan_filter_mac_009 - INFO - fail
+
+2018-05-03 15:58:47,681 - test_scan_filter_mac_010 - INFO - 测试chip0 filter mac主动扫描，chip1 filter mac 被动扫描
+2018-05-03 15:58:58,213 - test_scan_filter_mac_009 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:59:17,688 - test_scan_filter_mac_010 - INFO - fail
+
+2018-05-03 15:59:17,688 - test_scan_filter_mac_011 - INFO - 测试chip0  filter mac被动扫描，chip1 filter mac 主动扫描
+2018-05-03 15:59:39,442 - test_scan_filter_mac_010 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 15:59:46,462 - test_scan_filter_mac_010 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 15:59:47,694 - test_scan_filter_mac_011 - INFO - fail
+
+2018-05-03 15:59:47,694 - test_scan_filter_mac_012 - INFO - 测试chip0  filter mac被动扫描，chip1 filter mac 被动扫描
+2018-05-03 15:59:48,472 - test_scan_filter_mac_011 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 16:00:17,563 - test_scan_filter_mac_011 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 16:00:17,701 - test_scan_filter_mac_012 - INFO - fail
+
+2018-05-03 16:00:17,701 - test_scan_filter_name_001 - INFO - 测试chip0不加过虑主动扫描，chip1 filter name 主动扫描
+2018-05-03 16:00:21,515 - test_scan_filter_name_001 - DEBUG - Step 1:chip0 start scan with no filter name success.
+2018-05-03 16:00:35,683 - test_scan_filter_mac_012 - DEBUG - Step 1:chip0 start scan with filter mac success.
+2018-05-03 16:00:47,708 - test_scan_filter_name_001 - INFO - fail
+
+2018-05-03 16:00:47,708 - test_scan_filter_name_002 - INFO - 测试chip0不加过虑被动扫描，chip1 filter name 主动扫描
+2018-05-03 16:00:50,698 - test_scan_filter_mac_012 - DEBUG - Step 2:chip1 start scan with filter mac success.
+2018-05-03 16:00:53,435 - test_scan_filter_name_002 - DEBUG - Step 1:chip0 start scan with no filter name success.
+2018-05-03 16:01:17,715 - test_scan_filter_name_002 - INFO - fail
+
+2018-05-03 16:01:17,715 - test_scan_filter_name_003 - INFO - 测试chip0不加过虑被动扫描，chip1 filter name 被动扫描
+2018-05-03 16:01:22,395 - test_scan_filter_name_003 - DEBUG - Step 1:chip0 start scan with no filter name success.
+2018-05-03 16:01:47,722 - test_scan_filter_name_003 - INFO - fail
+
+2018-05-03 16:01:47,722 - test_scan_filter_name_004 - INFO - 测试chip0不加过虑主动扫描，chip1 filter name 被动扫描
+2018-05-03 16:01:51,790 - test_scan_filter_name_004 - DEBUG - Step 1:chip0 start scan with no filter name success.
+2018-05-03 16:02:17,729 - test_scan_filter_name_004 - INFO - fail
+
+2018-05-03 16:02:17,729 - test_scan_filter_name_005 - INFO - 测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+2018-05-03 16:02:22,275 - test_scan_filter_name_005 - DEBUG - Step 2:chip1 start scan with no filter name success.
+2018-05-03 16:02:47,735 - test_scan_filter_name_005 - INFO - fail
+
+2018-05-03 16:02:47,735 - test_scan_filter_name_006 - INFO - 测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+2018-05-03 16:02:51,773 - test_scan_filter_name_006 - DEBUG - Step 2:chip1 start scan with no filter name success.
+2018-05-03 16:03:17,742 - test_scan_filter_name_006 - INFO - fail
+
+2018-05-03 16:03:17,742 - test_scan_filter_name_007 - INFO - 测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+2018-05-03 16:03:24,083 - test_scan_filter_name_007 - DEBUG - Step 2:chip1 start scan with no filter name success.
+2018-05-03 16:03:47,749 - test_scan_filter_name_007 - INFO - fail
+
+2018-05-03 16:03:47,749 - test_scan_filter_name_008 - INFO - 测试chip0 filter name主动扫描，chip1 不加过虑主动扫描
+2018-05-03 16:03:53,456 - test_scan_filter_name_008 - DEBUG - Step 2:chip1 start scan with no filter name success.
+2018-05-03 16:04:17,756 - test_scan_filter_name_008 - INFO - fail
+
+2018-05-03 16:04:17,756 - test_scan_filter_name_009 - INFO - 测试chip0 chip1 filter name主动扫描，chip1 filter name 主动扫描
+2018-05-03 16:04:47,763 - test_scan_filter_name_009 - INFO - fail
+
+2018-05-03 16:04:47,763 - test_scan_filter_name_010 - INFO - 测试chip0 chip1 filter name主动扫描，chip1 filter name 被动扫描
+2018-05-03 16:05:17,770 - test_scan_filter_name_010 - INFO - fail
+
+2018-05-03 16:05:17,770 - test_scan_filter_name_011 - INFO - 测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
+2018-05-03 16:05:47,777 - test_scan_filter_name_011 - INFO - fail
+
+2018-05-03 16:05:47,777 - test_scan_filter_name_012 - INFO - 测试chip0 chip1 filter name被动扫描，chip1 filter name 主动扫描
+2018-05-03 16:05:57,784 - test_scan_filter_name_012 - INFO - fail
+
+2018-05-03 16:05:57,784 - test_scan_filter_rssi_001 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:05:58,838 - test_scan_filter_rssi_001 - DEBUG - Step 1:chip1 start scan with filter rssi success.
+2018-05-03 16:05:58,940 - test_scan_filter_rssi_001 - DEBUG - Step 1:chip0 start scan with filter rssi success.
+2018-05-03 16:05:58,940 - test_scan_filter_rssi_001 - INFO - pass
+
+2018-05-03 16:05:58,941 - test_scan_filter_rssi_002 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:05:59,547 - test_scan_filter_rssi_002 - DEBUG - Step 1:chip1 start scan with filter rssi success.
+2018-05-03 16:06:00,055 - test_scan_filter_rssi_002 - DEBUG - Step 1:chip0 start scan with filter rssi success.
+2018-05-03 16:06:00,055 - test_scan_filter_rssi_002 - INFO - pass
+
+2018-05-03 16:06:00,055 - test_scan_filter_rssi_003 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:06:00,970 - test_scan_filter_rssi_003 - DEBUG - Step 1:chip0 start scan with filter rssi success.
+2018-05-03 16:06:07,056 - test_scan_filter_rssi_003 - DEBUG - Step 1:chip1 start scan with no filter rssi success.
+2018-05-03 16:06:07,056 - test_scan_filter_rssi_003 - INFO - pass
+
+2018-05-03 16:06:07,056 - test_scan_filter_rssi_004 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:06:08,076 - test_scan_filter_rssi_004 - DEBUG - Step 1:chip0 start scan with filter rssi success.
+2018-05-03 16:06:11,511 - test_scan_filter_rssi_004 - DEBUG - Step 1:chip1 start scan with no filter rssi success.
+2018-05-03 16:06:11,511 - test_scan_filter_rssi_004 - INFO - pass
+
+2018-05-03 16:06:11,511 - test_scan_filter_rssi_005 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:06:12,332 - test_scan_filter_rssi_005 - DEBUG - Step 1:chip0 start scan with filter rssi success.
+2018-05-03 16:06:13,131 - test_scan_filter_rssi_005 - DEBUG - Step 1:chip1 start scan with filter rssi success.
+2018-05-03 16:06:13,131 - test_scan_filter_rssi_005 - INFO - pass
+
+2018-05-03 16:06:13,131 - test_scan_filter_rssi_006 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:06:13,540 - test_scan_filter_rssi_006 - DEBUG - Step 1:chip0 start scan with filter rssi success.
+2018-05-03 16:06:13,845 - test_scan_filter_rssi_006 - DEBUG - Step 1:chip1 start scan with filter rssi success.
+2018-05-03 16:06:13,845 - test_scan_filter_rssi_006 - INFO - pass
+
+2018-05-03 16:06:13,845 - test_scan_filter_rssi_007 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:06:14,351 - test_scan_filter_rssi_007 - DEBUG - Step 1:chip0 start scan with filter rssi success.
+2018-05-03 16:06:20,310 - test_scan_filter_rssi_007 - DEBUG - Step 1:chip1 start scan with no filter rssi success.
+2018-05-03 16:06:20,310 - test_scan_filter_rssi_007 - INFO - pass
+
+2018-05-03 16:06:20,310 - test_scan_filter_rssi_008 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:06:21,221 - test_scan_filter_rssi_008 - DEBUG - Step 1:chip0 start scan with filter rssi success.
+2018-05-03 16:06:24,372 - test_scan_filter_rssi_008 - DEBUG - Step 1:chip1 start scan with no filter rssi success.
+2018-05-03 16:06:24,372 - test_scan_filter_rssi_008 - INFO - pass
+
+2018-05-03 16:06:24,372 - test_scan_filter_rssi_009 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:06:25,598 - test_scan_filter_rssi_009 - DEBUG - Step 1:chip1 start scan with filter rssi success.
+2018-05-03 16:06:28,321 - test_scan_filter_rssi_009 - DEBUG - Step 1:chip0 start scan with no filter rssi success.
+2018-05-03 16:06:28,321 - test_scan_filter_rssi_009 - INFO - pass
+
+2018-05-03 16:06:28,321 - test_scan_filter_rssi_010 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:06:29,334 - test_scan_filter_rssi_010 - DEBUG - Step 1:chip1 start scan with filter rssi success.
+2018-05-03 16:06:32,072 - test_scan_filter_rssi_010 - DEBUG - Step 1:chip0 start scan with no filter rssi success.
+2018-05-03 16:06:32,072 - test_scan_filter_rssi_010 - INFO - pass
+
+2018-05-03 16:06:32,072 - test_scan_filter_rssi_011 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:06:33,490 - test_scan_filter_rssi_011 - DEBUG - Step 1:chip1 start scan with filter rssi success.
+2018-05-03 16:06:38,264 - test_scan_filter_rssi_011 - DEBUG - Step 1:chip0 start scan with no filter rssi success.
+2018-05-03 16:06:38,264 - test_scan_filter_rssi_011 - INFO - pass
+
+2018-05-03 16:06:38,264 - test_scan_filter_rssi_012 - INFO - 测试chip0 chip1 filter rssi主动扫描，chip1 filter rssi 主动扫描
+2018-05-03 16:06:38,770 - test_scan_filter_rssi_012 - DEBUG - Step 1:chip1 start scan with filter rssi success.
+2018-05-03 16:06:43,428 - test_scan_filter_rssi_012 - DEBUG - Step 1:chip0 start scan with no filter rssi success.
+2018-05-03 16:06:43,428 - test_scan_filter_rssi_012 - INFO - pass
+
+2018-05-03 16:06:43,428 - test_scan_on_cloud_local_001 - INFO - 测试chip0 local扫描的同时进行cloud扫描
+2018-05-03 16:06:47,861 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start local scan success.
+2018-05-03 16:06:48,567 - test_scan_on_cloud_local_001 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-05-03 16:06:48,567 - test_scan_on_cloud_local_001 - INFO - pass
+
+2018-05-03 16:06:48,567 - test_scan_on_cloud_local_002 - INFO - 测试chip1 local扫描的同时进行cloud扫描
+2018-05-03 16:06:53,758 - test_scan_on_cloud_local_002 - DEBUG - Step 1:chip0 start local scan success.
+2018-05-03 16:06:54,852 - test_scan_on_cloud_local_002 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-05-03 16:06:54,852 - test_scan_on_cloud_local_002 - INFO - pass
+
+2018-05-03 16:06:54,852 - test_scan_on_cloud_local_003 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-05-03 16:06:59,150 - test_scan_on_cloud_local_003 - DEBUG - Step 1:chip0 start local scan success.
+2018-05-03 16:07:00,246 - test_scan_on_cloud_local_003 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-05-03 16:07:00,246 - test_scan_on_cloud_local_003 - INFO - pass
+
+2018-05-03 16:07:00,246 - test_scan_on_cloud_local_004 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-05-03 16:07:05,099 - test_scan_on_cloud_local_004 - DEBUG - Step 1:chip0 start cloud scan success.
+2018-05-03 16:07:05,329 - test_scan_on_cloud_local_004 - DEBUG - Step 1:chip0 start local scan success.
+2018-05-03 16:07:05,329 - test_scan_on_cloud_local_004 - INFO - pass
+
+2018-05-03 16:07:05,329 - test_scan_on_cloud_local_005 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-05-03 16:07:05,330 - test_scan_on_cloud_local_005 - INFO - 测试点：测试chip0 local扫描的同时,chip1进行cloud扫描
+2018-05-03 16:07:07,095 - test_scan_on_cloud_local_005 - DEBUG - Step 1: start local scan success.
+2018-05-03 16:07:10,096 - test_scan_on_cloud_local_005 - DEBUG - Step 2: stop local scan success.
+2018-05-03 16:07:12,031 - test_scan_on_cloud_local_005 - DEBUG - Step 3:start cloud scan success.
+2018-05-03 16:07:12,032 - test_scan_scanmode_001 - INFO - 测试设备的主被动扫描切换功能
+2018-05-03 16:07:15,882 - test_scan_scanmode_001 - DEBUG - Step1:passive scan start success
+2018-05-03 16:07:16,084 - test_scan_scanmode_001 - DEBUG - Step1:Active scan start success
+2018-05-03 16:07:19,568 - test_scan_scanmode_001 - DEBUG - Step3:passive scan start success
+2018-05-03 16:07:19,670 - test_scan_scanmode_001 - DEBUG - Step1:Active scan start success
+2018-05-03 16:07:23,423 - test_scan_scanmode_001 - DEBUG - Step1:passive scan start success
+2018-05-03 16:07:23,526 - test_scan_scanmode_001 - DEBUG - Step1:Active scan start success
+2018-05-03 16:07:27,885 - test_scan_scanmode_001 - DEBUG - Step3:passive scan start success
+2018-05-03 16:07:28,088 - test_scan_scanmode_001 - DEBUG - Step1:Active scan start success
+2018-05-03 16:07:28,089 - test_scan_scanmode_001 - INFO - pass
+
+2018-05-03 16:07:28,089 - test_scan_scanmode_002 - INFO - 测试0芯片主动扫描同时，让1芯片被动扫
+2018-05-03 16:07:34,496 - test_scan_scanmode_002 - DEBUG - step 2:start chip0 start scan passive success.
+2018-05-03 16:07:34,496 - test_scan_scanmode_002 - INFO - pass
+
+2018-05-03 16:07:34,496 - test_scan_scanmode_003 - INFO - 测试0芯片被动扫描同时，让1芯片主动扫
+2018-05-03 16:07:40,278 - test_scan_scanmode_003 - DEBUG - step 1:chip 1 start passive scan.
+2018-05-03 16:07:40,278 - test_scan_scanmode_003 - INFO - pass
+
+2018-05-03 16:07:40,278 - test_scan_scanmode_004 - INFO - 测试两个芯片同时开启主动扫描
+2018-05-03 16:07:40,380 - test_scan_scanmode_004 - DEBUG - step 1:chip 1 start active scan.
+2018-05-03 16:07:40,482 - test_scan_scanmode_004 - DEBUG - step2:start chip0 scan active success.
+2018-05-03 16:07:40,482 - test_scan_scanmode_004 - INFO - pass
+
+2018-05-03 16:07:40,482 - test_scan_scanmode_005 - INFO - 测试两个芯片同时开启被动扫描
+2018-05-03 16:07:45,755 - test_scan_scanmode_005 - DEBUG - Step 1:chip0 start passive scan success.
+2018-05-03 16:07:46,867 - test_scan_scanmode_005 - DEBUG - Step 2:chip1 start active scan success 
+2018-05-03 16:07:46,867 - test_scan_scanmode_005 - INFO - pass
+

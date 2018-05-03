@@ -20,11 +20,13 @@ class testcase(unittest.TestCase):
     model = tools.get_model()
     filters = tools.get_filter()
     timeout = tools.read_job_config()['case_timeout']
+    filter_count = int(tools.read_job_config()['filter_count'])
+    unfilter_count = int(tools.read_job_config()['unfilter_count'])
 
     def setUp(self):
         self.timeout_flag = None
-        self.flag1 = None
-        self.flag2 = None
+        self.flag1 = 0
+        self.flag2 = 0
         self.logger.info('测试chip0 filter mac主动扫描，chip1 filter mac 被动扫描')
         self.timer = Timer(self.timeout, self.set_timeout)
         self.timer.start()
@@ -43,7 +45,7 @@ class testcase(unittest.TestCase):
             a.start()
 
             while True:
-                if self.flag1 and self.flag2:
+                if self.flag1==2 :
                     self.assertTrue(True)
                     self.logger.info('pass\n')
                     break
@@ -61,7 +63,7 @@ class testcase(unittest.TestCase):
             a.start()
 
             while True:
-                if self.flag1 and self.flag2:
+                if self.flag1==1 and self.flag2==1:
                     self.assertTrue(True)
                     self.logger.info('pass\n')
                     break
@@ -80,7 +82,7 @@ class testcase(unittest.TestCase):
                     msg = json.loads(message[5:])
                 if filter_mac:
                     # 进入开启过滤的扫描结果判断流程
-                    if count < 20:
+                    if count < self.filter_count:
                         print('chip0',count, message)
                         mac = msg['bdaddrs'][0]['bdaddr']
                         if mac != self.filters['filter_mac']:
@@ -90,16 +92,16 @@ class testcase(unittest.TestCase):
                         else:
                             count += 1
                     else:
-                        self.flag1 = True
+                        self.flag1 += 1
                         self.logger.debug('Step 1:chip0 start scan with filter mac success.')
                         break
                 else:
                     # 进入不开启过滤的扫描结果判断流程
-                    if count < 300:
+                    if count < self.unfilter_count:
                         print('chip0', count, message)
                         count += 1
                     else:
-                        self.flag1 = True
+                        self.flag1 += 1
                         self.logger.debug('Step 1:chip0 start scan with no filter mac success.')
                         break
 
@@ -111,7 +113,7 @@ class testcase(unittest.TestCase):
                 if message.startswith('data'):
                     msg = json.loads(message[5:])
                     if filter_mac:
-                        if count < 20:
+                        if count < self.filter_count:
                             print('chip1', count, message)
                             mac = msg['bdaddrs'][0]['bdaddr']
                             if mac != filter_mac:
@@ -121,16 +123,16 @@ class testcase(unittest.TestCase):
                             else:
                                 count += 1
                         else:
-                            self.flag2 = True
+                            self.flag2 += 1
                             self.logger.debug('Step 2:chip1 start scan with filter mac success.')
                             break
                     else:
                         # 进入不开启过滤的扫描结果判断流程
-                        if count < 300:
+                        if count < self.unfilter_count:
                             print('chip1', count, message)
                             count += 1
                         else:
-                            self.flag2 = True
+                            self.flag2 += 1
                             self.logger.debug('Step 2:chip1 start scan with no filter mac success.')
                             break
 
