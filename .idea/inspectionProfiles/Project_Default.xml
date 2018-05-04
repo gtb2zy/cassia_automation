@@ -16,6 +16,8 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="test_case.api_sys_test.test_scan_filter_name_001.*" />
+          <option value="tools" />
+          <option value="logs.set_logger" />
         </list>
       </option>
     </inspection_tool>
