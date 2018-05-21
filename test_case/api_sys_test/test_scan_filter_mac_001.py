@@ -27,7 +27,7 @@ class testcase(unittest.TestCase):
         self.flag1 = 0
         self.flag2 = 0
         self.logger.info('测试chip0不加过虑主动扫描，chip1 filter mac 主动扫描')
-        self.timer = Timer(5, self.set_timeout)
+        self.timer = Timer(self.timeout, self.set_timeout)
         self.timer.start()
 
     def tearDown(self):
@@ -67,10 +67,7 @@ class testcase(unittest.TestCase):
                     break
                 elif self.timeout_flag:
                     self.logger.info('fail\n')
-                    try:
-                        self.fail('Case failed,start scan timeout.')
-                    except:
-                        print('Case failed,start scan timeout.')
+                    self.fail('Case failed,start scan timeout.')
                     self.logger.error("Case failed,start scan timeout.")
                     break
 

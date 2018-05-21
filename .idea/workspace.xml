@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15014b96-e520-4201-871f-533ddb768ec4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change afterPath="$PROJECT_DIR$/config/stability_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_case/api_stability_test/test_api_stability.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/job_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/job_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/debug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/api_func_test/test_all_api_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/api_func_test/test_all_api_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_001.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_001.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_data/func_test_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test_data/func_test_data.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,44 +28,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
+      <file leaf-file-name="test_login_001.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_case/web_ui/test_login_001.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_scan_filter_rssi_001.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_rssi_001.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="200">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
-                <element signature="e#196#225#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_scan_filter_rssi_002.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_rssi_002.py">
+      <file leaf-file-name="test_all_api_function.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/api_func_test/test_all_api_function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_scan_filter_rssi_003.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_rssi_003.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-450">
+              <caret line="15" column="71" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,6 +68,14 @@
       <find>get_uuid</find>
       <find>test_write_by_handle</find>
       <find>baseFilename</find>
+      <find>sdk</find>
+      <find>conf</find>
+      <find>case_end_flag</find>
+      <find>time_out_flag</find>
+      <find>set_timeout</find>
+      <find>confs</find>
+      <find>print</find>
+      <find>json</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -83,14 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/sendReport.py" />
-        <option value="$PROJECT_DIR$/test_case/api_func_test/test_all_api_function.py" />
-        <option value="$PROJECT_DIR$/lib/api.py" />
-        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_chip_001.py" />
-        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_on_cloud_and_local_001.py" />
-        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_012.py" />
-        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_011.py" />
-        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_010.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_009.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_008.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_007.py" />
@@ -98,7 +91,6 @@
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_005.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_004.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_003.py" />
-        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_002.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_003.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_004.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_006.py" />
@@ -116,20 +108,33 @@
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_scanmode_003.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_scanmode_004.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_scanmode_005.py" />
-        <option value="$PROJECT_DIR$/lib/tools.py" />
-        <option value="$PROJECT_DIR$/config/job_config.json" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_on_cloud_local_001.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_on_cloud_local_002.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_on_cloud_local_003.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_on_cloud_local.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_on_cloud_local_005.py" />
-        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_001.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_005.py" />
         <option value="C:/Program Files/Python36/Lib/logging/handlers.py" />
+        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_001.py" />
+        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_rssi_001.py" />
+        <option value="$PROJECT_DIR$/config/job_config.json" />
+        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_002.py" />
+        <option value="$PROJECT_DIR$/config/atability_config.json" />
+        <option value="$PROJECT_DIR$/config/stability_config.json" />
+        <option value="$PROJECT_DIR$/config/func_test.json" />
         <option value="$PROJECT_DIR$/lib/logs.py" />
         <option value="$PROJECT_DIR$/config/config.json" />
-        <option value="$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_rssi_001.py" />
+        <option value="C:/Program Files/Python36/Lib/unittest/loader.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/lib/api.py" />
+        <option value="$PROJECT_DIR$/../BI_Daemon/api.py" />
+        <option value="$PROJECT_DIR$/config/environments.json" />
+        <option value="$PROJECT_DIR$/config/devives.json" />
+        <option value="$PROJECT_DIR$/lib/tools.py" />
+        <option value="$PROJECT_DIR$/test_case/api_stability_test/test_api_stability.py" />
+        <option value="$PROJECT_DIR$/test_case/web_ui/test.py" />
+        <option value="$PROJECT_DIR$/test_case/api_func_test/test_all_api_function.py" />
+        <option value="$PROJECT_DIR$/test_case/web_ui/test_login_001.py" />
       </list>
     </option>
   </component>
@@ -162,17 +167,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -202,7 +197,13 @@
               <item name="cassia_automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="cassia_automation" type="462c0819:PsiDirectoryNode" />
               <item name="test_case" type="462c0819:PsiDirectoryNode" />
-              <item name="api_sys_test" type="462c0819:PsiDirectoryNode" />
+              <item name="api_func_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cassia_automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cassia_automation" type="462c0819:PsiDirectoryNode" />
+              <item name="test_case" type="462c0819:PsiDirectoryNode" />
+              <item name="web_ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cassia_automation" type="b2602c69:ProjectViewProjectNode" />
@@ -214,15 +215,15 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yz\Documents\work\cassia_automation\config" />
       <recent name="C:\Users\yz\Documents\work\APItest" />
     </key>
   </component>
@@ -238,100 +239,113 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test_login_001">
+    <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="APItest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="APItest" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/api.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Unittests for test_scan_on_cloud_local_005.testcase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="APItest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/api_sys_test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/web_ui" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="APItest" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_scan_on_cloud_local_005.testcase&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_case/web_ui/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Unittests in test_scan_filter_mac_001.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="test_api_stability" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="APItest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/api_sys_test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/api_stability_test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="APItest" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_001.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_case/api_stability_test/test_api_stability.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Unittests in test_scan_filter_mac_005.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="test_login_001" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="APItest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/api_sys_test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/web_ui" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="APItest" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_005.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_case/web_ui/test_login_001.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Unittests in test_scan_filter_rssi_001.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="tools" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="APItest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/api_sys_test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="APItest" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_rssi_001.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/tools.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for test_scan_on_cloud_local_005.testcase" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_scan_filter_mac_001.py" />
-      <item index="2" class="java.lang.String" itemvalue="Python.main" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_scan_filter_mac_005.py" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_scan_filter_rssi_001.py" />
+    <list>
+      <item itemvalue="Python.test_api_stability" />
+      <item itemvalue="Python.api" />
+      <item itemvalue="Python.tools" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.test_login_001" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_scan_filter_rssi_001.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_scan_filter_mac_005.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_scan_filter_mac_001.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_scan_on_cloud_local_005.testcase" />
+      <list>
+        <item itemvalue="Python.test_login_001" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.tools" />
+        <item itemvalue="Python.test_api_stability" />
+        <item itemvalue="Python.api" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -386,82 +400,70 @@
       <option name="project" value="LOCAL" />
       <updated>1525336166364</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add some case">
+      <created>1525398793605</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1525398793605</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_scan_on_cloud_local_002_testcase - 2018.04.24 at 19h 35m 21s.xml">
-      <configuration name="Unittests for test_scan_on_cloud_local_002.testcase" configurationId="tests" />
+    <history-entry file="Unittests_for_test_scan_filter_rssi_001_testcase - 2018.05.09 at 18h 04m 57s.xml">
+      <configuration name="Unittests for test_scan_filter_rssi_001.testcase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_scan_on_cloud_local_003_testcase - 2018.04.24 at 19h 38m 29s.xml">
-      <configuration name="Unittests for test_scan_on_cloud_local_003.testcase" configurationId="tests" />
+    <history-entry file="Unittests_for_test_scan_filter_rssi_001_testcase - 2018.05.09 at 18h 07m 27s.xml">
+      <configuration name="Unittests for test_scan_filter_rssi_001.testcase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_scan_on_cloud_local_005_testcase - 2018.04.25 at 09h 45m 17s.xml">
-      <configuration name="Unittests for test_scan_on_cloud_local_005.testcase" configurationId="tests" />
+    <history-entry file="Unittests_for_test_scan_filter_rssi_001_testcase_test_scan_filter_rssi - 2018.05.09 at 18h 08m 18s.xml">
+      <configuration name="Unittests for test_scan_filter_rssi_001.testcase.test_scan_filter_rssi" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_scan_on_cloud_local_testcase - 2018.04.24 at 19h 39m 41s.xml">
-      <configuration name="Unittests for test_scan_on_cloud_local.testcase" configurationId="tests" />
+    <history-entry file="Unittests_for_test_api_stability_api_stabillity_test_test_scan - 2018.05.09 at 19h 46m 30s.xml">
+      <configuration name="Unittests for test_api_stability.api_stabillity_test.test_scan" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_scan_filter_mac_001_py - 2018.04.25 at 15h 35m 59s.xml">
-      <configuration name="Unittests in test_scan_filter_mac_001.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_api_stability_api_stabillity_test_test_scan - 2018.05.09 at 19h 47m 07s.xml">
+      <configuration name="Unittests for test_api_stability.api_stabillity_test.test_scan" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_scan_filter_mac_001_py - 2018.04.25 at 15h 36m 14s.xml">
-      <configuration name="Unittests in test_scan_filter_mac_001.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_api_stability_api_stabillity_test_test_scan - 2018.05.09 at 19h 47m 35s.xml">
+      <configuration name="Unittests for test_api_stability.api_stabillity_test.test_scan" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_scan_filter_mac_001_py - 2018.04.25 at 15h 36m 29s.xml">
-      <configuration name="Unittests in test_scan_filter_mac_001.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_api_stability_api_stabillity_test_test_scan - 2018.05.09 at 19h 47m 59s.xml">
+      <configuration name="Unittests for test_api_stability.api_stabillity_test.test_scan" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_scan_filter_mac_005_py - 2018.04.26 at 19h 01m 40s.xml">
-      <configuration name="Unittests in test_scan_filter_mac_005.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_all_api_function_test_api_test_scan - 2018.05.11 at 16h 24m 31s.xml">
+      <configuration name="Unittests for test_all_api_function.test_api.test_scan" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_scan_filter_mac_005_py - 2018.04.26 at 19h 17m 05s.xml">
-      <configuration name="Unittests in test_scan_filter_mac_005.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_all_api_function_test_api - 2018.05.11 at 16h 27m 12s.xml">
+      <configuration name="Unittests for test_all_api_function.test_api" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_scan_filter_rssi_001_py - 2018.05.03 at 15h 48m 05s.xml">
-      <configuration name="Unittests in test_scan_filter_rssi_001.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_all_api_function_test_api - 2018.05.16 at 19h 24m 47s.xml">
+      <configuration name="Unittests for test_all_api_function.test_api" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18697916" sideWeight="0.4942717" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19895834" sideWeight="0.5057283" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889503" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4942717" visible="true" weight="0.18619792" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50208336" side_tool="true" weight="0.32827586" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.32872927" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Favorites" order="2" sideWeight="0.5057283" side_tool="true" weight="0.19895834" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39779004" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19895834" sideWeight="0.4942717" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889503" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19895834" sideWeight="0.5057283" order="2" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -470,211 +472,18 @@
     <MESSAGE value="add threading setDaemon func when timeout to end sub threads" />
     <MESSAGE value="dealwith some bug" />
     <MESSAGE value="change project name to cassia_automation" />
-    <option name="LAST_COMMIT_MESSAGE" value="change project name to cassia_automation" />
+    <MESSAGE value="add some case" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some case" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="51" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test_case/api_func_test/test_all_api_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-736">
-          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ExcelUtil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="442" column="8" lean-forward="false" selection-start-line="442" selection-start-column="8" selection-end-line="442" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_007.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_006.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_005.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_003.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_008.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_009.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_010.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_011.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_012.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_007.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_006.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_004.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_003.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_008.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_009.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_010.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_011.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_012.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/unittest/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="337" column="0" lean-forward="false" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_chip_002.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_scanmode_003.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_scanmode_002.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_scanmode_001.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_002.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_001.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_scanmode_004.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -689,38 +498,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_002.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/job_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="72" column="32" lean-forward="false" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_on_cloud_local_003.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="37" />
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_on_cloud_local_002.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
-          <caret line="37" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="19" />
+          <caret line="37" column="25" lean-forward="true" selection-end-line="83" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -735,96 +523,42 @@
     <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_on_cloud_local_004.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="19" />
+          <caret line="24" column="25" selection-end-line="83" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_on_cloud_local_005.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2720">
-          <caret line="85" column="19" lean-forward="false" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
+          <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_name_004.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-64">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_001.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Program Files/Python36/Lib/logging/handlers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
-          <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-          <folding />
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1120166012/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18368">
-          <caret line="574" column="0" lean-forward="false" selection-start-line="574" selection-start-column="0" selection-end-line="574" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/logs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="28" column="55" lean-forward="false" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-          <folding />
+          <caret line="574" selection-start-line="574" selection-end-line="574" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_005.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="785">
-          <caret line="105" column="29" lean-forward="false" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-          <folding>
-            <element signature="e#4057#5484#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="785">
-          <caret line="1058" column="17" lean-forward="false" selection-start-line="1058" selection-start-column="17" selection-end-line="1058" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_rssi_001.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#196#225#0" expanded="true" />
-          </folding>
+          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -832,15 +566,290 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_003.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_rssi_003.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="260">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_012.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_002.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_rssi_001.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_mac_001.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_chip_001.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/sendReport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/job_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="406" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_duration_001.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="99" column="29" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="1053" column="20" lean-forward="true" selection-start-line="1053" selection-start-column="20" selection-end-line="1053" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/api_sys_test/test_scan_filter_duplicate_006.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="64" column="39" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="863" selection-start-line="863" selection-end-line="863" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/unittest/loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1361">
+          <caret line="386" column="33" lean-forward="true" selection-start-line="386" selection-start-column="33" selection-end-line="386" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/logs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="295" selection-start-line="295" selection-end-line="295" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BI_Daemon/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="152" column="25" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/stability_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6125">
+          <caret line="308" lean-forward="true" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/requests/sessions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9300">
+          <caret line="400" column="30" selection-start-line="400" selection-start-column="30" selection-end-line="400" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7475">
+          <caret line="301" column="43" selection-start-line="301" selection-start-column="43" selection-end-line="301" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/devices.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/api_stability_test/test_api_stability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/web_ui/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/selenium/webdriver/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/selenium/webdriver/remote/command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="974">
+          <caret line="147" column="31" selection-start-line="147" selection-start-column="20" selection-end-line="147" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="122" column="39" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!block;n#func_env_e1000#0;n#!!top" />
+            <element signature="n#!!block;n#func_env_x1000#0;n#!!top" />
+            <element signature="n#!!block;n#func_env_s2000#0;n#!!top" />
+            <element signature="n#!!block;n#ap1#0;n#!!block;n#S2000#0;n#!!block;n#stability_env#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/selenium/webdriver/chrome/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="891" column="30" selection-start-line="891" selection-start-column="8" selection-end-line="891" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/unittest/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="260" lean-forward="true" selection-start-line="260" selection-end-line="260" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ExcelUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/api_func_test/test_all_api_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/web_ui/test_login_001.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,7 +1,8 @@
 import json,os,sys
-import unittest,ddt,datetime,time
+import unittest,time
 from contextlib import closing	
 import sseclient,threading
+from lib import ddt
 path = os.getcwd().split('cassia_automation')[0] + 'cassia_automation/lib/'
 sys.path.append(path)
 from ExcelUtil import ExcelUtil
@@ -380,60 +381,60 @@ class test_api(unittest.TestCase):
 		self.assertEqual(body,expect_result)		
 
 	@ddt.data(*dd['read_by_handle'])
-	def test_write_by_handle():
+	def test_write_by_handle(self,values):
 		device = values['device']
 		handle = values['handle']
 		handle_data = values['handle_data']
 		expect_result = values['expect_result']
 		code,body = self.sdk.write_by_handle(device,handle,handle_data)
 		self.assertEqual(body,expect_result)
-		'''
-			# @ddt.data(*dd['get_connect_state'])
-			# def test_get_device_connect_state(self,values):
-			# 	self.message = None
-			# 	device = values['device']
-			# 	types = values['type']
-			# 	expect_result = values['expect_result']
-			# 	res = self.sdk.get_device_connect_state()
-			# 	client = sseclient.SSEClient(res)
-			# 	threading.Thread(target = self.recv_message,args = (client,)).start()
-			# 	if expect_result =='connected':
-			# 		self.sdk.disconnect_device(device)
-			# 		time.sleep(2)
-			# 		self.message = None
-			# 		code,body,duration =self.sdk.connect_device(device,types,0,10000)
-			# 		print(code,body)
-			# 		while 1:
-			# 			if self.message:
-			# 				if self.message['handle']==device:
-			# 					self.assertTrue(True)
-			# 					self.sdk.disconnect_device(device)
-			# 					self.message =None
-			# 					break
-			# 				else:
-			# 					self.assertTrue(False)
-			# 					self.sdk.disconnect_device(device)
-			# 					self.message =None
-			# 					break
-			# 	else:
-			# 		self.sdk.connect_device(device,types,0,10000)
-			# 		time.sleep(2)
-			# 		self.message = None
-			# 		code,body = self.sdk.disconnect_device(device)
-			# 		print(code,body)
-			# 		while 1:
-			# 			if self.message:
-			# 				if self.message['handle']==device:
-			# 					self.assertTrue(True)
-			# 					self.sdk.disconnect_device(device)
-			# 					self.message =None
-			# 					break
-			# 				else:
-			# 					self.assertTrue(False)
-			# 					self.sdk.disconnect_device(device)
-			# 					self.message =None
-			# 					break
-		'''
+
+
+	# @ddt.data(*dd['get_connect_state'])
+	# def test_get_device_connect_state(self,values):
+	# 	self.message = None
+	# 	device = values['device']
+	# 	types = values['type']
+	# 	expect_result = values['expect_result']
+	# 	res = self.sdk.get_device_connect_state()
+	# 	client = sseclient.SSEClient(res)
+	# 	threading.Thread(target = self.recv_message,args = (client,)).start()
+	# 	if expect_result =='connected':
+	# 		self.sdk.disconnect_device(device)
+	# 		time.sleep(2)
+	# 		self.message = None
+	# 		code,body,duration =self.sdk.connect_device(device,types,0,10000)
+	# 		print(code,body)
+	# 		while 1:
+	# 			if self.message:
+	# 				if self.message['handle']==device:
+	# 					self.assertTrue(True)
+	# 					self.sdk.disconnect_device(device)
+	# 					self.message =None
+	# 					break
+	# 				else:
+	# 					self.assertTrue(False)
+	# 					self.sdk.disconnect_device(device)
+	# 					self.message =None
+	# 					break
+	# 	else:
+	# 		self.sdk.connect_device(device,types,0,10000)
+	# 		time.sleep(2)
+	# 		self.message = None
+	# 		code,body = self.sdk.disconnect_device(device)
+	# 		print(code,body)
+	# 		while 1:
+	# 			if self.message:
+	# 				if self.message['handle']==device:
+	# 					self.assertTrue(True)
+	# 					self.sdk.disconnect_device(device)
+	# 					self.message =None
+	# 					break
+	# 				else:
+	# 					self.assertTrue(False)
+	# 					self.sdk.disconnect_device(device)
+	# 					self.message =None
+	# 					break
 	
 	@ddt.data(*dd['recv_notification'])
 	def test_recive_notification(self,values):
@@ -443,8 +444,8 @@ class test_api(unittest.TestCase):
 		client = sseclient.SSEClient(res)
 		threading.Thread(target = self.recv_message,args = (client,)).start()
 		while 1:
-			if message:
-				self.assertEqual(message,expect_result)
+			if self.message:
+				self.assertEqual(self.message,expect_result)
 				break
 
 	def get_uuid(self,data):

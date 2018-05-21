@@ -1,8 +1,7 @@
 from unittest import TestLoader, TestSuite
-import HTMLTestRunner
 import time, os, json
 from lib.logs import set_logger
-from lib.sendReport import send_report
+from lib import HTMLTestRunner
 
 
 # 代码svn仓库路径为：https://168.168.10.200/svn/QA_versions/自动化测试平台
@@ -27,14 +26,23 @@ def main():
             cases = []
             test_plan_names.append(plan_name)
             test_plan_comments.append(plan_conf['comment'])
-
             for job_name, job_conf in plan_conf['jobs'].items():
                 with open('config/job_config.json', 'w', encoding='utf8') as f:
-                    # 写临时的job_conf文件，该文件会被job下面对应的case实例化是读取
-                    f.write(str(job_conf).replace('\'', '\"'))
+                    # 写临时的job_conf文件，
+                    tmp = {}
+                    tmp['case_timeout'] = plan_conf['case_timeout']
+                    tmp['filter_count'] = plan_conf['filter_count']
+                    tmp['unfilter_count'] = plan_conf['unfilter_count']
+                    with open('config/environments.json') as envs:
+                        envs = json.load(envs)
+                        env = envs[job_conf['env']]
+                        tmp = dict(tmp,**env)
+                        f.write(str(tmp).replace('\'', '\"'))
 
                 if job_conf['case']:
+                    #add test cases in test job.
                     if job_conf['case_path']:
+                        #如果不指定case路径，默认添加所有case执行
                         case_path = 'test_case/' + job_conf['case_path']
                     else:
                         case_path = 'test_case/'
@@ -60,7 +68,7 @@ def main():
 																description=test_plan_comments[i]
                                                                )
                 html_test_runner.run(suite)
-                send_report(test_plan_comments[i]).send()
+                # send_report(test_plan_comments[i]).send()
 
 if __name__ == '__main__':
     main()

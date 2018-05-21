@@ -1,15 +1,2 @@
-2018-04-19 18:25:55,328 - tools - ERROR - Config file read failed!
-2018-04-19 18:26:56,880 - tools - ERROR - Config file read failed!
-2018-04-19 18:27:41,273 - tools - ERROR - Config file read failed!
-2018-04-19 18:28:06,775 - tools - ERROR - Config file read failed!
-2018-04-19 19:05:25,628 - main - ERROR - 配置文件格式错误
-2018-04-19 19:07:25,081 - main - ERROR - 配置文件格式错误
-2018-04-19 19:08:18,495 - main - ERROR - 配置文件格式错误
-2018-04-24 15:33:58,577 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
-2018-04-24 15:34:26,783 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
-2018-04-25 15:35:59,895 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
-2018-04-26 09:42:41,882 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
-2018-04-26 19:17:21,925 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
-2018-05-03 15:48:30,681 - tools - ERROR - Config file read failed!
-2018-05-03 15:49:34,701 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
-2018-05-03 15:54:47,626 - test_scan_filter_mac_001 - ERROR - Case failed,start scan timeout.
+2018-05-16 19:53:08,218 - tools - ERROR - Config file read failed!
+2018-05-18 11:58:42,159 - __main__ - ERROR - Config file read failed!
