@@ -1,0 +1,98 @@
+{
+  "S2000":{
+    "dev_cassia_FD": {
+    "device_type": "public",
+    "handle": "",
+    "handle_value": "",
+    "uuid": "",
+    "service_uuid": "",
+    "charac_uuid": "",
+    "devices": {
+      "ap1": "['as20','bs20','cs20']",
+      "ap2": "['ds20','es20','fs20']",
+      "ap3": "['es20','ms20','ns20']",
+      "ap4": "['zs20','hs20','ys20']",
+      "ap5": "['xs20','is20','ks20']"
+      }
+     },
+    "dev_HW": {
+    "device_type": "random",
+    "handle": "",
+    "handle_value": "",
+    "uuid": "",
+    "service_uuid": "",
+    "charac_uuid": "",
+    "devices": {
+      "ap1": "['h1','h2','h3']",
+      "ap2": "[]",
+      "ap3": "['h4','h5','h6']",
+      "ap4": "['h7','h8','h9']",
+      "ap5": "[]"
+      }
+    }
+  },
+  "X1000":{
+    "dev_cassia_FD": {
+    "device_type": "public",
+    "handle": "",
+    "handle_value": "",
+    "uuid": "",
+    "service_uuid": "",
+    "charac_uuid": "",
+    "devices": {
+      "ap1": "['','','']",
+      "ap2": "['','','']",
+      "ap3": "['','','']",
+      "ap4": "['','','']",
+      "ap5": "['','','']"
+      }
+     },
+    "dev_HW": {
+    "device_type": "random",
+    "handle": "",
+    "handle_value": "",
+    "uuid": "",
+    "service_uuid": "",
+    "charac_uuid": "",
+    "devices": {
+      "ap1": "['','','']",
+      "ap2": "['','','']",
+      "ap3": "['','','']",
+      "ap4": "['','','']",
+      "ap5": "['','','']"
+      }
+    }
+  },
+  "E1000":{
+    "dev_cassia_FD": {
+    "device_type": "public",
+    "handle": "",
+    "handle_value": "",
+    "uuid": "",
+    "service_uuid": "",
+    "charac_uuid": "",
+    "devices": {
+      "ap1": "['','','']",
+      "ap2": "['','','']",
+      "ap3": "['','','']",
+      "ap4": "['','','']",
+      "ap5": "['','','']"
+      }
+     },
+    "dev_HW": {
+    "device_type": "random",
+    "handle": "",
+    "handle_value": "",
+    "uuid": "",
+    "service_uuid": "",
+    "charac_uuid": "",
+    "devices": {
+      "ap1": "['','','']",
+      "ap2": "['','','']",
+      "ap3": "['','','']",
+      "ap4": "['','','']",
+      "ap5": "['','','']"
+      }
+    }
+  }
+}
