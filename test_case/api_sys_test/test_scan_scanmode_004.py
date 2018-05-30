@@ -29,6 +29,7 @@ class testcase(unittest.TestCase):
     def tearDown(self):
         self.timer.cancel()
 
+    # noinspection PyUnreachableCode
     def test_chips_start_scan_meanwhile(self):
         if self.model.startswith('S') or self.model.startswith('s'):
             self.assertTrue(True)

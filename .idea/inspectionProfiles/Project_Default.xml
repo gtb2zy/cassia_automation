@@ -11,6 +11,15 @@
           <option value="E128" />
           <option value="E402" />
           <option value="E231" />
+          <option value="E261" />
+          <option value="E722" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
         </list>
       </option>
     </inspection_tool>
@@ -20,6 +29,7 @@
           <option value="test_case.api_sys_test.test_scan_filter_name_001.*" />
           <option value="tools" />
           <option value="logs.set_logger" />
+          <option value="test_case.api_func_test.test_all_api_function.ExcelUtil" />
         </list>
       </option>
     </inspection_tool>

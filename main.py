@@ -22,32 +22,38 @@ def main():
         plans = conf['test_plans']
 
         for plan_name, plan_conf in plans.items():
+            #遍历所有的test plan，存储到相关列表
             loader = TestLoader()
             cases = []
             test_plan_names.append(plan_name)
             test_plan_comments.append(plan_conf['comment'])
             for job_name, job_conf in plan_conf['jobs'].items():
+                #遍历测试计划下面得所有测试任务
                 with open('config/job_config.json', 'w', encoding='utf8') as f:
                     # 写临时的job_conf文件，
                     tmp = {}
                     tmp['case_timeout'] = plan_conf['case_timeout']
                     tmp['filter_count'] = plan_conf['filter_count']
                     tmp['unfilter_count'] = plan_conf['unfilter_count']
+                    tmp['case_path'] = job_conf['case_path']
+                    tmp['case'] = job_conf['case']
+                    # tmp['env'] = job_conf['env']
                     with open('config/environments.json') as envs:
                         envs = json.load(envs)
                         env = envs[job_conf['env']]
                         tmp = dict(tmp,**env)
-                        f.write(str(tmp).replace('\'', '\"'))
+                    f.write(str(tmp).replace('\'', '\"'))
 
                 if job_conf['case']:
                     #add test cases in test job.
                     if job_conf['case_path']:
                         #如果不指定case路径，默认添加所有case执行
-                        case_path = 'test_case/' + job_conf['case_path']
+                        case_path = path + 'test_case/' + job_conf['case_path']
                     else:
-                        case_path = 'test_case/'
+                        case_path = path + 'test_case/'
                     for case in job_conf['case']:
                         # 搜索指定目录下的所有符合匹配规则的case
+                        print(case_path,case)
                         cases.append(loader.discover(case_path, pattern=case))
                 else:
                     pass
@@ -60,7 +66,7 @@ def main():
         # threading.Thread(target = run_suite,args = (i,suite)).start()
         if suite:
             now = time.strftime("%Y-%m-%d_%H-%M-%S")
-            filename = reports_dir + '/report_' + now + '.html'
+            filename = reports_dir + 'report_' + now + '.html'
             with open(filename, 'wb') as f:
                 html_test_runner = HTMLTestRunner.HTMLTestRunner(stream=f,
 																verbosity=2,
@@ -71,4 +77,5 @@ def main():
                 # send_report(test_plan_comments[i]).send()
 
 if __name__ == '__main__':
+
     main()

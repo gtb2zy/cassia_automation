@@ -49,6 +49,7 @@ class testcase(unittest.TestCase):
                     self.logger.error("Step 1:Case failed,start scan timeout.")
                     break
 
+    # noinspection PyUnreachableCode
     def chip0_scan(self):
         #step1:chip 1 start scan,then start chip0 scan.
         with closing(self.sdk.scan(chip=0)) as self.sse1:

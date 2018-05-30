@@ -35,6 +35,7 @@ class testcase(unittest.TestCase):
         self.timer.cancel()
 
     # 测试方法
+    # noinspection PyUnreachableCode
     def test_scan_filter_mac(self):
         if self.model.startswith('S') or self.model.startswith('s'):
             a = threading.Thread(target=self.chip0_scan, args=(0, self.filters['filter_mac']))
@@ -73,6 +74,7 @@ class testcase(unittest.TestCase):
                     self.logger.error("Case failed,start scan timeout.")
                     break
 
+    # noinspection PyUnreachableCode
     def chip0_scan(self, active=0, filter_mac=None):
         # step1:chip 1 start passive scan,then start chip0 scan.
         with closing(self.sdk.scan(chip=0, active=active, filter_mac=filter_mac)) as self.sse1:
@@ -105,6 +107,7 @@ class testcase(unittest.TestCase):
                         self.logger.debug('Step 1:chip0 start scan with no filter mac success.')
                         break
 
+    # noinspection PyUnreachableCode
     def chip1_scan(self, active=0, filter_mac=None):
         # step2:start chip0 scan.
         with closing(self.sdk.scan(chip=1, active=active, filter_mac=filter_mac)) as self.sse2:

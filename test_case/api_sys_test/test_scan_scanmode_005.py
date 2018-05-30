@@ -29,6 +29,7 @@ class testcase(unittest.TestCase):
     def tearDown(self):
         self.timer.cancel()
 
+    # noinspection PyUnreachableCode
     def test_chips_start_scan_meanwhile(self):
         if self.model.startswith('S') or self.model.startswith('s'):
             self.assertTrue(True)
@@ -46,6 +47,7 @@ class testcase(unittest.TestCase):
                     self.logger.error("Case failed,start scan timeout.")
                     break
 
+    # noinspection PyUnreachableCode
     def chip0_scan(self):
         #step1:chip 1 start passive scan,then start chip0 scan.
         with closing(self.sdk.scan(chip=0)) as self.sse1:
@@ -67,8 +69,8 @@ class testcase(unittest.TestCase):
                     self.flag1 = True
                     self.logger.debug('Step 1:chip0 start passive scan success.')
                     break
-                    
 
+    # noinspection PyUnreachableCode
     def chip1_scan(self):
         #step2:start chip0 scan.
         with closing(self.sdk.scan(chip=1)) as self.sse2:

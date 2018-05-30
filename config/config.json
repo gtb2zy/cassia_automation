@@ -8,34 +8,8 @@
 			"jobs": {
 				"job1": {
 					"env": "func_env_e1000",
-					"case_path":"",
-					"case": ["test*.py"]
-				}
-			}
-		},
-		"test_plan2": {
-			"comment": "test_plan2",
-			"case_timeout": 30,
-			"filter_count": 10,
-			"unfilter_count": 300,
-			"jobs": {
-				"job1": {
-					"env": "func_env_x1000",
-					"case_path": "api_func_test",
-					"case": ["test*.py"]
-				}
-			}
-		},
-		"test_plan3": {
-			"comment": "test_plan3",
-			"case_timeout": 30,
-			"filter_count": 10,
-			"unfilter_count": 300,
-			"jobs": {
-				"job1": {
-					"env": "func_env_s2000",
-					"case_path": "api_func_test",
-					"case": ["test*.py"]
+					"case_path":"api_func_test",
+					"case": ["test_all_api*.py"]
 				}
 			}
 		}

@@ -31,6 +31,7 @@ class testcase(unittest.TestCase):
     def tearDown(self):
         self.timer.cancel()
 
+    # noinspection PyUnreachableCode
     def test_scan_on_cloud_local(self):
         a = threading.Thread(target=self.local_scan)
         b = threading.Thread(target=self.cloud_scan)

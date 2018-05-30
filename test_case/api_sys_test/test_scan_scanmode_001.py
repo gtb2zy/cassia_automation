@@ -26,6 +26,7 @@ class testcase(unittest.TestCase):
     def tearDown(self):
         self.timer.cancel()
 
+    # noinspection PyUnreachableCode,PyUnreachableCode,PyUnreachableCode,PyUnreachableCode,PyUnreachableCode,PyUnreachableCode,PyUnreachableCode
     def test_change_scan_mode(self):
         flag = None
         count = 0
@@ -226,6 +227,7 @@ class testcase(unittest.TestCase):
             else:
                 self.logger.info('fail\n')
 
+    # noinspection PyUnreachableCode
     def close(self):
         self.fail("Case failed,start scan timeout.")
         self.logger.error("Case failed,start scan timeout.")

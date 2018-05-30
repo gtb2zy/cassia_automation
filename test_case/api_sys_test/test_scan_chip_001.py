@@ -99,7 +99,9 @@ class testcase(unittest.TestCase):
 				self.logger.info('case pass\n')
 			else:
 				self.logger.info('case fail\n')
-	def close(self):
+
+    # noinspection PyUnreachableCode
+    def close(self):
 		self.fail("Case failed,start scan timeout.")
 		self.logger.info("Case failed,start scan timeout.")
 		self.sse.close()
