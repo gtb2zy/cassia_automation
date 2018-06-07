@@ -158,6 +158,6 @@ def main():
     for ap in ap_list:
         for conf in conf1[ap].values():
             test = test_stability(conf)
-            threading.Thread(target=test.loop,args = (devices)).start()
+            threading.Thread(target= test.loop,args = (devices)).start()
 if __name__ == '__main__':
     main()

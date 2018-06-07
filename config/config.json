@@ -1,13 +1,39 @@
 {
 	"test_plans": {
 		"test_plan1": {
-			"comment": "test_plan1",
-			"case_timeout": 30,
+			"comment": "func_env_x1000",
+			"case_timeout": 60,
+			"filter_count": 10,
+			"unfilter_count": 300,
+			"jobs": {
+				"job1": {
+					"env": "func_env_x1000",
+					"case_path":"api_func_test",
+					"case": ["test_all_api*.py"]
+				}
+			}
+		},
+		"test_plan2": {
+			"comment": "func_env_e1000",
+			"case_timeout": 60,
 			"filter_count": 10,
 			"unfilter_count": 300,
 			"jobs": {
 				"job1": {
 					"env": "func_env_e1000",
+					"case_path":"api_func_test",
+					"case": ["test_all_api*.py"]
+				}
+			}
+		},
+		"test_plan3": {
+			"comment": "func_env_s2000",
+			"case_timeout": 60,
+			"filter_count": 10,
+			"unfilter_count": 300,
+			"jobs": {
+				"job1": {
+					"env": "func_env_s2000",
 					"case_path":"api_func_test",
 					"case": ["test_all_api*.py"]
 				}
