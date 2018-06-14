@@ -3502,3 +3502,5 @@ __main__-AP CC:1B:E0:E1:12:0C 第38次循环成功结束...
 
 __main__-Config file read failed!
 __main__-测试chip0不加过虑主动扫描，chip1 filter name 被动扫描
+tools-Config file read failed!
+tools-Config file read failed!
