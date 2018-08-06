@@ -1,4 +1,0 @@
-2018-05-16 19:53:08,218 - tools - ERROR - Config file read failed!
-2018-05-18 11:58:42,159 - __main__ - ERROR - Config file read failed!
-2018-06-13 17:57:05,234 - tools - ERROR - Config file read failed!
-2018-06-13 17:57:28,336 - tools - ERROR - Config file read failed!

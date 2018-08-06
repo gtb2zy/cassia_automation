@@ -49,5 +49,13 @@
 		"mail_sender": "yuanzhen0632@qq.com",
 		"mail_recv": "['yuanzhen@cassianetworks.com',]",
 		"mail_text": "测试邮件发送。。。"
-	}
+	},
+  "common_paramter":{
+        "comment":"通用的参数",
+        "AP_model":"S2000",
+         "hub":"CC:1B:E0:E1:14:FC",
+         "host": "http://168.168.30.254/api",
+         "local_host":"http://168.168.30.99",
+         "BD1_mac":"CC:1B:E0:E1:14:FE"
+  }
 }

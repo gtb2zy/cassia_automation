@@ -86,13 +86,13 @@ class testcase(unittest.TestCase):
 						rssi = int(msg['rssi'])
 						rssi_threshold=int(self.filters['filter_rssi'])
 						if rssi >= rssi_threshold:
-							count+=1
+							count += 1
 						else:
 							self.fail("filter rssi failed")
 							self.logger.debug("filter rssi failed")
 							break
 					else:
-						self.flag1+=1
+						self.flag1 += 1
 						self.logger.debug('Step 1:chip0 start scan with filter rssi success.')
 						break
 				else:

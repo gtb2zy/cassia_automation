@@ -51,186 +51,85 @@
   "stability_env": {
     "S2000": {
       "ap1": {
-        "data_file": "sys_test_data.xlsx",
-        "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.88",
-        "user": "tester",
-        "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E1:14:70",
-        "model": "s2000",
-        "device": "['dev_cassia_FD','dev_HW']",
-        "local": "False",
-        "case_timeout": 30
-      },
-      "ap2": {
-        "data_file": "sys_test_data.xlsx",
-        "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.84",
-        "user": "tester",
-        "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E1:12:0C",
-        "model": "s2000",
-        "device": "['dev_cassia_FD','dev_HW']",
-        "local": "False",
-        "case_timeout": 30
-      },
-      "ap3": {
-        "data_file": "sys_test_data.xlsx",
-        "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.86",
-        "user": "tester",
-        "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E1:13:84",
-        "model": "s2000",
-        "device": "['dev_cassia_FD','dev_HW']",
-        "local": "False",
-        "case_timeout": 30
-      },
-      "ap4": {
-        "data_file": "sys_test_data.xlsx",
         "host": "http://168.168.30.253/api",
         "local_host": "http://168.168.30.83",
         "user": "tester",
         "pwd": "10b83f9a2e823c47",
         "hub": "CC:1B:E0:E1:13:60",
         "model": "s2000",
-        "device": "['dev_cassia_FD','dev_HW']",
+        "device": "['dev_aiv','dev_HW']",
         "local": "False",
         "case_timeout": 30
       },
-      "ap5": {
-        "data_file": "sys_test_data.xlsx",
+      "ap2": {
         "host": "http://168.168.30.253/api",
         "local_host": "http://168.168.30.82",
         "user": "tester",
         "pwd": "10b83f9a2e823c47",
         "hub": "CC:1B:E0:E1:13:3C",
         "model": "s2000",
-        "device": "['dev_cassia_FD','dev_HW']",
+        "device": "['dev_aiv','dev_HW']",
         "local": "False",
         "case_timeout": 30
       }
     },
     "E1000":{
       "ap1": {
-        "data_file": "sys_test_data.xlsx",
-        "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.90",
-        "user": "tester",
-        "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E0:DC:98",
-        "model": "E1000",
-        "device": "['dev_cassia_FD','dev_HW']",
-        "local": "False",
-        "case_timeout": 30
-      },
-      "ap2": {
-        "data_file": "sys_test_data.xlsx",
         "host": "http://168.168.30.253/api",
         "local_host": "http://168.168.30.93",
         "user": "tester",
         "pwd": "10b83f9a2e823c47",
         "hub": "CC:1B:E0:E0:DE:90",
         "model": "E1000",
-        "device": "['dev_cassia_FD','dev_HW']",
+        "device": "['dev_aiv']",
         "local": "False",
-        "case_timeout": 30
+        "case_timeout": 5
       },
-      "ap3": {
-        "data_file": "sys_test_data.xlsx",
-        "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.81",
-        "user": "tester",
-        "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E0:DC:A0",
-        "model": "E1000",
-        "device": "['dev_cassia_FD','dev_HW']",
-        "local": "False",
-        "case_timeout": 30
-      },
-      "ap4": {
-        "data_file": "sys_test_data.xlsx",
-        "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.77",
-        "user": "tester",
-        "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E0:DC:68",
-        "model": "E1000",
-        "device": "['dev_cassia_FD','dev_HW']",
-        "local": "False",
-        "case_timeout": 30
-      },
-      "ap5": {
-        "data_file": "sys_test_data.xlsx",
-        "host": "http://168.168.30.253/api",
+      "ap2": {
+       "host": "http://168.168.30.253/api",
         "local_host": "http://168.168.30.80",
         "user": "tester",
         "pwd": "10b83f9a2e823c47",
         "hub": "CC:1B:E0:E0:DD:F4",
         "model": "E1000",
-        "device": "['dev_cassia_FD','dev_HW']",
+        "device": "['dev_aiv']",
         "local": "False",
-        "case_timeout": 30
+        "case_timeout": 5
       }
     },
     "X1000":{
       "ap1": {
-        "data_file": "sys_test_data.xlsx",
         "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.90",
+        "local_host": "http://168.168.30.13",
         "user": "tester",
         "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E0:DC:98",
-        "model": "X1000",
-        "device": "['dev_cassia_FD','dev_HW']",
+        "hub": "CC:1B:E0:E0:1C:88",
+        "model": "E1000",
+        "device": "['dev_aiv']",
         "local": "False",
-        "case_timeout": 30
+        "case_timeout": 5
       },
       "ap2": {
-        "data_file": "sys_test_data.xlsx",
         "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.93",
+        "local_host": "http://168.168.30.20",
         "user": "tester",
         "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E0:DE:90",
+        "hub": "CC:1B:E0:E7:FD:64",
         "model": "X1000",
-        "device": "['dev_cassia_FD','dev_HW']",
+        "device": "['dev_aiv','dev_HW']",
         "local": "False",
         "case_timeout": 30
-      },
-      "ap3": {
-        "data_file": "sys_test_data.xlsx",
-        "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.81",
-        "user": "tester",
-        "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E0:DC:A0",
-        "model": "X1000",
-        "device": "['dev_cassia_FD','dev_HW']",
-        "local": "False",
-        "case_timeout": 30
-      },
-      "ap4": {
-        "data_file": "sys_test_data.xlsx",
-        "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.77",
-        "user": "tester",
-        "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E0:DC:68",
-        "model": "X1000",
-        "device": "['dev_cassia_FD','dev_HW']",
-        "local": "False",
-        "case_timeout": 30
-      },
-      "ap5": {
-        "data_file": "sys_test_data.xlsx",
-        "host": "http://168.168.30.253/api",
-        "local_host": "http://168.168.30.80",
-        "user": "tester",
-        "pwd": "10b83f9a2e823c47",
-        "hub": "CC:1B:E0:E0:DD:F4",
-        "model": "X1000",
-        "device": "['dev_cassia_FD','dev_HW']",
+      }
+    },
+    "S1000": {
+      "ap1": {
+        "host": "http://172.16.10.11/api",
+        "local_host": "http://192.168.2.103",
+        "user": "cassia",
+        "pwd": "cassia",
+        "hub": "CC:1B:E0:E0:A8:52",
+        "model": "S1000",
+        "device": "['dev_aiv']",
         "local": "False",
         "case_timeout": 30
       }
