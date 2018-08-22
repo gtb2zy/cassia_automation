@@ -27,13 +27,16 @@ class apPageTest(UiTest):
         time.sleep(3)
         router = self.bs.find_element_by_css_selector(
             'div.moreOperte div:nth-child(2)')
-        print(dir(router))
-        print(router.value_of_css_property('size'))
-        js = "var event = document.createEvent('MouseEvents');\
-                event.initMouseEvent('mouseover',true,true,document.defaultView);\
-                arguments[0].dispatchEvent(event);"
-        self.bs.execute_script(js, router)
-        # self.action.move_to_element_with_offset(router, 1657, 292).perform()
+        p = router.location
+        x = p['x'] + 5
+        y = p['y'] + 5
+        print(1680, x, 300, y)
+        # print(router.value_of_css_property('size'))
+        # js = "var event = document.createEvent('MouseEvents');\
+        #         event.initMouseEvent('mouseover',true,true,document.defaultView);\
+        #         arguments[0].dispatchEvent(event);"
+        # self.bs.execute_script(js, router)
+        self.action.move_by_offset(x, y).context_click().perform()
         time.sleep(10)
         self.bs.find_element_by_css_selector(
             'div.itembox div:nth-child(1)').click()

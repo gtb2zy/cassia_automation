@@ -9,10 +9,10 @@ from contextlib import closing
 class api():
 
     '''
-            para:update_header= False
-            由于token有效期为1一小时，因此，如果脚本运行之间超过一个小时，应该
-            传参数update_header= True，让其自动更新heders
-            默认不自动更新
+        para:update_header= False
+        由于token有效期为1一小时，因此，如果脚本运行之间超过一个小时，应该
+        传参数update_header= True，让其自动更新heders
+        默认不自动更新
     '''
 
     def __init__(self,
@@ -67,6 +67,7 @@ class api():
         }
         self.headers = headers
         return headers
+
     def scan(self, **args):
         data = {"event": 1, 'mac': self.hub}
         if args:
@@ -83,6 +84,7 @@ class api():
             else:
                 print('SSE closeed!', threading.current_thread().name, e)
     # SSE连接，参考scan接口
+
     def get_device_connect_state(self):
         url = self.host + '/management/nodes/connection-state'
         if not self.local:
@@ -166,6 +168,7 @@ class api():
             discover_descriptors 函数返回某个服务下的某个特征值
             discover_descriptors 函数返回某个特征值的描述值
     '''
+
     def discovery_services(self, device, uuid=None):
         data = {
             'mac': self.hub,
@@ -180,6 +183,7 @@ class api():
         else:
             print(res.status_code, res.text)
             return res.status_code, res.text
+
     def discovery_charateristic(self, device, charater_uuid):
         data = {
             "mac": self.hub,
@@ -244,6 +248,7 @@ class api():
             print(res.status_code, res.text)
             return res.status_code, res.text
 # SSE连接，参考scan接口
+
     def recive_notification(self):
         data = {"mac": self.hub,
                 "event": 1}
@@ -268,6 +273,7 @@ class api():
         else:
             print(res.status_code, res.text)
             return res.status_code, res.text
+
     def start_advertise(self, chip, interval, adv_data, resp_data):
         data = {
             'mac': self.hub,
