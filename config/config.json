@@ -1,46 +1,27 @@
-{
+ {
 	"test_plans": {
 		"test_plan1": {
 			"comment": "func_env_x1000",
+			"test_type":0,
+			"ac":"('192.168.1.1','root','cassia1983')",
+			"server":"('192.168.1.1','root','cassia1983')",
+			"client":"[('192.168.1.2','root','cassia'),('192.168.1.3','root','cassia'),('192.168.1.4','root','cassia')]"
+			},
+		"test_plan2": {
+			"comment": "func_env_x1000",
 			"case_timeout": 120,
+			"test_type":1,
 			"filter_count": 10,
 			"unfilter_count": 300,
-			"jobs": {
+			"jobs": {	
 				"job1": {
 					"env": "func_env_x1000",
 					"case_path":"api_func_test",
 					"case": ["test_all_api*.py"]
 				}
 			}
-		},
-		"test_plan2": {
-			"comment": "func_env_e1000",
-			"case_timeout": 120,
-			"filter_count": 10,
-			"unfilter_count": 300,
-			"jobs": {
-				"job1": {
-					"env": "func_env_e1000",
-					"case_path":"api_func_test",
-					"case": ["test_all_api*.py"]
-				}
-			}
-		},
-		"test_plan3": {
-			"comment": "func_env_s2000",
-			"case_timeout": 120,
-			"filter_count": 10,
-			"unfilter_count": 300,
-			"jobs": {
-				"job1": {
-					"env": "func_env_s2000",
-					"case_path":"api_func_test",
-					"case": ["test_all_api*.py"]
-				}
-			}
 		}
 	},
-
 	"mail_attr": {
 		"mail_host": "smtp.qq.com",
 		"mail_user": "yuanzhen0632@qq.com",

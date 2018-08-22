@@ -35,8 +35,12 @@ class test_api(unittest.TestCase):
 
     def setUp(self):
         self.case_run_flag = None
-        # self.timeout_timer = threading.Timer(self.conf['case_timeout'], self.time_out)
-        # self.timeout_timer.start()
+        self.tmp=[]
+        # t1 = threading.Thread(target=self.start_advertise, args=())
+        # t1.setDaemon(True)
+        # t1.start()
+        self.timeout_timer = threading.Timer(self.conf['case_timeout'], self.time_out)
+        self.timeout_timer.start()
 
     @ddt.data(*dd['scandata'])
     def test_scan(self, values):
@@ -51,15 +55,20 @@ class test_api(unittest.TestCase):
         filter_mac = values['filter_mac']
         filter_rssi = values['filter_rssi']
         filter_uuid = values['filter_uuid']
-        duration = values['duration']
+        if values['duration'] ==0:
+            duration=5
+        else:
+            duration = values['duration']
         if values['chip']:
             chip = values['chip']
         else:
             chip = 0
+            values['chip']=chip
         if values['active']:
             active = values['active']
         else:
             active = 0
+            values['active']=active
         para = {}
         tmp = ['__name__', 'expect_result_s1000', 'expect_result_other']
         for key in values:
@@ -67,37 +76,46 @@ class test_api(unittest.TestCase):
                 para[key] = values[key]
         print('para==', para)
         print(len(para))
-        interval = 1
-        adv_data = '02010605094C696864'
-        resp_data = '5094C696864'
-        api1 = api(self.common_conf['local_host'], local=True)
-        code, msg = api1.start_advertise(0, interval, adv_data, resp_data)
-        if code == 200:
-            pass
-        else:
-            self.case_run_flag = 'fail'
-            print("start advertise failed code={0},msg={1}".format(code, msg))
-            return
         with closing(self.sdk.scan(**para)) as r:
             '''
             该部分主要测试过滤相关参数，也就是说
             进入到这个部分的测试用例全部是开启扫描成功的
             '''
+            print("para===",r.url)
             if r.status_code == 200:
+                if len(para) ==2:
+                    t = threading.Thread(target=self.chip_active,args=(r,active))
+                    t.setDaemon(True)
+                    t.start()
+                    while True:
+                        if self.case_run_flag == 'success':
+                            return
+                        elif self.case_run_flag == 'fail':
+                            self.fail('chip_active failed!')
+                            return
+                        elif self.case_run_flag == 'timeout':
+                            self.fail('chip_active case run tome out.')
+                            return
+                        else:
+                            time.sleep(0.5)
+
                 if len(para) == 3:
                     if filter_duplicates:
                         t = threading.Thread(target=self.filter_duplicates, args=(
                             r, filter_duplicates, active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter failed!')
+                                self.fail('filter_duplicates failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('case run tome out.')
+                                self.fail('filter_duplicates case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
@@ -106,14 +124,17 @@ class test_api(unittest.TestCase):
                             target=self.filter_uuid, args=(r, filter_uuid, active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter failed!')
+                                self.fail('filter_uuid failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('case run tome out.')
+                                self.fail('filter_uuid case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
@@ -122,14 +143,17 @@ class test_api(unittest.TestCase):
                             target=self.filter_mac, args=(r, filter_mac, active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter failed!')
+                                self.fail('filter_mac failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('case run tome out.')
+                                self.fail('filter_mac case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
@@ -138,14 +162,17 @@ class test_api(unittest.TestCase):
                             target=self.filter_rssi, args=(r, filter_rssi, active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter failed!')
+                                self.fail('filter_rssi failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('case run tome out.')
+                                self.fail('filter_rssi case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
@@ -154,14 +181,17 @@ class test_api(unittest.TestCase):
                             target=self.filter_name, args=(r, filter_name, active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter failed!')
+                                self.fail('filter_name failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('case run tome out.')
+                                self.fail('filter_name case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
@@ -170,6 +200,9 @@ class test_api(unittest.TestCase):
                             target=self.duration_test, args=(r, duration, active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
@@ -189,245 +222,1134 @@ class test_api(unittest.TestCase):
                                 print('start scan success.')
                                 return
                 elif len(para) == 4:
-                    if (duration and chip) or (duration and active):
+                    if (duration and filter_duplicates):
                         t = threading.Thread(
-                            target=self.duration_test, args=(r, duration))
+                            target=self.duration_filter_duplicates, args=(r, duration,filter_duplicates,active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('duration failed!')
+                                self.fail('duration_filter_duplicates failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('duration case run tome out.')
+                                self.fail('duration_filter_duplicates case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
-                    if (filter_duplicates and chip) or (filter_duplicates and active):
-                        print("active11==", active)
-                        t = threading.Thread(target=self.filter_duplicates, args=(
-                            r, filter_duplicates, active))
+                    elif (duration and filter_name):
+                        t = threading.Thread(
+                            target=self.duration_filter_name, args=(r, duration,filter_name,active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter_duplicates failed!')
+                                self.fail('duration_filter_name failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail(
-                                    'filter_duplicates case run tome out.')
+                                self.fail('duration_filter_name case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
-                    elif filter_duplicates and filter_name:
+                    elif (duration and filter_mac):
+                        print("mmmmm")
+                        t = threading.Thread(
+                            target=self.duration_filter_mac, args=(r, duration,filter_mac,active))
+                        t.setDaemon(True)
+                        t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_mac failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_mac case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (duration and filter_rssi):
+                        t = threading.Thread(
+                            target=self.duration_filter_rssi, args=(r, duration,filter_rssi,active))
+                        t.setDaemon(True)
+                        t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_rssi failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_rssi case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (duration and filter_uuid):
+                        t = threading.Thread(
+                            target=self.duration_filter_uuid, args=(r, duration,filter_uuid,active))
+                        t.setDaemon(True)
+                        t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_uuid failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_uuid case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_duplicates and filter_name):
+                        t = threading.Thread(target=self.filter_duplicates_name, args=(
+                            r, filter_duplicates, filter_name,active))
+                        t.setDaemon(True)
+                        t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_duplicates_name failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('filter_duplicates_name case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_duplicates and filter_mac):
                         # 过滤条件为filter_duplicates和filter_name，下面分支语句情况类似
                         t = threading.Thread(
-                            target=self.filter_duplicates_name, args=(r, filter_name))
+                            target=self.filter_duplicates_mac, args=(r, filter_duplicates,filter_mac,active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter failed!')
+                                self.fail('filter_duplicates_mac failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('case run time out.')
+                                self.fail('filter_duplicates_mac case run time out.')
                                 return
                             else:
                                 time.sleep(0.5)
-                    elif filter_duplicates and filter_rssi:
+                    elif (filter_duplicates and filter_uuid):
+                        # 过滤条件为filter_duplicates和filter_name，下面分支语句情况类似
                         t = threading.Thread(
-                            target=self.filter_duplicates_rssi, args=(r, filter_rssi,))
+                            target=self.filter_duplicates_uuid, args=(r, filter_duplicates,filter_uuid,active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter failed!')
+                                self.fail('filter_duplicates_uuid failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('case run tome out.')
+                                self.fail('filter_duplicates_uuid case run time out.')
                                 return
                             else:
                                 time.sleep(0.5)
-                    elif filter_name and filter_rssi:
+                    elif (filter_duplicates and filter_rssi):
+                        # 过滤条件为filter_duplicates和filter_name，下面分支语句情况类似
+                        t = threading.Thread(
+                            target=self.filter_duplicates_rssi, args=(r, filter_duplicates,filter_rssi,active))
+                        t.setDaemon(True)
+                        t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_duplicates_rssi failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('filter_duplicates_rssi case run time out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_name and filter_rssi):
                         t = threading.Thread(target=self.filter_name_rssi, args=(
-                            r, filter_name, filter_rssi))
+                            r, filter_name, filter_rssi,active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter failed!')
+                                self.fail('filter_name_rssi failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('case run tome out.')
+                                self.fail('filter_name_rssi case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
-                    elif filter_name and filter_uuid:
+                    elif (filter_name and filter_mac):
+                        t = threading.Thread(target=self.filter_name_mac, args=(
+                            r, filter_name, filter_mac,active))
+                        t.setDaemon(True)
+                        t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_name_mac failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('filter_name_mac case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_name and filter_uuid):
                         t = threading.Thread(target=self.filter_name_uuid, args=(
-                            r, filter_name, filter_uuid))
+                            r, filter_name, filter_uuid,active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter failed!')
+                                self.fail('filter_name_uuid failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('case run tome out.')
+                                self.fail('filter_name_uuid case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
-                    elif filter_uuid and filter_rssi:
-                        t = threading.Thread(target=self.filter_uuid_rssi, args=(
-                            r, filter_uuid, filter_rssi))
+                    elif (filter_mac and filter_rssi):
+                        t = threading.Thread(target=self.filter_mac_rssi, args=(
+                            r, filter_mac, filter_rssi,active))
                         t.setDaemon(True)
                         t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter failed!')
+                                self.fail('filter_mac_rssi failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail('case run tome out.')
+                                self.fail('filter_mac_rssi case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
+                    elif (filter_mac and filter_uuid):
+                        t = threading.Thread(target=self.filter_mac_uuid, args=(
+                            r, filter_mac, filter_uuid,active))
+                        t.setDaemon(True)
+                        t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_mac_uuid failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('filter_mac_uuid case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_rssi and filter_uuid):
+                        t = threading.Thread(target=self.filter_rssi_uuid, args=(
+                            r, filter_rssi, filter_uuid,active))
+                        t.setDaemon(True)
+                        t.start()
+                        t1 = threading.Thread(target=self.start_advertise, args=())
+                        t1.setDaemon(True)
+                        t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_rssi_uuid failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('filter_rssi_uuid case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    else:
+                        self.fail('参数不正确')
+                        return
                 elif len(para) == 5:
-                    if filter_duplicates and filter_name and filter_rssi:
-                        t = threading.Thread(target=self.filter_duplicates_name_rssi,
-                                             args=(r, filter_rssi, filter_name))
+                    if (duration and filter_duplicates and filter_name):
+                        t = threading.Thread(target=self.duration_filter_duplicates_name, args=(
+                            r, duration, filter_duplicates,filter_name, active))
                         t.setDaemon(True)
                         t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
                         while True:
                             if self.case_run_flag == 'success':
                                 return
                             elif self.case_run_flag == 'fail':
-                                self.fail('filter duplicate_name_rssi failed!')
+                                self.fail('duration_filter_duplicates_name failed!')
                                 return
                             elif self.case_run_flag == 'timeout':
-                                self.fail(
-                                    'case filter duplicate_name_rssi run tome out.')
+                                self.fail('duration_filter_duplicates_name case run tome out.')
                                 return
                             else:
                                 time.sleep(0.5)
+                    elif (duration and filter_duplicates and filter_mac):
+                        t = threading.Thread(target=self.duration_filter_duplicates_mac, args=(
+                            r, duration, filter_duplicates,filter_mac, active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_duplicates_mac failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_duplicates_mac case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (duration and filter_duplicates and filter_rssi):
+                        t = threading.Thread(target=self.duration_filter_duplicates_rssi, args=(
+                            r, duration, filter_duplicates,filter_rssi, active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_duplicates_rssi failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_duplicates_rssi case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (duration and filter_duplicates and filter_uuid):
+                        t = threading.Thread(target=self.duration_filter_duplicates_uuid, args=(
+                            r, duration, filter_duplicates,filter_uuid, active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_duplicates_uuid failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_duplicates_uuid case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (duration and filter_name and filter_mac):
+                        t = threading.Thread(target=self.duration_filter_name_mac, args=(
+                            r, duration, filter_name,filter_mac, active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_name_mac failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_name_mac case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (duration and filter_name and filter_rssi):
+                        t = threading.Thread(target=self.duration_filter_name_rssi, args=(
+                            r, duration, filter_name,filter_rssi, active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_name_rssi failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_name_rssi case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (duration and filter_name and filter_uuid):
+                        t = threading.Thread(target=self.duration_filter_name_mac, args=(
+                            r, duration, filter_name,filter_uuid, active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_name_uuid failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_name_uuid case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (duration and filter_mac and filter_rssi):
+                        t = threading.Thread(target=self.duration_filter_mac_rssi, args=(
+                            r, duration, filter_mac,filter_rssi, active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_mac_rssi failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_mac_rssi case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (duration and filter_mac and filter_uuid):
+                        t = threading.Thread(target=self.duration_filter_mac_uuid, args=(
+                            r, duration, filter_mac,filter_uuid, active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_mac_uuid failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_mac_uuid case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (duration and filter_rssi and filter_uuid):
+                        t = threading.Thread(target=self.duration_filter_rssi_uuid, args=(
+                            r, duration, filter_rssi,filter_uuid, active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('duration_filter_rssi_uuid failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('duration_filter_rssi_uuid case run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_duplicates and filter_name and filter_mac):
+                        t = threading.Thread(target=self.filter_duplicates_name_mac,
+                                             args=(r, filter_duplicates, filter_name,filter_mac,active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_duplicates_name_mac failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('case filter_duplicates_name_mac run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_duplicates and filter_name and filter_rssi):
+                        t = threading.Thread(target=self.filter_duplicates_name_rssi,
+                                             args=(r, filter_duplicates, filter_name,filter_rssi,active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_duplicates_name_rssi failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('case filter_duplicates_name_rssi run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_duplicates and filter_name and filter_uuid):
+                        t = threading.Thread(target=self.filter_duplicates_name_uuid,
+                                             args=(r, filter_duplicates, filter_name,filter_uuid,active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_duplicates_name_uuid failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('case filter_duplicates_name_uuid run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_name and filter_mac and filter_uuid):
+                        t = threading.Thread(target=self.filter_name_mac_uuid,
+                                             args=(r,filter_name,filter_mac,filter_uuid,active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_name_mac_uuid failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('case filter_name_mac_uuid run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_name and filter_mac and filter_rssi):
+                        t = threading.Thread(target=self.filter_name_mac_rssi,
+                                             args=(r, filter_name,filter_mac,filter_rssi,active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_name_mac_rssi failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('case filter_name_mac_rssi run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                    elif (filter_mac and filter_rssi and filter_uuid):
+                        t = threading.Thread(target=self.filter_mac_rssi_uuid,
+                                             args=(r, filter_mac, filter_rssi,filter_uuid,active))
+                        t.setDaemon(True)
+                        t.start()
+                        # t1 = threading.Thread(target=self.start_advertise, args=())
+                        # t1.setDaemon(True)
+                        # t1.start()
+                        while True:
+                            if self.case_run_flag == 'success':
+                                return
+                            elif self.case_run_flag == 'fail':
+                                self.fail('filter_mac_rssi_uuid failed!')
+                                return
+                            elif self.case_run_flag == 'timeout':
+                                self.fail('case filter_mac_rssi_uuid run tome out.')
+                                return
+                            else:
+                                time.sleep(0.5)
+                elif len(para) == 6:
+                    pass
             else:
-                print("r.text===", r.text, r.status_code)
-                print("result==", expect_result)
                 self.assertEqual(r.text, expect_result)
-
-    def duration_test(self, res, duration):
-        print('local==', self.conf['local'])
-        if self.conf['local'] == 'True':
-            if duration:
-                # 字符串扫描5s后停止
-                if isinstance(duration, str):
-                    duration1 = 5
-                    print("字符串duration=", duration1)
-                # 负数和0  扫描5s后停止
-                elif duration <= 0:
-                    duration1 = 5
-                    print("负数和0 duration=", duration1)
-                # 小数位数小于等于3时，会按照设置的时间停止扫描；小数位数大于3时，参数不起效，一直扫描数据
-                elif duration > float(str(duration)[:5]):
-                    duration1 = None
-                    print("小数位数大于3 duration=", duration1)
+    def get_filter_duplicates(self,filter_duplicates,filters,active,j):
+        if int(filter_duplicates) == 1:
+            # 去重的数据是：mac+adData
+            if len(self.tmp) < self.conf['filter_count']:
+                if filters in self.tmp:
+                    self.case_run_flag = 'fail'
+                    print('\n', test_result, '\n', self.tmp)
+                    return  self.case_run_flag
                 else:
-                    print("rrr=", round(duration, 3))
-                    duration1 = duration
-                    print("整数浮点数duration=", duration1)
+                    self.tmp.append(filters)
             else:
-                # 不设置duration就是一直可以扫描数据
-                duration1 = None
+                print("active===",int(active),'\n j==',j)
+                if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                    self.case_run_flag = 'success'
+                    return self.case_run_flag
+                else:
+                    self.case_run_flag = 'fail'
+                    return self.case_run_flag
+        else:
+            if len(self.tmp) < self.conf['unfilter_count']:
+                if filters in self.tmp:
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                        self.case_run_flag = 'success'
+                        return self.case_run_flag
+                    else:
+                        self.tmp.append(filters)
+                else:
+                    self.tmp.append(filters)
+            else:
+                if filters in self.tmp:
+                    print("active===", int(active), '\n j==', j)
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                        self.case_run_flag = 'success'
+                        return self.case_run_flag
+                    else:
+                        self.case_run_flag = 'fail'
+                        return self.case_run_flag
+                else:
+                    self.case_run_flag = 'fail'
+                    return self.case_run_flag
+    def check_filters(self,filters,filter_parameter,active,j):
+        if len(self.tmp) < self.conf['filter_count']:
+            if filters != filter_parameter:
+                print('\n', filters, '≠', filter_parameter, '\n')
+                self.case_run_flag = 'fail'
+                return self.case_run_flag
+            else:
+                self.tmp.append(filters)
+        else:
+            if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                self.case_run_flag ='success'
+                return self.case_run_flag
+            else:
+                self.case_run_flag = 'fail'
+                return self.case_run_flag
+    def chip_active(self,res,active):
+        count=0
+        j=0
+        for test_result in res.iter_lines():
+            test_result = test_result.decode()
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                if "scanData" in test_result:
+                    j = j + 1
+                if count > int(self.conf['unfilter_count']):
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                        self.case_run_flag = 'success'
+                        print("chip_active success")
+                        return self.case_run_flag
+                    else:
+                        self.case_run_flag = 'fail'
+                        return self.case_run_flag
+                else:
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                        self.case_run_flag = 'success'
+                        print("chip_active success")
+                        return self.case_run_flag
+                    else:
+                        count = count + 1
+    def duration_test(self, res, duration,active):
+        j=0
+        count=0
+        if self.conf['local'] == 'True':
+            duration1=self.get_duration(duration)
             if duration1:
                 d1 = datetime.datetime.now()
                 try:
-                    for msg in res.iter_lines():
-                        continue
-                except AttributeError as e:
-                    print("error==", e)
+                    for test_result in res.iter_lines():
+                        test_result = test_result.decode()
+                        if test_result.startswith('data'):
+                            test_result = json.loads(test_result[5:])
+                            count=count+1
+                            print("count===",count)
+                            if "scanData" in test_result:
+                                j = j + 1
+                except AttributeError:
+                    pass
+                except:
+                    self.case_run_flag='fail'
+                    print("e")
+                    return
+                d2 = datetime.datetime.now()
+                t = float(((d2 - d1).seconds)) + \
+                    float((d2 - d1).microseconds / 1000 / 1000) - 0.5
+                print("t===",t)
+                if t <= duration1:
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                        self.case_run_flag = 'success'
+                        return
+                    else:
+                        self.case_run_flag='fail'
+                        return
+                else:
+                    self.case_run_flag = 'fail'
+                    return
+            else:
+                self.case_run_flag =self.chip_active(res,active)
+                if self.case_run_flag:
+                    return
+        else:
+            self.case_run_flag=self.chip_active(res,active)
+            if self.case_run_flag:
+                return
+    def filter_duplicates(self, res, filter_duplicates, active):
+        j=0
+        for test_result in res.iter_lines():
+            try:
+                test_result = test_result.decode()
+            except:
+                print("test_result11==", str(test_result))
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                if "adData" in test_result:
+                    filters = test_result['bdaddrs'][0]['bdaddr'] + test_result['adData']
+                elif "scanData" in test_result:
+                    filters = test_result['bdaddrs'][0]['bdaddr'] + test_result["scanData"]
+                    j=j+1
+                self.case_run_flag=self.get_filter_duplicates(filter_duplicates, filters, active,j)
+                if self.case_run_flag:
+                    return
+    def filter_uuid(self, res, filter_uuid,active):
+        j=0
+        for test_result in res.iter_lines():
+            test_result = test_result.decode()
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                if "adData" in test_result:
+                    uuid = self.get_uuid(test_result['adData'])
+                elif "scanData" in test_result:
+                    uuid = self.get_uuid(test_result['scanData'])
+                    j=j+1
+                sort_uuid = str(filter_uuid)[2:] + str(filter_uuid)[:2]
+                if uuid:
+                    self.case_run_flag=self.check_filters(uuid,sort_uuid,active,j)
+                    if self.case_run_flag:
+                        return
+                else:
+                    self.case_run_flag = 'fail'
+                    print(test_result)
+                    return
+    def filter_name(self, res, filter_name,active):
+        j=0
+        for test_result in res.iter_lines():
+            test_result = test_result.decode()
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                filters = test_result['name']
+                if "scanData" in test_result:
+                    j=j+1
+                self.case_run_flag=self.check_filters(filters,filter_name,active,j)
+                if self.case_run_flag:
+                    return
+    def filter_rssi(self, res, filter_rssi,active):
+        j=0
+        for test_result in res.iter_lines():
+            test_result = test_result.decode()
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                filters = int(test_result['rssi'])
+                if "scanData" in test_result:
+                    j=j+1
+                if len(self.tmp) < self.conf['filter_count']:
+                    if filters < int(filter_rssi):
+                        print('\n', filters, '≠', filter_rssi, '\n')
+                        self.case_run_flag = 'fail'
+                        return
+                    else:
+                        self.tmp.append(filters)
+                else:
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                        self.case_run_flag = 'success'
+                        return
+                    else:
+                        self.case_run_flag = 'fail'
+                        return
+    def filter_mac(self, res, filter_mac,active):
+        j=0
+        for test_result in res.iter_lines():
+            test_result = test_result.decode()
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                filters = test_result['bdaddrs'][0]['bdaddr']
+                if "scanData" in test_result:
+                    j=j+1
+                self.case_run_flag=self.check_filters(filters,filter_mac,active,j)
+                if self.case_run_flag:
+                    return
+    def duration_filter_duplicates(self,res,duration,filter_duplicates,active):
+        j=0
+        if self.conf['local'] == 'True':
+            duration1 = self.get_duration(duration)
+            if duration1:
+                d1 = datetime.datetime.now()
+                try:
+                    for test_result in res.iter_lines():
+                        test_result = str(test_result, encoding='utf8')
+                        if test_result.startswith('data'):
+                            test_result = json.loads(test_result[5:])
+                            if "adData" in test_result:
+                                filters = test_result['bdaddrs'][0]['bdaddr'] + test_result['adData']
+                            elif "scanData" in test_result:
+                                filters = test_result['bdaddrs'][0]['bdaddr'] + test_result["scanData"]
+                                j = j + 1
+                            self.case_run_flag=self.get_filter_duplicates(filter_duplicates,filters,active,j)
+                            if self.case_run_flag:
+                                return
+                except AttributeError:
+                    pass
+                except:
+                    self.case_run_flag='fail'
+                    return
                 d2 = datetime.datetime.now()
                 t = float(((d2 - d1).seconds)) + \
                     float((d2 - d1).microseconds / 1000 / 1000) - 0.5
                 if t <= duration1:
-                    self.case_run_flag = 'success'
-                    return
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                        self.case_run_flag = 'success'
+                        return
+                    else:
+                        self.case_run_flag = 'fail'
+                        return
                 else:
                     self.case_run_flag = 'fail'
                     return
             else:
-                count = 0
-                for msg in res.iter_lines():
-                    message = msg.decode()
-                    if message.startswith("data"):
-                        count += 1
-                        # print("chip 0 ", count, message)
-                        if count > int(self.conf['unfilter_count']):
-                            self.case_run_flag = 'success'
-                            return
+                self.chip_active(res,active)
         else:
-            self.case_run_flag = 'success'
             print("AC端不支持duration参数")
-            return
-
-    def filter_duplicates_name(self, res, filter_name):
-        tmp = []
-        for test_result in res.iter_lines():
-            test_result = str(test_result, encoding='utf8')
-            if test_result.startswith('data'):
-                test_result = json.loads(test_result[5:])
-                filters = test_result['bdaddrs'][0][
-                    'bdaddr'] + test_result['adData']
-                if test_result['name'] == filter_name:
-                    if len(tmp) < self.conf['filter_count']:
-                        if filters in tmp:
-                            self.case_run_flag = 'fail'
-                            print('\n', test_result, '\n', tmp)
-                            return
-                        else:
-                            print(test_result)
-                            tmp.append(filters)
-                    else:
+            self.case_run_flag=self.chip_active(res,active)
+            if self.case_run_flag:
+                return
+    def duration_filter_name(self,res,duration,filter_name,active):
+        j = 0
+        if self.conf['local'] == 'True':
+            duration1 = self.get_duration(duration)
+            if duration1:
+                d1 = datetime.datetime.now()
+                try:
+                    for test_result in res.iter_lines():
+                        test_result = str(test_result, encoding='utf8')
+                        if test_result.startswith('data'):
+                            test_result = json.loads(test_result[5:])
+                            if "adData" in test_result:
+                                j = j + 1
+                            filters=test_result['name']
+                            self.case_run_flag = self.check_filters(filters,filter_name,active,j)
+                            if self.case_run_flag:
+                                return
+                except AttributeError:
+                    pass
+                except:
+                    self.case_run_flag ='fail'
+                    return
+                d2 = datetime.datetime.now()
+                t = float(((d2 - d1).seconds)) + \
+                    float((d2 - d1).microseconds / 1000 / 1000) - 0.5
+                if t <= duration1:
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
                         self.case_run_flag = 'success'
+                        return
+                    else:
+                        self.case_run_flag = 'fail'
                         return
                 else:
                     self.case_run_flag = 'fail'
-                    print('\n', test_result, '\n', tmp)
                     return
-
-    def filter_duplicates_rssi(self, res, filter_rssi):
-        tmp = []
+            else:
+                self.chip_active(res, active)
+        else:
+            print("AC端不支持duration参数")
+            self.case_run_flag = self.chip_active(res, active)
+            if self.case_run_flag:
+                return
+    def duration_filter_mac(self,res,duration,filter_mac,active):
+        j = 0
+        print("locsl===",self.conf['local'] )
+        if self.conf['local'] == 'True':
+            print("duration_type==",type(duration),"shuzhi==",duration)
+            duration1 = self.get_duration(duration)
+            print('duration1==',duration1)
+            if duration1:
+                d1 = datetime.datetime.now()
+                try:
+                    for test_result in res.iter_lines():
+                        test_result = str(test_result, encoding='utf8')
+                        if test_result.startswith('data'):
+                            test_result = json.loads(test_result[5:])
+                            if "adData" in test_result:
+                                j = j + 1
+                            filters=test_result['bdaddrs'][0]['bdaddr']
+                            self.case_run_flag = self.check_filters(filters,filter_mac,active,j)
+                            if self.case_run_flag:
+                                return
+                except AttributeError:
+                    pass
+                except:
+                    self.case_run_flag ='fail'
+                    return
+                d2 = datetime.datetime.now()
+                t = float(((d2 - d1).seconds)) + \
+                    float((d2 - d1).microseconds / 1000 / 1000) - 0.5
+                if t <= duration1:
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                        self.case_run_flag = 'success'
+                        return
+                    else:
+                        self.case_run_flag = 'fail'
+                        return
+                else:
+                    self.case_run_flag = 'fail'
+                    return
+            else:
+                self.chip_active(res, active)
+        else:
+            print("AC端不支持duration参数")
+            self.case_run_flag = self.chip_active(res, active)
+            if self.case_run_flag:
+                return
+    def duration_filter_uuid(self,res,duration,filter_uuid,active):
+        j = 0
+        if self.conf['local'] == 'True':
+            duration1 = self.get_duration(duration)
+            if duration1:
+                d1 = datetime.datetime.now()
+                try:
+                    for test_result in res.iter_lines():
+                        test_result = str(test_result, encoding='utf8')
+                        if test_result.startswith('data'):
+                            test_result = json.loads(test_result[5:])
+                            if "adData" in test_result:
+                                uuid = self.get_uuid(test_result['adData'])
+                            elif "scanData" in test_result:
+                                uuid = self.get_uuid(test_result['scanData'])
+                                j = j + 1
+                            sort_uuid = str(filter_uuid)[2:] + str(filter_uuid)[:2]
+                            if uuid:
+                                self.case_run_flag = self.check_filters(uuid, sort_uuid, active, j)
+                                print("sell==",self.case_run_flag)
+                                if self.case_run_flag:
+                                    return
+                            else:
+                                self.case_run_flag='fail'
+                                print("sel2==", self.case_run_flag)
+                                return
+                except AttributeError:
+                    pass
+                except:
+                    self.case_run_flag ='fail'
+                    print("sel3==", self.case_run_flag)
+                    return
+                d2 = datetime.datetime.now()
+                t = float(((d2 - d1).seconds)) + \
+                    float((d2 - d1).microseconds / 1000 / 1000) - 0.5
+                if t <= duration1:
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                        self.case_run_flag = 'success'
+                        return
+                    else:
+                        self.case_run_flag = 'fail'
+                        return
+                else:
+                    self.case_run_flag = 'fail'
+                    return
+            else:
+                self.chip_active(res, active)
+        else:
+            print("AC端不支持duration参数")
+            self.case_run_flag = self.chip_active(res, active)
+            if self.case_run_flag:
+                return
+    def duration_filter_rssi(self,res,duration,filter_rssi,active):
+        j = 0
+        if self.conf['local'] == 'True':
+            duration1 = self.get_duration(duration)
+            if duration1:
+                d1 = datetime.datetime.now()
+                try:
+                    for test_result in res.iter_lines():
+                        test_result = str(test_result, encoding='utf8')
+                        if test_result.startswith('data'):
+                            test_result = json.loads(test_result[5:])
+                            if "scanData" in test_result:
+                                j = j + 1
+                            filters = int(test_result['rssi'])
+                            if len(self.tmp) < self.conf['filter_count']:
+                                if filters < int(filter_rssi):
+                                    print('\n', filters, '≠', filter_rssi, '\n')
+                                    self.case_run_flag = 'fail'
+                                    return
+                                else:
+                                    self.tmp.append(filters)
+                            else:
+                                if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                                    self.case_run_flag = 'success'
+                                    return
+                                else:
+                                    self.case_run_flag = 'fail'
+                                    return
+                except AttributeError:
+                    pass
+                except:
+                    self.case_run_flag ='fail'
+                    return
+                d2 = datetime.datetime.now()
+                t = float(((d2 - d1).seconds)) + \
+                    float((d2 - d1).microseconds / 1000 / 1000) - 0.5
+                if t <= duration1:
+                    if (int(active) == 1 and j > 0) or (int(active) == 0 and j == 0):
+                        self.case_run_flag = 'success'
+                        return
+                    else:
+                        self.case_run_flag = 'fail'
+                        return
+                else:
+                    self.case_run_flag = 'fail'
+                    return
+            else:
+                self.chip_active(res, active)
+        else:
+            print("AC端不支持duration参数")
+            self.case_run_flag = self.chip_active(res, active)
+            if self.case_run_flag:
+                return
+    def filter_duplicates_name(self,res,filter_duplicates,filter_name,active):
+        print("bbb")
+        j = 0
         for test_result in res.iter_lines():
             test_result = str(test_result, encoding='utf8')
             if test_result.startswith('data'):
                 test_result = json.loads(test_result[5:])
-                filters = test_result['bdaddrs'][0][
-                    'bdaddr'] + test_result['adData']
-                if len(tmp) < self.conf['filter_count']:
-                    if filters in tmp or int(test_result['rssi']) < int(filter_rssi):
-                        print(int(test_result['rssi']), '\n', tmp)
-                        self.case_run_flag = 'fail'
+                print("test_result===", test_result)
+                if "adData" in test_result:
+                    filters = test_result['bdaddrs'][0]['bdaddr'] + test_result['adData']
+                elif "scanData" in test_result:
+                    filters = test_result['bdaddrs'][0]['bdaddr'] + test_result["scanData"]
+                    j = j + 1
+                if filter_name == test_result['name']:
+                    self.case_run_flag = self.get_filter_duplicates(filter_duplicates, filters, active, j)
+                    if self.case_run_flag:
                         return
-                    else:
-                        tmp.append(filters)
-                        print(test_result)
                 else:
-                    self.case_run_flag = 'success'
+                    print('\n', filter_name, '≠', test_result['name'], '\n')
+                    self.case_run_flag = 'fail'
                     return
-
+    def filter_duplicates_mac(self,res,filter_duplicates,filter_mac,active):
+        j = 0
+        for test_result in res.iter_lines():
+            test_result = str(test_result, encoding='utf8')
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                if "adData" in test_result:
+                    filters = test_result['bdaddrs'][0]['bdaddr'] + test_result['adData']
+                elif "scanData" in test_result:
+                    filters = test_result['bdaddrs'][0]['bdaddr'] + test_result["scanData"]
+                    j = j + 1
+                if filter_mac == test_result['bdaddrs'][0]['bdaddr']:
+                    self.case_run_flag = self.get_filter_duplicates(filter_duplicates, filters, active, j)
+                    if self.case_run_flag:
+                        return
+                else:
+                    print('\n', filter_mac, '≠', test_result['bdaddrs'][0]['bdaddr'], '\n')
+                    self.case_run_flag='fail'
+                    return
+    def filter_duplicates_uuid(self,res,filter_duplicates,filter_uuid,active):
+        j = 0
+        for test_result in res.iter_lines():
+            test_result = str(test_result, encoding='utf8')
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                if "adData" in test_result:
+                    filters = test_result['bdaddrs'][0]['bdaddr'] + test_result['adData']
+                    uuid = self.get_uuid(test_result['adData'])
+                elif "scanData" in test_result:
+                    filters = test_result['bdaddrs'][0]['bdaddr'] + test_result["scanData"]
+                    uuid = self.get_uuid(test_result['scanData'])
+                    j = j + 1
+                sort_uuid = str(filter_uuid)[2:] + str(filter_uuid)[:2]
+                if sort_uuid == uuid:
+                    self.case_run_flag = self.get_filter_duplicates(filter_duplicates, filters, active, j)
+                    if self.case_run_flag:
+                        return
+                else:
+                    print('\n', sort_uuid, '≠', uuid, '\n')
+                    self.case_run_flag='fail'
+                    return
+    def filter_duplicates_rssi(self,res,filter_duplicates,filter_rssi,active):
+        j = 0
+        for test_result in res.iter_lines():
+            test_result = str(test_result, encoding='utf8')
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                if "adData" in test_result:
+                    filters = test_result['bdaddrs'][0]['bdaddr'] + test_result['adData']
+                    rssi = test_result['rssi']
+                elif "scanData" in test_result:
+                    filters = test_result['bdaddrs'][0]['bdaddr'] + test_result["scanData"]
+                    rssi = test_result['rssi']
+                    j = j + 1
+                if int(rssi) >=int(filter_rssi):
+                    self.case_run_flag = self.get_filter_duplicates(filter_duplicates, filters, active, j)
+                    if self.case_run_flag:
+                        return
+                else:
+                    print('\n', rssi, '<', filter_rssi, '\n')
+                    self.case_run_flag='fail'
+                    return
     def filter_duplicates_name_rssi(self, res, filter_rssi, filter_name):
-        tmp = []
         for test_result in res.iter_lines():
             test_result = str(test_result, encoding='utf8')
             if test_result.startswith('data'):
@@ -435,221 +1357,121 @@ class test_api(unittest.TestCase):
                 filters = test_result['bdaddrs'][0][
                     'bdaddr'] + test_result['adData']
                 if test_result['name'] == filter_name:
-                    if len(tmp) < self.conf['filter_count']:
-                        if filters in tmp or int(test_result['rssi']) < int(filter_rssi):
-                            print(int(test_result['rssi']), '\n', tmp)
+                    if len(self.tmp) < self.conf['filter_count']:
+                        if filters in self.tmp or int(test_result['rssi']) < int(filter_rssi):
+                            print(int(test_result['rssi']), '\n', self.tmp)
                             self.case_run_flag = 'fail'
                             return
                         else:
-                            tmp.append(filters)
+                            self.tmp.append(filters)
                             print(test_result)
                     else:
                         self.case_run_flag = 'success'
                         return
                 else:
                     print(int(test_result['rssi']), '\n',
-                          test_result['name'], '\n',  tmp)
+                          test_result['name'], '\n',  self.tmp)
                     self.case_run_flag = 'fail'
                     return
-
-    def filter_duplicates(self, res, filter_duplicates, active):
-        tmp = []
-        print("	def filter_duplicates(self, res,filter_duplicates,active):")
+    def filter_name_rssi(self, res, filter_name,filter_rssi,active):
+        j=0
         for test_result in res.iter_lines():
-            test_result = str(test_result, encoding='utf8')
-            if test_result.startswith('data'):
-                test_result = json.loads(test_result[5:])
-                print("test_result==", test_result)
-                if active == 1:
-                    if "adData" in test_result:
-                        filters = test_result['bdaddrs'][0][
-                            'bdaddr'] + test_result['adData']
-                    elif "scanData" in test_result:
-                        filters = test_result['bdaddrs'][0][
-                            'bdaddr'] + test_result["scanData"]
-                else:
-                    print("active0==", active)
-                    filters = test_result['bdaddrs'][0][
-                        'bdaddr'] + test_result['adData']
-                if filter_duplicates == 1:
-                    # 去重的数据是：mac+adData
-                    if len(tmp) < self.conf['filter_count']:
-                        if filters in tmp:
-                            self.case_run_flag = 'fail'
-                            print('\n', test_result, '\n', tmp)
-                            return
-                        else:
-                            print(test_result)
-                            tmp.append(filters)
-                    else:
-                        self.case_run_flag = 'success'
-                        return
-                else:
-                    print("test_result11==", test_result)
-                    if len(tmp) < self.conf['unfilter_count']:
-                        if filters in tmp:
-                            self.case_run_flag = 'success'
-                            return
-                        else:
-                            tmp.append(filters)
-                    else:
-                        if filters in tmp:
-                            self.case_run_flag = 'success'
-                            return
-                        else:
-                            self.case_run_flag = 'fail'
-                            return
-
-    def filter_name_rssi(self, res, filter_name, filter_rssi):
-        tmp = []
-        for test_result in res.iter_lines():
-            test_result = str(test_result, encoding='utf8')
+            test_result = test_result.decode()
             if test_result.startswith('data'):
                 test_result = json.loads(test_result[5:])
                 filters = test_result['name']
-                if len(tmp) < self.conf['filter_count']:
-                    if filters != filter_name or int(test_result['rssi']) < int(filter_rssi):
-                        self.case_run_flag = 'fail'
-                        print('\n', test_result, '\n', tmp)
+                if "scanData" in test_result:
+                    j=j+1
+                if int(test_result['rssi']) >= int(filter_rssi):
+                    self.case_run_flag = self.check_filters(filters, filter_name, active, j)
+                    if self.case_run_flag:
                         return
-                    else:
-                        print(test_result)
-                        tmp.append(filters)
                 else:
-                    self.case_run_flag = 'success'
+                    self.case_run_flag='fail'
                     return
-
-    def filter_name_uuid(self, res, filter_name, filter_uuid):
-        tmp = []
+    def filter_name_uuid(self, res, filter_name,filter_uuid,active):
+        j=0
         for test_result in res.iter_lines():
-            test_result = str(test_result, encoding='utf8')
+            test_result = test_result.decode()
             if test_result.startswith('data'):
                 test_result = json.loads(test_result[5:])
-                expect = filter_name + \
-                    str(filter_uuid)[2:] + str(filter_uuid)[:2]
-                uuid = self.get_uuid(test_result['adData'])
-                if uuid:
-                    filters = test_result['name'] + uuid
-                    if len(tmp) < self.conf['filter_count']:
-                        if filters != expect:
-                            self.case_run_flag = 'fail'
-                            print(filters, expect)
-                            return
-                        else:
-                            tmp.append(filters)
-                            print(test_result)
-                    else:
-                        self.case_run_flag = 'success'
-                        return
-
-    def filter_uuid_rssi(self, res, filter_uuid, filter_rssi):
-        tmp = []
-        for test_result in res.iter_lines():
-            test_result = str(test_result, encoding='utf8')
-            if test_result.startswith('data'):
-                test_result = json.loads(test_result[5:])
-                uuid = self.get_uuid(test_result['adData'])
+                if "adData" in test_result:
+                    uuid = self.get_uuid(test_result['adData'])
+                elif "scanData" in test_result:
+                    uuid = self.get_uuid(test_result['scanData'])
+                    j = j + 1
                 sort_uuid = str(filter_uuid)[2:] + str(filter_uuid)[:2]
-                if uuid:
-                    filters = uuid
-                    if len(tmp) < self.conf['filter_count']:
-                        if filters != sort_uuid or int(test_result['rssi']) < int(filter_rssi):
-                            print(filters, sort_uuid, '\n',
-                                  test_result['rssi'] < filter_rssi)
-                            self.case_run_flag = 'fail'
-                            return
-                        else:
-                            tmp.append(filters)
-                            print(test_result)
-                    else:
-                        self.case_run_flag = 'success'
-                        return
-                else:
-                    self.case_run_flag = 'fail'
-                    print(test_result)
+                filters=str(uuid)+str(test_result['name'])
+                filters_parameter=str(sort_uuid)+str(filter_name)
+                self.case_run_flag = self.check_filters(filters, filters_parameter, active, j)
+                if self.case_run_flag:
                     return
-
-    def filter_uuid(self, res, filter_uuid):
-        tmp = []
+    def filter_name_mac(self, res, filter_name,filter_mac,active):
+        j=0
         for test_result in res.iter_lines():
-            test_result = str(test_result, encoding='utf8')
+            test_result = test_result.decode()
             if test_result.startswith('data'):
                 test_result = json.loads(test_result[5:])
-                uuid = self.get_uuid(test_result['adData'])
-                sort_uuid = str(filter_uuid)[2:] + str(filter_uuid)[:2]
-                if uuid:
-                    filters = uuid
-                    if len(tmp) < self.conf['filter_count']:
-                        if filters != sort_uuid:
-                            print('\n', filters, '≠', filter_uuid, '\n')
-                            self.case_run_flag = 'fail'
-                            return
-                        else:
-                            tmp.append(filters)
-                            print(test_result)
-                    else:
-                        self.case_run_flag = 'success'
-                        return
-                else:
-                    self.case_run_flag = 'fail'
-                    print(test_result)
+                if "scanData" in test_result:
+                    j = j + 1
+                filters=str(test_result['bdaddrs'][0]['bdaddr'])+str(test_result['name'])
+                filters_parameter=str(filter_mac)+str(filter_name)
+                self.case_run_flag = self.check_filters(filters, filters_parameter, active, j)
+                if self.case_run_flag:
                     return
-
-    def filter_name(self, res, filter_name):
-        tmp = []
+    def filter_mac_rssi(self, res, filter_mac,filter_rssi,active):
+        j=0
         for test_result in res.iter_lines():
-            test_result = str(test_result, encoding='utf8')
-            if test_result.startswith('data'):
-                test_result = json.loads(test_result[5:])
-                filters = test_result['name']
-                if len(tmp) < self.conf['filter_count']:
-                    if filters != filter_name:
-                        print('\n', filters, '≠', filter_name, '\n')
-                        self.case_run_flag = 'fail'
-                        return
-                    else:
-                        tmp.append(filters)
-                        print(test_result)
-                else:
-                    self.case_run_flag = 'success'
-                    return
-
-    def filter_rssi(self, res, filter_rssi):
-        tmp = []
-        for test_result in res.iter_lines():
-            test_result = str(test_result, encoding='utf8')
-            if test_result.startswith('data'):
-                test_result = json.loads(test_result[5:])
-                filters = int(test_result['rssi'])
-                if len(tmp) < self.conf['filter_count']:
-                    if filters < int(filter_rssi):
-                        print('\n', filters, '≠', filter_rssi, '\n')
-                        self.case_run_flag = 'fail'
-                        return
-                    else:
-                        tmp.append(filters)
-                        print(test_result)
-                else:
-                    self.case_run_flag = 'success'
-                    return
-
-    def filter_mac(self, res, filter_mac):
-        tmp = []
-        for test_result in res.iter_lines():
-            test_result = str(test_result, encoding='utf8')
+            test_result = test_result.decode()
             if test_result.startswith('data'):
                 test_result = json.loads(test_result[5:])
                 filters = test_result['bdaddrs'][0]['bdaddr']
-                if len(tmp) < self.conf['filter_count']:
-                    if filters != filter_mac:
-                        print('\n', filters, '≠', filter_mac, '\n')
-                        self.case_run_flag = 'fail'
+                if "scanData" in test_result:
+                    j=j+1
+                if int(test_result['rssi']) >= int(filter_rssi):
+                    self.case_run_flag = self.check_filters(filters, filter_mac, active, j)
+                    if self.case_run_flag:
                         return
-                    else:
-                        tmp.append(filters)
-                        print(test_result)
                 else:
-                    self.case_run_flag = 'success'
+                    self.case_run_flag='fail'
+                    return
+    def filter_mac_uuid(self, res, filter_mac,filter_uuid,active):
+        j=0
+        for test_result in res.iter_lines():
+            test_result = test_result.decode()
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                if "adData" in test_result:
+                    uuid = self.get_uuid(test_result['adData'])
+                elif "scanData" in test_result:
+                    uuid = self.get_uuid(test_result['scanData'])
+                    j = j + 1
+                sort_uuid = str(filter_uuid)[2:] + str(filter_uuid)[:2]
+                filters=str(test_result['bdaddrs'][0]['bdaddr'])+str(uuid)
+                filters_parameter=str(filter_mac)+str(sort_uuid)
+                self.case_run_flag = self.check_filters(filters, filters_parameter, active, j)
+                if self.case_run_flag:
+                    return
+    def filter_rssi_uuid(self, res, filter_rssi,filter_uuid,active):
+        j = 0
+        for test_result in res.iter_lines():
+            test_result = test_result.decode()
+            if test_result.startswith('data'):
+                test_result = json.loads(test_result[5:])
+                if "adData" in test_result:
+                    uuid = self.get_uuid(test_result['adData'])
+                elif "scanData" in test_result:
+                    uuid = self.get_uuid(test_result['scanData'])
+                    j = j + 1
+                sort_uuid = str(filter_uuid)[2:] + str(filter_uuid)[:2]
+                filters=str(uuid)
+                filter_parameter=str(sort_uuid)
+                if int(test_result['rssi']) >= int(filter_rssi):
+                    self.case_run_flag = self.check_filters(filters, filter_parameter, active, j)
+                    if self.case_run_flag:
+                        return
+                else:
+                    self.case_run_flag = 'fail'
                     return
     # @ddt.data(*dd['connectdata'])
     # def test_connect(self, values):
@@ -935,7 +1757,6 @@ class test_api(unittest.TestCase):
             return str(uuid)
         else:
             return None
-
     def recv_message(self, res):
         for msg in res:
             print(msg)
@@ -944,12 +1765,65 @@ class test_api(unittest.TestCase):
                     self.message = json.loads(msg)
                 except:
                     pass
-
+    def get_duration(self,duration):
+        if duration or duration ==0:
+            # 字符串扫描5s后停止
+            if isinstance(duration, str):
+                duration1 = 5
+                print("字符串duration=", duration1)
+            # 负数和0  扫描5s后停止
+            elif duration <= 0:
+                duration1 = 5
+                print("负数和0 duration=", duration1)
+            # 小数位数小于等于3时，会按照设置的时间停止扫描；小数位数大于3时，参数不起效，一直扫描数据
+            elif duration > float(str(duration)[:5]):
+                duration1 = None
+                print("小数位数大于3 duration=", duration1)
+            else:
+                print("rrr=", round(duration, 3))
+                duration1 = duration
+                print("整数浮点数duration=", duration1)
+        else:
+            # 不设置duration就是一直可以扫描数据
+            duration1 = None
+        return duration1
+    def start_advertise(self):
+        j = 0
+        print('aaa11')
+        api1 = api(self.common_conf['local_host'], local=True)
+        while j < 4:
+            for i in range(10, 50):
+                i = str(i)
+                ad_data = '0201060303F0FF0201' + i + '11094170695F66756E6374696F6E54657374'
+                resp_data = '0201060303F0FF030102' + i + '11094170695F66756E6374696F6E54657374'
+                code, msg = api1.start_scan_advertise(0, 20, ad_data, resp_data)
+                if code == 200 or code == 502:
+                    time.sleep(1)
+                else:
+                    self.case_run_flag = 'fail'
+                    print("start advertise failed code={0},msg={1}".format(code, msg))
+                    return
+                # if int(i)%2==0:
+                #     code, msg = api1.start_scan_advertise(0, 20, ad_data, resp_data)
+                #     if code == 200 or code == 502:
+                #         time.sleep(1)
+                #     else:
+                #         self.case_run_flag = 'fail'
+                #         print("start advertise failed code={0},msg={1}".format(code, msg))
+                #         return
+                # else:
+                #     code, msg = api1.start_advertise(0, 20, ad_data, resp_data)
+                #     if code == 200 or code == 502:
+                #         time.sleep(0.5)
+                #     else:
+                #         self.case_run_flag = 'fail'
+                #         print("start advertise failed code={0},msg={1}".format(code, msg))
+                #         return
+            j = j + 1
     def time_out(self):
         self.case_run_flag = 'timeout'
 
     def tearDown(self):
-        pass
-        # self.timeout_timer.cancel()
+        self.timeout_timer.cancel()
 if __name__ == '__main__':
     unittest.main(verbosity=2)

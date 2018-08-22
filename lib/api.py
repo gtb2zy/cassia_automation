@@ -9,10 +9,10 @@ from contextlib import closing
 class api():
 
     '''
-        para:update_header= False
-        由于token有效期为1一小时，因此，如果脚本运行之间超过一个小时，应该
-        传参数update_header= True，让其自动更新heders
-        默认不自动更新
+            para:update_header= False
+            由于token有效期为1一小时，因此，如果脚本运行之间超过一个小时，应该
+            传参数update_header= True，让其自动更新heders
+            默认不自动更新
     '''
 
     def __init__(self,
@@ -67,7 +67,6 @@ class api():
         }
         self.headers = headers
         return headers
-
     def scan(self, **args):
         data = {"event": 1, 'mac': self.hub}
         if args:
@@ -84,7 +83,6 @@ class api():
             else:
                 print('SSE closeed!', threading.current_thread().name, e)
     # SSE连接，参考scan接口
-
     def get_device_connect_state(self):
         url = self.host + '/management/nodes/connection-state'
         if not self.local:
@@ -166,9 +164,39 @@ class api():
             discovery_services 函数返回某个设备下面的所有服务
             discovery_charateristic 函数返回某个服务下面的所有特征值
             discover_descriptors 函数返回某个服务下的某个特征值
-            discover_descriptors 函数返回某个特征值的描述值
+            discover_descriptor 函数返回某个特征值的描述值
+首先要弄清楚蓝牙服务的数据结构，如下面所示，分为三层，分别是：
+        +services
+         -service1
+          +characteristics
+           -characteristic1
+            +descriptors
+             -...
+           -characteristic2
+           ...
+           -characteristicn
+         -service2
+         ...
+         -servicen
+        下面是个例子：
+        +services 某个服务
+         --00001800-0000-1000-8000-00805f9b34fb 服务的uuid
+         --handle:1
+           +characteristics  该服务下面的所有特征值
+         --uuid:00002a00-0000-1000-8000-00805f9b34fb 第一个特征值的uuid
+           --handle:3
+           --properties:  read
+           --valueHandle:3 以上全是第一个特征值的相关属性
+          +descriptors 这层是该特征值的描述值，该层的属性为optional
+          --uuid:00002a00-0000-1000-8000-00805f9b34fb 
+            --handle:3
+        结合上面的介绍，下面分别说明：
+        discovery_services 函数返回某个设备下面的所有服务
+        discovery_charateristics 函数返回某个服务下面的所有特征值
+        discover_charateristic 函数返回某个服务下的某个特征值
+        discover_descriptors 函数返回某个特征值的描述值
+            
     '''
-
     def discovery_services(self, device, uuid=None):
         data = {
             'mac': self.hub,
@@ -179,20 +207,6 @@ class api():
         print(res.url)
         if res.status_code == 200:
             print('Discovery services successed:\n', res.text)
-            return res.status_code, res.text
-        else:
-            print(res.status_code, res.text)
-            return res.status_code, res.text
-
-    def discovery_charateristic(self, device, charater_uuid):
-        data = {
-            "mac": self.hub,
-            "uuid": charater_uuid
-        }
-        url = self.host + '/gatt/nodes/' + device + '/characteristics'
-        res = requests.get(url, params=data, headers=self.headers)
-        if res.status_code == 200:
-            print('Discovery characteristic successed:\n', res.text)
             return res.status_code, res.text
         else:
             print(res.status_code, res.text)
@@ -212,6 +226,30 @@ class api():
             print(res.status_code, res.text)
             return res.status_code, res.text
 
+    def discovery_characteristics(self, device, service_uuid):
+        data = {
+            'mac': self.hub,
+            'all': 1
+        }
+        url = self.host + '/gatt/nodes/' + device + '/services/' + service_uuid + '/characteristics'
+        res = requests.get(url, params=data, headers=self.headers)
+        if res.status_code == 200:
+            print('Discovery characteristics successed:\n', res.text)
+            return res.status_code, res.text
+        else:
+            print(res.status_code, res.text)
+            return res.status_code, res.text
+
+    def discover_descriptors(self, device, charater_uuid):
+        url = self.host + '/gatt/nodes/' + device + '/characteristics/' + str(
+            charater_uuid) + '/descriptors?mac=' + self.hub
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            print('Discovery descriptors successed:\n', res.text)
+            return res.status_code, res.text
+        else:
+            print(res.status_code, res.text)
+            return res.status_code, res.text
     def discover_all(self, device):
         data = {"mac": self.hub}
         url = self.host + '/gatt/nodes/' + device + \
@@ -248,7 +286,6 @@ class api():
             print(res.status_code, res.text)
             return res.status_code, res.text
 # SSE连接，参考scan接口
-
     def recive_notification(self):
         data = {"mac": self.hub,
                 "event": 1}
@@ -273,23 +310,41 @@ class api():
         else:
             print(res.status_code, res.text)
             return res.status_code, res.text
-
-    def start_advertise(self, chip, interval, adv_data, resp_data):
+    def start_advertise(self, chip, interval, ad_data, resp_data):
         data = {
             'mac': self.hub,
             'chip': chip,
             'interval': interval,
+            'ad_data':ad_data,
             'resp_data': resp_data
         }
         url = self.host + '/advertise/start'
         res = requests.get(url, headers=self.headers, params=data)
+        print(res.url)
         if res.status_code == 200:
             print('Start advertise successed:\n', res.text)
             return res.status_code, res.text
         else:
             print(res.status_code, res.text)
             return res.status_code, res.text
-
+    def start_scan_advertise(self, chip, interval, ad_data, resp_data):
+        data = {
+            'mac': self.hub,
+            'chip': chip,
+            'ad_type': 0,
+            'interval': interval,
+            'ad_data':ad_data,
+            'resp_data': resp_data
+        }
+        url = self.host + '/advertise/start'
+        res = requests.get(url, headers=self.headers, params=data)
+        print(res.url)
+        if res.status_code == 200:
+            print('Start scan advertise successed:\n', res.text)
+            return res.status_code, res.text
+        else:
+            print(res.status_code, res.text)
+            return res.status_code, res.text
 
 if __name__ == '__main__':
     host = 'http://168.168.30.253/api'

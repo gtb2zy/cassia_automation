@@ -57,9 +57,9 @@ class UiTest(unittest.TestCase):
         s = select.select_by_index(3)
         self.click(s)
 
-
 if __name__ == '__main__':
     test = UiTest()
     test._init()
     test.login()
     test.stop_auto_fresh()
+

@@ -7,21 +7,24 @@ from contextlib import closing
 
 path = os.getcwd().split('cassia_automation')[0] + 'cassia_automation/lib/'
 sys.path.append(path)
-from api import api
-from logs import set_logger
+from api import
+from download_logs import Download_logs
+# from logs import set_logger
+import logs
 from tools import read_stability_config,get_device_list
 loop_error = False
 class test_stability():
 	debug=[]
+	err=[]
 	def __init__(self,conf):
 		self.case_end_flag = False
 		self.time_out_flag = False
 		self.conf = conf
 		self.sdk = api(self.conf['host'], self.conf['hub'], self.conf['user'], self.conf['pwd'])
-		debug_file = "stability_debug_" + "".join(self.conf['hub'].split(':')) + ".txt"
-		error_file = "stability_error_" + "".join(self.conf['hub'].split(':')) + '.txt'
-		self.logger = set_logger(__name__, debugfile=debug_file, errorfile=error_file)
-
+		filename = "stability_debug.log"
+		# error_file = "stability_error_" + "".join(self.conf['hub'].split(':')) + '.txt'
+		self.logger = logs.set_logger(__name__,filename=filename)
+		self.downlogs=Download_logs(self.conf['local_host'],22,'root','3_5*rShsen')
 	def update_token(self):
 		global headers
 		headers = self.sdk.set_header()
@@ -54,32 +57,41 @@ class test_stability():
 			start = 'AP %s 开始第%d次循环...\n' % (self.sdk.hub, self.loop)
 			print(start)
 			self.test_scan()
-			# self.test_connect_device(device_conf)
-			# self.test_connected_devlist()
-			# self.test_discover_service(device_conf)
-			# self.test_discover_characteristics(device_conf)
-			# self.test_discover_the_characteristics(device_conf)
-			# self.test_discover_descriptors(device_conf)
-			# self.test_discover_all(device_conf)
-			# self.test_read_by_handle(device_conf)
-			# self.test_write_by_handle(device_conf)
-			# self.test_recive_indication_and_notification(device_conf)
-			# self.test_disconnect_device(device_conf)
-			# self.test_stop_advertise()
+			self.test_connect_device(device_conf)
+			self.test_connected_devlist()
+			self.test_discover_service(device_conf)
+			self.test_discover_characteristics(device_conf)
+			self.test_discover_the_characteristics(device_conf)
+			self.test_discover_descriptors(device_conf)
+			self.test_discover_all(device_conf)
+			self.test_read_by_handle(device_conf)
+			self.test_write_by_handle(device_conf)
+			self.test_recive_indication_and_notification(device_conf)
+			self.test_disconnect_device(device_conf)
+			self.test_stop_advertise()
 			time.sleep(1)
 			end = 'AP %s 第%d次循环成功结束...\n' % (self.sdk.hub, self.loop)
 			print(end)
 			self.debug.append(end)
 			for msg in self.debug:
-				self.logger.info(msg)
+				self.logger.debug(msg)
 			self.debug = []
 			self.loop += 1
 		print("循环异常结束")
+
+		conn_flag=self.downlogs.connect()
+		if conn_flag:
+			desDirectory=self.conf['model'] + '_' + self.conf['hub'].split(':')+'_log/'
+			self.downlogs.get_logs(desDirectory)
+		else:
+			err='获取异常AP的log失败，ssh连接失败'
+			self.err.append(err)
+		self.errend()
 		timert.cancel()
 	def errend(self):
 		end = 'AP %s 第%d次循环异常结束...\n' % (self.sdk.hub, self.loop)
 		print(end)
-		for msg in self.debug:
+		for msg in self.err:
 			self.logger.error(msg)
 		exit(1)
 	def test_scan(self):
@@ -107,9 +119,9 @@ class test_stability():
 							self.end_timer()
 							break
 						else:
-							debug = 'AP %s chip 0 start scan failed! MSG:%s' % (self.sdk.hub, data)
-							self.debug.append(debug)
-							print(debug)
+							err = 'AP %s chip 0 start scan failed! MSG:%s' % (self.sdk.hub, data)
+							self.err.append(err)
+							print(err)
 							self.end_timer()
 							break
 		if self.conf['model'].upper().startswith('S'):
@@ -138,10 +150,9 @@ class test_stability():
 								self.end_timer()
 								break
 							else:
-								print("scan11_data===",data)
-								debug = 'AP %s chip 1 start scan failed! MSG:%s' % (self.sdk.hub, data)
-								self.debug.append(debug)
-								print(debug)
+								err = 'AP %s chip 1 start scan failed! MSG:%s' % (self.sdk.hub, data)
+								self.err.append(err)
+								print(err)
 								self.end_timer()
 								break
 	def scan_to_connect(self,chip, dev):
@@ -200,14 +211,14 @@ class test_stability():
 											connect_device.append(device)
 											break
 										else:
-											debug = 'ap={0} device={1} connect error'.format(self.conf['hub'], device)
-											self.debug.append(debug)
+											err = 'ap={0} device={1} connect error'.format(self.conf['hub'], device)
+											self.err.append(err)
 											loop_error = True
 											break
 							break
 		if j == 0:
 			err = 'ap={0} device={1} all connected failed'.format(self.conf['hub'], device_list)
-			self.debug.append(err)
+			self.err.append(err)
 			loop_error = True
 		else:
 			debug='ap={0} device={1} all connected success'.format(self.conf['hub'], connect_device)
@@ -230,8 +241,8 @@ class test_stability():
 						self.conn_flag = True
 			else:
 				loop_error = True
-				debug = 'ap={0} get device disconnect before get devlist failed,return code={1},msg={2}'.format(self.conf['hub'],																					   code, text)
-				self.debug.append(debug)
+				err = 'ap={0} get device disconnect before get devlist failed,return code={1},msg={2}'.format(self.conf['hub'],																					   code, text)
+				self.err.append(err)
 				# self.end_timer()
 				break
 		for dev in devices:
@@ -240,9 +251,9 @@ class test_stability():
 				j = j +1
 		if j ==0:
 			loop_error = True
-			debug = 'ap={0} get disconnect failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
-			self.debug.append(debug)
-			print(debug)
+			err = 'ap={0} get disconnect failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
+			self.err.append(err)
+			print(err)
 		else:
 			code, body = self.sdk.get_devices_list('connected')
 			if code==200:
@@ -252,13 +263,13 @@ class test_stability():
 					self.debug.append(debug)
 				else:
 					loop_error = True
-					debug = 'ap={0} get disconnect failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
-					self.debug.append(debug)
+					err = 'ap={0} get disconnect failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
+					self.err.append(err)
 					# print(debug)
 			else:
 				loop_error = True
-				debug='ap={0}test disconnect api call connected device list error,code={1},msg={2}'.format(self.conf['hub'],code,body)
-				self.debug.append(debug)
+				err='ap={0}test disconnect api call connected device list error,code={1},msg={2}'.format(self.conf['hub'],code,body)
+				self.err.append(err)
 				# print(debug)
 	def test_connected_devlist(self):
 		code, body1 = self.sdk.get_devices_list('connected')
@@ -275,13 +286,13 @@ class test_stability():
 					break
 				else:
 					loop_error = True
-					debug = 'ap={0} get connected device list,return code={1}'.format(self.conf['hub'], code)
-					self.debug.append(debug)
+					err = 'ap={0} get connected device list,return code={1}'.format(self.conf['hub'], code)
+					self.err.append(err)
 					break
 		else:
 			loop_error = True
-			debug = 'ap={0} get connected device list,return code={1}'.format(self.conf['hub'], code)
-			self.debug.append(debug)
+			err = 'ap={0} get connected device list,return code={1}'.format(self.conf['hub'], code)
+			self.err.append(err)
 	def test_discover_service(self, device_conf):
 		self.conn_flag = False
 		global loop_error
@@ -301,9 +312,9 @@ class test_stability():
 						self.conn_flag = True
 			else:
 				loop_error = True
-				debug = 'ap={0} get services before get devlist failed,return code={1},msg={2}'.format(self.conf['hub'],
+				err = 'ap={0} get services before get devlist failed,return code={1},msg={2}'.format(self.conf['hub'],
 																									   code, text)
-				self.debug.append(debug)
+				self.err.append(err)
 				# self.end_timer()
 				break
 		for dev in devices:
@@ -319,8 +330,8 @@ class test_stability():
 		print("j==",j)
 		if j ==0:
 			loop_error = True
-			debug = 'ap={0} get services failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
-			self.debug.append(debug)
+			err = 'ap={0} get services failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
+			self.err.append(err)
 		else:
 			self.case_end_flag = True
 			debug = 'ap={0} get services success,return code={1},msg={2}'.format(self.conf['hub'], code, text)
@@ -345,9 +356,9 @@ class test_stability():
 						self.conn_flag = True
 			else:
 				loop_error = True
-				debug = 'ap={0} get characteristic before get devlist failed,return code={1},msg={2}'.format(
+				err = 'ap={0} get characteristic before get devlist failed,return code={1},msg={2}'.format(
 					self.conf['hub'], code, text)
-				self.debug.append(debug)
+				self.err.append(err)
 				break
 		for dev in devices:
 			for value in device_conf.values():
@@ -362,8 +373,8 @@ class test_stability():
 		print("j==",j)
 		if j ==0:
 			loop_error = True
-			debug = 'ap={0} get characteristic failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
-			self.debug.append(debug)
+			err = 'ap={0} get characteristic failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
+			self.err.append(err)
 		else:
 			self.case_end_flag = True
 			debug = 'ap={0} get characteristic success,return code={1},msg={2}'.format(self.conf['hub'], code, text)
@@ -388,9 +399,9 @@ class test_stability():
 						self.conn_flag = True
 			else:
 				loop_error = True
-				debug = 'ap={0} get the characteristic before get devlist failed,return code={1},msg={2}'.format(
+				err = 'ap={0} get the characteristic before get devlist failed,return code={1},msg={2}'.format(
 					self.conf['hub'], code, text)
-				self.debug.append(debug)
+				self.err.append(err)
 				break
 		for dev in devices:
 			for value in device_conf.values():
@@ -405,8 +416,8 @@ class test_stability():
 		print("j==",j)
 		if j ==0:
 			loop_error = True
-			debug = 'ap={0} get the characteristic failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
-			self.debug.append(debug)
+			err = 'ap={0} get the characteristic failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
+			self.err.append(err)
 		else:
 			self.case_end_flag = True
 			debug = 'ap={0} get the characteristic success,return code={1},msg={2}'.format(self.conf['hub'], code, text)
@@ -429,9 +440,9 @@ class test_stability():
 						self.conn_flag = True
 			else:
 				loop_error = True
-				debug = 'ap={0} get the all before get devlist failed,return code={1},msg={2}'.format(
+				err = 'ap={0} get the all before get devlist failed,return code={1},msg={2}'.format(
 					self.conf['hub'], code, text)
-				self.debug.append(debug)
+				self.err.append(err)
 				break
 		for dev in devices:
 			code, text = self.sdk.discover_all(dev)
@@ -442,8 +453,8 @@ class test_stability():
 		print("j==",j)
 		if j ==0:
 			loop_error = True
-			debug = 'ap={0} get the all failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
-			self.debug.append(debug)
+			err = 'ap={0} get the all failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
+			self.err.append(err)
 		else:
 			self.case_end_flag = True
 			debug = 'ap={0} get the all success,return code={1},msg={2}'.format(self.conf['hub'], code, text)
@@ -468,9 +479,9 @@ class test_stability():
 						self.conn_flag = True
 			else:
 				loop_error = True
-				debug = 'ap={0} get the descriptors before get devlist failed,return code={1},msg={2}'.format(
+				err = 'ap={0} get the descriptors before get devlist failed,return code={1},msg={2}'.format(
 					self.conf['hub'], code, text)
-				self.debug.append(debug)
+				self.err.append(err)
 				break
 		for dev in devices:
 			for value in device_conf.values():
@@ -485,8 +496,8 @@ class test_stability():
 		print("j==",j)
 		if j ==0:
 			loop_error = True
-			debug = 'ap={0} get the descriptors failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
-			self.debug.append(debug)
+			err = 'ap={0} get the descriptors failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
+			self.err.append(err)
 		else:
 			self.case_end_flag = True
 			debug = 'ap={0} get the descriptors success,return code={1},msg={2}'.format(self.conf['hub'], code, text)
@@ -511,9 +522,9 @@ class test_stability():
 						self.conn_flag = True
 			else:
 				loop_error = True
-				debug = 'ap={0} get the read by handle before get devlist failed,return code={1},msg={2}'.format(
+				err = 'ap={0} get the read by handle before get devlist failed,return code={1},msg={2}'.format(
 					self.conf['hub'], code, text)
-				self.debug.append(debug)
+				self.err.append(err)
 				break
 		for dev in devices:
 			for value in device_conf.values():
@@ -528,8 +539,8 @@ class test_stability():
 		print("j==",j)
 		if j ==0:
 			loop_error = True
-			debug = 'ap={0} get the read handle failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
-			self.debug.append(debug)
+			err = 'ap={0} get the read handle failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
+			self.err.append(err)
 		else:
 			self.case_end_flag = True
 			debug = 'ap={0} get the read handle success,return code={1},msg={2}'.format(self.conf['hub'], code, text)
@@ -555,9 +566,9 @@ class test_stability():
 						self.conn_flag = True
 			else:
 				loop_error = True
-				debug = 'ap={0} write by handle before get devlist failed,return code={1},msg={2}'.format(
+				err = 'ap={0} write by handle before get devlist failed,return code={1},msg={2}'.format(
 					self.conf['hub'], code, text)
-				self.debug.append(debug)
+				self.err.append(err)
 				break
 		for dev in devices:
 			for value in device_conf.values():
@@ -575,9 +586,9 @@ class test_stability():
 						self.debug.append(debug)
 						break
 					else:
-						debug = 'AP={0} device={1}  write by handle values failed code={2},msg={3}'.format(self.conf['hub'],
+						err = 'AP={0} device={1}  write by handle values failed code={2},msg={3}'.format(self.conf['hub'],
 																									 dev, code, text)
-						self.debug.append(debug)
+						self.err.append(err)
 						loop_error=True
 						break
 			else:
@@ -586,8 +597,8 @@ class test_stability():
 				self.debug.append(debug)
 		if j ==0:
 			loop_error = True
-			debug = 'ap={0}  write handle failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
-			self.debug.append(debug)
+			err = 'ap={0}  write handle failed,return code={1},msg={2}'.format(self.conf['hub'], code, text)
+			self.err.append(err)
 		else:
 			self.case_end_flag = True
 			debug = 'ap={0}  write handle success,return code={1},msg={2}'.format(self.conf['hub'], code, text)
@@ -611,9 +622,9 @@ class test_stability():
 					self.conn_flag = True
 			else:
 				loop_error = True
-				debug = 'ap={0} recive indication&notification before get devlist failed,return code={1},msg={2}'.format(
+				err = 'ap={0} recive indication&notification before get devlist failed,return code={1},msg={2}'.format(
 					self.conf['hub'], code, text)
-				self.debug.append(debug)
+				self.err.append(err)
 				break
 		print("devices==", devices)
 		for dev in devices:
@@ -634,9 +645,9 @@ class test_stability():
 						break
 					else:
 						loop_error=True
-						debug = 'AP={0} recive_indication_and_notification success code={1},msg={2}'.format(self.conf['hub'],
+						err = 'AP={0} recive_indication_and_notification success code={1},msg={2}'.format(self.conf['hub'],
 																											res.status_code, message)
-						self.debug.append(debug)
+						self.err.append(err)
 						break
 				print("device_model==",device_model)
 				if self.success_flag:
@@ -680,8 +691,8 @@ class test_stability():
 								break
 		if j == 0:
 			loop_error = True
-			debug = 'ap={0}  接收通知 failed'.format(self.conf['hub'])
-			self.debug.append(debug)
+			err = 'ap={0}  接收通知 failed'.format(self.conf['hub'])
+			self.err.append(err)
 		else:
 			self.case_end_flag = True
 			debug = 'ap={0}  接收通知 success'.format(self.conf['hub'])
@@ -696,7 +707,7 @@ class test_stability():
 				chip = 1
 			else:
 				chip = 0
-		interval=1
+		interval=20
 		adv_data='02010605094C696864'
 		resp_data='5094C696864'
 		code,msg=self.sdk.start_advertise(chip,interval,adv_data,resp_data)
@@ -707,9 +718,9 @@ class test_stability():
 			return code,chip
 		else:
 			loop_error=True
-			debug = 'AP={0} start_advertise failed,code={1},message={2}'.format(self.conf['hub'], code, msg)
-			self.debug.append(debug)
-			print(debug)
+			err = 'AP={0} start_advertise failed,code={1},message={2}'.format(self.conf['hub'], code, msg)
+			self.err.append(err)
+			print(err)
 			return code,chip
 	def test_stop_advertise(self):
 		# 这个接口将广播和停止广播一起测试了
@@ -723,14 +734,14 @@ class test_stability():
 				print(debug)
 			else:
 				loop_error = True
-				debug = 'AP={0} stop advertise failed,code={1}'.format(self.conf['hub'], code1)
-				self.debug.append(debug)
-				print(debug)
+				err = 'AP={0} stop advertise failed,code={1}'.format(self.conf['hub'], code1)
+				self.err.append(err)
+				print(err)
 		else:
 			loop_error = True
-			debug = 'AP={0} before stop advertise failed,code={1}'.format(self.conf['hub'], code)
-			self.debug.append(debug)
-			print(debug)
+			err = 'AP={0} before stop advertise failed,code={1}'.format(self.conf['hub'], code)
+			self.err.append(err)
+			print(err)
 def main():
 	conf1 = read_stability_config()
 	# ap_list = ['E1000','S2000','X1000']
