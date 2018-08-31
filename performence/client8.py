@@ -49,7 +49,7 @@ def init_config():
                             data_path = value
                         elif key == 'avtive':
                             active = value
-            print('配置文件读取成功！\n')
+            print('配置文件读取成功！')
     except Exception as e:
         print('配置文件打开失败,失败原因:\n', e)
 
@@ -122,7 +122,7 @@ def scan(sock, mac, bak=False):
                         SSE_CLIENT[mac] = res
                         # 向server响应备用AP扫描是否开启成功
                         sock.send(bytes('bak_ap_scan+' + mac, encoding='utf-8'))
-                        print(f'当前扫描的AP总数为：{len(scanning_aps)}\n\n', end='')
+                        print('当前扫描的AP总数为：{len(scanning_aps)}\n\n', end='')
                         flag = False
                         scan_data_count = scan_data_count + 1
                     else:

@@ -7,7 +7,7 @@ from contextlib import closing
 
 path = os.getcwd().split('cassia_automation')[0] + 'cassia_automation/lib/'
 sys.path.append(path)
-from api import
+from api import api
 from download_logs import Download_logs
 # from logs import set_logger
 import logs
@@ -24,7 +24,7 @@ class test_stability():
 		filename = "stability_debug.log"
 		# error_file = "stability_error_" + "".join(self.conf['hub'].split(':')) + '.txt'
 		self.logger = logs.set_logger(__name__,filename=filename)
-		self.downlogs=Download_logs(self.conf['local_host'],22,'root','3_5*rShsen')
+		self.downlogs=Download_logs(self.conf['local_host'].split('/',2)[2],22,'root','3_5*rShsen')
 	def update_token(self):
 		global headers
 		headers = self.sdk.set_header()
@@ -78,10 +78,9 @@ class test_stability():
 			self.debug = []
 			self.loop += 1
 		print("循环异常结束")
-
 		conn_flag=self.downlogs.connect()
 		if conn_flag:
-			desDirectory=self.conf['model'] + '_' + self.conf['hub'].split(':')+'_log/'
+			desDirectory=self.conf['model'] + '_' + "".join(self.conf['hub'].split(':'))+'_log/'
 			self.downlogs.get_logs(desDirectory)
 		else:
 			err='获取异常AP的log失败，ssh连接失败'
@@ -744,8 +743,8 @@ class test_stability():
 			print(err)
 def main():
 	conf1 = read_stability_config()
-	# ap_list = ['E1000','S2000','X1000']
-	ap_list = ['S1000']
+	ap_list = ['E1000','S2000','X1000']
+	# ap_list = ['S1000']
 	thread = []
 	for ap in ap_list:
 		conf_ap = conf1[ap]

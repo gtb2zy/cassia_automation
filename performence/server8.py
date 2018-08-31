@@ -19,6 +19,15 @@ OFFLINE_APS = 0
 CLIENT_INFO = []
 TESTING = True
 config = {}
+REDIRECTED = True
+
+
+def myprint(string):
+    if REDIRECTED:
+        with open('/tmp/performence/log.log', 'a', encoding='utf8') as f:
+            f.writelines(string)
+    else:
+        print(string)
 
 
 def init_config():
@@ -32,7 +41,7 @@ def init_config():
                         pass
                     else:
                         key = line.split('=')[0].strip()
-                        value: str = line.split('=')[1].strip()
+                        value = line.split('=')[1].strip()
                         if key == 'HOST':
                             config['host'] = value
                         elif key == 'server':
@@ -61,7 +70,7 @@ def init_config():
                         else:
                             pass
     except Exception as e:
-        print('配置文件打开失败', e)
+        myprint('配置文件打开失败', e)
 
 
 def init_para():
@@ -80,7 +89,7 @@ def init_para():
         start = hubs_per_pc * pc
         end = hubs_per_pc * (pc + 1)
         hub = hubs[start:end]
-        str_hub = ','.join(hub)
+        # str_hub = ','.join(hub)
         client_cfg['msg_type'] = 'config_res'
         client_cfg['sleep_time'] = sleep_time
         client_cfg['interval'] = config['interval']
@@ -104,19 +113,21 @@ def set_header():
     try:
         # 发起请求
         res = requests.post(config['host'] + '/oauth2/token', data=json.dumps(data), headers=head)
-        # print(res.text,res.status_code)
+        myprint(res.url)
+        # myprint(res.text,res.status_code)
         if res.status_code == 200:
             res_body = json.loads(res.text)
-            # print(res_body.get("access_token"))
+            # myprint(res_body.get("access_token"))
             TOKEN = res_body.get("access_token")
         elif res.status_code == 401:
-            print('开发帐号错误')
+            myprint('开发帐号错误')
         elif res.status_code == 400:
-            print('API路径错误')
+            myprint('API路径错误')
     except Exception as e:
-        print(e)
+        myprint(e)
+    myprint(TOKEN)
     headers = {'Content-Type': 'application/json', 'version': '1', 'Authorization': 'Bearer ' + TOKEN}
-    # print(headers)
+    # myprint(headers)
     sethead_timer = threading.Timer(3500, set_header)
     sethead_timer.start()
 
@@ -125,22 +136,15 @@ def connect_to_client(sock, addr):
     global data
     while True:
         if TESTING:
-            try:
-                data = sock.recv(1024)
-            except Exception as e:
-                # print(e)
-                pass
+            data = sock.recv(1024)
             message = str(data, encoding='utf-8')
             data_type = message.split('+')[0].strip()
-            # print(data_type,message)
             send_para(sock, message, data_type, addr)
         else:
             break
 
 
 def send_para(sock, data, data_type, addr):
-    total_ap = 0
-    total_speed = 0
     if data_type == 'config_req':
         sock.send(bytes(client_configs[config['process_no']], encoding='utf-8'))
         msg = {'msg_type': 'session', 'session': config['process_no']}
@@ -148,30 +152,36 @@ def send_para(sock, data, data_type, addr):
     elif data_type == 'config_ok':
         config['process_no'] = config['process_no'] + 1
         CLIENT_INFO.append({'speed': 0, 'scanning_aps': 0})
-        print("Client's %s:%s test parameters inited success！\n" % (addr[0], addr[1]))
+        myprint("Client's %s:%s test parameters inited success！\n" % (addr[0], addr[1]))
         if config['process_no'] == config['process_count']:
-            print('All pc has been inited success,test start !\n')
+            myprint('All pc has been inited success,test start !\n')
             start_test(CLIENTS)
     elif data_type == 'sync':
-        session = int(data.split('+')[1])
-        # print('session',session)
-        speed = data.split('+')[2]
-        scanning_aps = data.split('+')[3]
-        CLIENT_INFO[session]['speed'] = speed
-        CLIENT_INFO[session]['scanning_aps'] = scanning_aps
-        for c in CLIENT_INFO:
-            total_speed = total_speed + int(c.get('scanning_aps')) * int(c.get('speed'))
-            total_ap = total_ap + int(c.get('scanning_aps'))
-        if total_ap > 0:
-            aver_speed = total_speed / total_ap
-            print('Scanning ap count is %d now,average scan speed is %d.\n' % (total_ap, aver_speed))
+        get_speed(data)
     elif data_type == 'bak_ap_scan':
         mac = data.split('+')[1].strip()
-        print("Bak ap %s start scan success!\n" % mac)
+        myprint("Bak ap %s start scan success!\n" % mac)
     elif data_type == 5:
         pass
     elif data_type == 6:
         pass
+
+
+def get_speed(data):
+    total_ap = 0
+    total_speed = 0
+    session = int(data.split('+')[1])
+    # myprint('session',session)
+    speed = data.split('+')[2]
+    scanning_aps = data.split('+')[3]
+    CLIENT_INFO[session]['speed'] = speed
+    CLIENT_INFO[session]['scanning_aps'] = scanning_aps
+    for c in CLIENT_INFO:
+        total_speed = total_speed + int(c.get('scanning_aps')) * int(c.get('speed'))
+        total_ap = total_ap + int(c.get('scanning_aps'))
+    if total_ap > 0:
+        aver_speed = total_speed / total_ap
+        myprint('Scanning ap count is %d now,average scan speed is %d.\n' % (total_ap, aver_speed))
 
 
 def get_online_hubs(headers):
@@ -197,7 +207,7 @@ def get_scanning_ap():
             time.sleep(10)
             total = 0
         else:
-            print('All AP has started scan success!')
+            myprint('All AP has started scan success!')
             break
 
 
@@ -212,7 +222,7 @@ def hubStatus():
                     message = json.loads(message[6:])
                     if OFFLINE_APS < config['max_offline']:  # 判断离线AP是否超过限制，如果超过则停止测试
                         if message['status'] == 'offline':
-                            print('AP(%s)offline,will use backup AP ccontinue test！' % message['mac'])
+                            myprint('AP(%s)offline,will use backup AP ccontinue test！' % message['mac'])
                             for hubs in config['max_offline']:
                                 if message['mac'] in hubs:
                                     session = SCANNING_APS.index(hubs)  # 定位到离线AP属于哪个client
@@ -224,7 +234,7 @@ def hubStatus():
                                     CLIENTS[session].send(bytes(str(msg), encoding='utf-8'))
                                     OFFLINE_APS = OFFLINE_APS + 1
                     else:
-                        print('Too many AP offline,test failed ,stop!')
+                        myprint('Too many AP offline,test failed ,stop!')
                         msg = {'msg_type': 'test_stop'}
                         for client in CLIENTS:
                             client.send(bytes(str(msg), encoding='utf-8'))
@@ -233,11 +243,12 @@ def hubStatus():
             else:
                 break
     except Exception as e:
-        print(e)
+        myprint(e)
 
 
 def stop_test(clients):
     global TESTING, COPY_TIMER
+    myprint("测试完成，准备停止测试...")
     TESTING = False
     sethead_timer.cancel()
     if config['test_mode'] == 0:
@@ -293,9 +304,9 @@ def start_ac_monitor():  # 开始新的监控进程，生成全新的测试文�
         elif config['test_mode'] == '1':
             ssh_client.exec_command(cmd1)
             ssh_client.exec_command(cmd2)
-        print('成功开启AC性能监控，数据文件保存在%s:/tmp/res/\n' % ip)
+        myprint('成功开启AC性能监控，数据文件保存在%s:/tmp/res/\n' % ip)
     except Exception as e:
-        print('AC性能监控开启失败，\n', e)
+        myprint('AC性能监控开启失败，\n', e)
 
 
 def init_monitor_client():  # 初始化性能监控工具
@@ -311,16 +322,17 @@ def init_monitor_client():  # 初始化性能监控工具
         ssh_client = paramiko.SSHClient()
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ssh_client.connect(ip, 22, 'root', config['ac_root_pwd'], timeout=5)
-        print('Monitor client init successed!\n')
+        myprint('Monitor client init successed!\n')
     except Exception as e:
-        print('Monitor client init failed!\n')
-        print(e)
+        myprint('Monitor client init failed!\n')
+        myprint(e)
     try:
         sftp_client.put('nmon_x86_centos6', '/tmp/nmon_x86_centos6')
     except Exception as e:
-        print(e)
-        print('自动上传nmon工具失败，请手动上传！')
+        myprint(e)
+        myprint('自动上传nmon工具失败，请手动上传！')
     try:
+        ssh_client.exec_command('mkdir -p /tmp/res/')
         ssh_client.exec_command('killall top')
         ssh_client.exec_command('killall pidstat')
         ssh_client.exec_command('killall nmon_x86_centos6')
@@ -335,7 +347,7 @@ def init_monitor_client():  # 初始化性能监控工具
         sftp_client.mkdir(src)
         history_files = sftp_client.listdir(src)
     if len(history_files) > 0:
-        print('删除历史遗留数据文件!\n')
+        myprint('删除历史遗留数据文件!\n')
         for file in history_files:
             sftp_client.remove(src + file)
 
@@ -345,12 +357,16 @@ def copy_file(flag=True):
     global COPY_TIMER
     no = 0
     src = '/tmp/res/'
-    print('开始从服务器拷贝文件到本地\n')
+    myprint('开始从服务器拷贝文件到本地\n')
+    try:
+        ssh_client.exec_command('mkdir -p %s' % config['data_path'])
+    except BaseException:
+        pass
     try:
         files = sftp_client.listdir('/tmp/res/')
         for file in files:
             sftp_client.get(src + file, config['data_path'] + file)
-        print('成功从AC拷贝测试结果文件到目录%s\n' % config['data_path'])
+        myprint('成功从AC拷贝测试结果文件到目录%s\n' % config['data_path'])
     except BaseException:
         # 只有在结束测试时，拷贝失败尝试重新拷贝,默认为不重试
         if flag:
@@ -358,14 +374,14 @@ def copy_file(flag=True):
         else:
             while no < 3:
                 try:
-                    print('从服务器copy文件失败,正在重试\n')
+                    myprint('从服务器copy文件失败,正在重试\n')
                     files = sftp_client.listdir('/tmp/res/')
                     for file in files:
                         sftp_client.get(src + file, config['data_path'] + file)
                 except Exception as e:
-                    print(e)
+                    myprint(e)
                 no += 1
-            print('从服务器copy文件失败，请手动copy\n')
+            myprint('从服务器copy文件失败，请手动copy\n')
             return
 
     write_csv()
@@ -385,7 +401,7 @@ def write_csv():
     for file in os.listdir(data_path):
         filename = file.split('.')[0]
         if filename == 'monitor_data_top':
-            print('开始处理测试数据文件...\n')
+            myprint('开始处理测试数据文件...\n')
             with open(data_path + file, 'r', encoding='utf-8') as f:
                 nfm_rows = [['name', 'CPU', 'MEM']]
                 ac_rows = [['name', 'CPU', 'MEM']]
@@ -440,7 +456,7 @@ def write_csv():
                                 row.append(y)
                         L = ac_rows[i] + nfm_rows[i] + mongod_rows[i] + mem_total_rows[i] + cpu_total_rows[i] + row
                         csv_write.writerow(L)
-            print('数据处理完成，结果文件到目录C:/Users/Administrator/Desktop/\n')
+            myprint('数据处理完成，结果文件到目录C:/Users/Administrator/Desktop/\n')
 
 
 def main():
@@ -450,22 +466,30 @@ def main():
     sk = socket.socket()
     # localIP = socket.gethostbyname(socket.gethostname())  # 获取本机IP，windows
     localIP = config['server']
+    myprint(localIP)
     sk.bind((localIP, 8080))
     sk.listen(5)
-    print("#######################################################")
-    print("Monitor stared,listening on %s waiting for client connect...." % localIP)
-    print("#######################################################")
+    myprint("#######################################################")
+    myprint("Monitor stared,listening on %s waiting for client connect...." % localIP)
+    myprint("#######################################################")
     while True:
         try:
             sock, addr = sk.accept()
             CLIENTS.append(sock)
-            print('New connect from :', addr)
+            myprint('New connect from :', addr)
             threading.Thread(target=connect_to_client, args=(sock, addr)).start()
         except Exception as e:
-            print(e)
+            myprint(e)
         time.sleep(1)
         if config['process_no'] == config['process_count']:
             break
+    try:
+        while TESTING:
+            # 监听程序退出
+            time.sleep(1)
+    except KeyboardInterrupt:
+        stop_test(CLIENTS)
+        myprint('检测到CTRL-C，测试终止....')
 
 
 if __name__ == '__main__':

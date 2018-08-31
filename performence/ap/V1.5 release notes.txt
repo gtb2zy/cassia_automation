@@ -1,0 +1,26 @@
+
+1. 使用方法
+   在centos 32位系统中，执行 ./run.sh即可；
+
+2. 模拟AP个数的设置：
+   在run.sh中，line9：for (( i=1; i<=200; i++ ))
+   其中的200代表的是要模拟的AP的个数，修改其值并保存，再执行./run.sh即可。
+   同是：AP的控制隧道的源端口号从10001开始，数据隧道从20001开始。每增加一个AP，其端口号加1.
+
+3. 若要指定AC地址，且AP与AC间可跨三层。
+   指定地址的方法是： 在/etc/config/目录下创建文件 wtp.cfg，并在wtp.cfg中配置 
+       <WTP_STATIC_AC_IPV4_ADDR>1.1.1.1
+       其中1.1.1.1即为要配置的AC地址。
+
+4. 当所有要使用的WTP进程均正常 运行，并连上待测AC后，可通过 ./dev-test进行发送参数的配置：
+
+提示信息：
+please input 3 parameters. 1st: ap number, 2nd: test type(count/duration/speed), 3rd: message count or duration(unit:second).
+第一个参数：要发送数据的AP个数，这个数必须小于等于启动的AP数；
+第二个参数：发送数据的方式，count为一次性发完指定数量; duration为发送的时长，不限个数；speed为速率，即每秒发送的消息个数，建议设为整数，且为100的整数倍。
+
+5. 设置完参数后，可以用AC对接的测试脚本进行测试。
+
+
+v1.4  修复一个bug: 在启动dev-test时，输入某些值会被解析成负数。
+

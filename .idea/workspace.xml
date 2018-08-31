@@ -2,58 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21fd43e9-d2e2-47b7-a518-4f9d4218ad6d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/logs.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/logs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/debug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_11_23_34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_11_28_29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_11_30_29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_11_40_20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_12_42_52.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_12_51_08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_13_39_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_13_45_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_13_50_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_14_01_23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_28_14_11_34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_11_37_58.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_11_43_46.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_11_45_17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_12_56_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_12_58_49.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_13_49_58.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_13_52_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_13_54_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_14_01_25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_14_04_52.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_14_06_18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_14_07_38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_14_09_25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_14_11_36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_14_13_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_14_14_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_14_16_56.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_16_00_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_16_03_45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_17_21_20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_17_23_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_17_24_42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_17_28_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_add_ap_30_17_30_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_display_of_dashboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_display_of_dashboard_18_11_26_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_filter_of_model_25_17_21_51.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_filter_of_model_25_17_53_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_filter_of_model_25_17_56_46.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_filter_of_model_25_18_05_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_filter_of_model_25_19_10_41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_filter_of_model_25_19_13_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_filter_of_model_25_20_09_09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/screen_shot/test_user_help.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/web_ui/test_ap_001 - 副本 (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/web_ui/test_ap_001 - 副本 (2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/web_ui/test_ap_page_003.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/web_ui/test_ap_page_003.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/test.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/performence/client8.py" beforeDir="false" afterPath="$PROJECT_DIR$/performence/client8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/performence/server8.py" beforeDir="false" afterPath="$PROJECT_DIR$/performence/server8.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,14 +17,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="logs.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="logs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/logs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="525">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server8.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/performence/server8.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-157">
+              <caret line="447" selection-start-line="447" selection-end-line="447" />
               <folding>
-                <element signature="e#0#17#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#330#2153#0" />
+                <element signature="e#2177#3200#0" />
+                <element signature="e#3233#4304#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client8.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/performence/client8.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="67" column="47" lean-forward="true" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,21 +57,15 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Program Files/Python36/Lib/logging/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="1315" column="11" lean-forward="true" selection-start-line="1315" selection-start-column="11" selection-end-line="1315" selection-end-column="11" />
+            <state relative-caret-position="32825">
+              <caret line="1315" column="11" selection-start-line="1315" selection-start-column="11" selection-end-line="1315" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="tools.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/tools.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-975">
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -124,6 +96,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,11 +109,15 @@
               <item name="cassia_automation" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cassia_automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cassia_automation" type="462c0819:PsiDirectoryNode" />
+              <item name="performence" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -201,51 +178,116 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32872927" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/tools.py">
+    <entry file="file://$PROJECT_DIR$/lib/logs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-975">
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="675">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Program Files/Python36/Lib/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
+        <state relative-caret-position="32875">
+          <caret line="1315" column="11" selection-start-line="1315" selection-start-column="11" selection-end-line="1315" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tools.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/logs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32875">
           <caret line="1315" column="11" lean-forward="true" selection-start-line="1315" selection-start-column="11" selection-end-line="1315" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tools.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tools.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32825">
+          <caret line="1315" column="11" selection-start-line="1315" selection-start-column="11" selection-end-line="1315" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/logs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="525">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
           <folding>
-            <element signature="e#0#17#0" expanded="true" />
+            <element signature="e#1943#1957#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-1120166012/_socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="464" column="15" selection-start-line="464" selection-start-column="8" selection-end-line="464" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/performence/server8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-157">
+          <caret line="447" selection-start-line="447" selection-end-line="447" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#330#2153#0" />
+            <element signature="e#2177#3200#0" />
+            <element signature="e#3233#4304#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/performence/client8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="67" column="47" lean-forward="true" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
