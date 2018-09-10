@@ -215,7 +215,5 @@ def get_uuid(data):
 
 
 if __name__ == '__main__':
-
-    sdk = get_api()
-    for x in sdk.scan():
-        print(x)
+    conf = read_config()
+    print(conf) 

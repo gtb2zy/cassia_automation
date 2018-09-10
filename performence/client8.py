@@ -4,6 +4,7 @@ import json
 import threading
 import time
 import socket
+import sys
 
 scanning_aps = []
 headers = {}
@@ -15,12 +16,12 @@ ac_root_pwd = ''
 data_path = ''
 TESTING = True
 speed = 0
-global MONITOR, ssh_client, sftp_client, copy_timer
+# global MONITOR, ssh_client, sftp_client, copy_timer
 
 
 # 读取配置文件
 def init_config():
-    global HOST, user, pwd, active, server, INTERVAL, PER_COUNT, test_time, ac_root_pwd, data_path, active
+    global server
     try:
         with open('test.conf', 'r', encoding='utf-8') as conf:
             for line in conf:
@@ -31,75 +32,78 @@ def init_config():
                     else:
                         key = line.split('=')[0].strip()
                         value = line.split('=')[1].strip()
-                        if key == 'HOST':
-                            HOST = value
-                        elif key == 'user':
-                            user = value
-                        elif key == 'pwd':
-                            pwd = value
-                        elif key == 'active':
-                            active = value
-                        elif key == 'server':
+                        if key == 'server':
                             server = value
-                        elif key == 'test_time':
-                            test_time = int(value)
-                        elif key == 'ac_root_pwd':
-                            ac_root_pwd = value
-                        elif key == 'data_path':
-                            data_path = value
-                        elif key == 'avtive':
-                            active = value
-            print('配置文件读取成功！')
+            print('配置文件读取成功,成功获取到server地址！')
     except Exception as e:
         print('配置文件打开失败,失败原因:\n', e)
+        sys.exit()
 
 
 # 客户端，负责与服务器的连接，并且接收从服务器发来的数据
 def connect_to_server():
     global sock
-    sock = socket.socket()
-    sock.connect((server, 8080))
+    while True:
+        sock = socket.socket()
+        sock.connect((server, 8080))
+        time.sleep(.5)
+        data = sock.recv(1024)
+        message = str(data, encoding='utf-8')
+        if message == 'client_hello':
+            print('Connect to server success!')
+            break
+        else:
+            sock.close()
+            sock = None
+            print('connect to server failed,wait for reconnect!')
     sock.send(bytes('config_req', encoding='utf-8'))
     while True:
         if TESTING:
-            data = sock.recv(51200)
-            message = eval(str(data, encoding='utf-8'))
-            data_type = message['msg_type']
-            send_para(sock, message, data_type)
+            try:
+                data = sock.recv(51200)
+                message = eval(str(data, encoding='utf-8'))
+                data_type = message['msg_type']
+                send_para(sock, message, data_type)
+            except ConnectionResetError:
+                print('服务端异常结束，测试停止！')
+                stop_test()
         else:
-            break
+            return
 
 
 # 数据处理函数，负责解析从服务器接受到的参数以及向服务器发送数据
 def send_para(sock, data, data_type):
     # 定义全局测试参数
-    global PC_COUNT, PC_NO, START_TIME, INTERVAL, PER_COUNT, HUBS, sessionID, scanning_aps, user, pwd, HOST, test_mode
+    global sessionID
     if data_type == 'config_res':
-        sock.send(bytes('config_ok', encoding='utf-8'))
-        # 解析并设置从服务器获取的全局测试参数
-        START_TIME = data['sleep_time']
-        INTERVAL = data['interval']
-        PER_COUNT = data['per_count']
-        HUBS = data['hubs']
-        user = data['user']
-        pwd = data['pwd']
-        HOST = data['host']
-        test_mode = int(data['test_mode'])
-        # print(START_TIME,PER_COUNT,INTERVAL,HUBS)
-        print('######################################################')
-        print("     成功从控制器获取测试数据，等待测试开始！")
-        print('######################################################')
+        get_test_data(data)
+        set_header()
     elif data_type == 'test_start':
         start_test()
     elif data_type == 'session':
         sessionID = data['session']
     elif data_type == 'bak_ap_scan':
-        delmac = data.split('+')[2].strip()
-        scanning_aps.remove(delmac)
-        mac = data.split('+')[1].strip()
+        mac = data['mac']
         threading.Thread(target=scan, args=(sock, mac, True,)).start()
     elif data_type == 'test_stop':
-        stop_test(sock)
+        stop_test()
+
+
+def get_test_data(data):
+    global START_TIME, INTERVAL, PER_COUNT, HUBS, user, pwd, HOST, test_mode
+    sock.send(bytes('config_ok', encoding='utf-8'))
+    # 解析并设置从服务器获取的全局测试参数
+    START_TIME = data['sleep_time']
+    INTERVAL = data['interval']
+    PER_COUNT = data['per_count']
+    HUBS = data['hubs']
+    user = data['user']
+    pwd = data['pwd']
+    HOST = data['host']
+    test_mode = int(data['test_mode'])
+    print('######################################################')
+    print("     成功从控制器获取测试数据，等待测试开始！")
+    print('######################################################')
 
 
 # 开始AP扫描
@@ -138,7 +142,7 @@ def scan(sock, mac, bak=False):
         if str(e) == "'NoneType' object has no attribute 'read'":
             pass
         else:
-            print('SSE closeed!', threading.current_thread().name, e)  # scan(sock,mac)
+            print('SSE closeed!', threading.current_thread().name, e)
 
 
 def sync_to_server():
@@ -149,7 +153,7 @@ def sync_to_server():
                 bytes('sync+' + str(sessionID) + '+' + str(speed) + '+' + str(len(scanning_aps)), encoding='utf-8'))
             time.sleep(10)
         else:
-            break
+            return
 
 
 # 计算AP的sap秒速度，该速度为平均值
@@ -172,7 +176,7 @@ def scan_speed():
 
 
 # 设置请求头
-def set_header(user, pwd):
+def set_header():
     global headers, set_head_timer, HOST, TOKEN
     use_info = user + ':' + pwd
     # 编码开发者帐号
@@ -194,8 +198,6 @@ def set_header(user, pwd):
     except Exception as e:
         print(e)
     headers = {'Content-Type': 'application/json', 'version': '1', 'Authorization': 'Bearer ' + TOKEN}
-    # print(headers)
-    # noinspection PyTypeChecker
     set_head_timer = threading.Timer(3500, set_header, (user, pwd))
     set_head_timer.start()
 
@@ -205,17 +207,16 @@ def all_ap_scan(sock, hubs):
     print('AP总数量为%d，开始扫描！\n' % len(hubs))
     threads = []
     for hub in hubs:
-        # print(hub)
         threads.append(threading.Thread(target=scan, args=(sock, hub,)))
-    # print(len(threads),threads)
     for t in threads:
-        t.start()  # t.join(30)
+        t.start()
 
 
-# 逐渐开启AP扫描
+# 分步骤逐渐开启AP扫描
 def scan_by_interval(hubs, interval, per_count, start_time=0):
     i = 0
     j = per_count
+    # 根据start_time，判断什么时候开始扫描
     time.sleep(start_time)
     print('AP总数量为%d，开始扫描！\n' % len(hubs))
     while True:
@@ -229,37 +230,55 @@ def scan_by_interval(hubs, interval, per_count, start_time=0):
                     threading.Thread(target=scan, args=(sock, hubs[i],)).start()
                     j = j + 1
                 break
-            time.sleep(interval)  # t.join(10)
+            time.sleep(interval)
+
+
+def hubStatus():
+    global OFFLINE_APS, scanning_aps
+    hub_status = requests.get(HOST + '/cassia/hubStatus', headers=headers, stream=True)
+    for line in hub_status.iter_lines():
+        if TESTING:
+            message = str(line, encoding='utf-8')
+            if message.startswith('data'):
+                message = json.loads(message[6:])
+                # 判断离线AP,准备开启备用AP扫描
+                if message['status'] == 'offline':
+                    scanning_aps.remove(message['mac'])
+                    print('AP(%s)offline,will use backup AP ccontinue test！' % message['mac'])
+                    msg = 'offline+%s+%d' % (message['mac'], sessionID)
+                    sock.send(bytes(msg, encoding='utf8'))
+        else:
+            return
 
 
 def start_test():
-    print(test_mode, type(test_mode))
     if test_mode == 0:
         print('开始稳定性测试。。。\n')
+        # 开启所有AP扫描
         all_ap_scan(sock, HUBS)
+        # 开启子线程，监控AP离线事件
+        threading.Thread(target=hubStatus).start()
+        # 开启定时器，时时计算扫描速度
         threading.Timer(10, scan_speed).start()
         time.sleep(10)
+        # 开启定时器，时时同步测试状态到服务端
         threading.Thread(target=sync_to_server).start()
     elif test_mode == 1:
         print('开始性能测试。。。\n')
         if START_TIME > 0:
-            print('Other pc already started test,Waiting %d seconds to start test...' % START_TIME)
+            print('According to test plan config,Waiting %d seconds to start test...' % START_TIME)
         threading.Thread(target=scan_by_interval, args=(HUBS, INTERVAL, PER_COUNT, START_TIME,)).start()
         threading.Timer(10, scan_speed).start()
         threading.Thread(target=sync_to_server).start()
 
 
-def stop_test(sock):
+def stop_test():
     global TESTING
     TESTING = False
     try:
         sock.close()
-        # MONITOR.close()
-        # print('Stop ap monitor thread!\n')
         speed_timer.cancel()
         print('Stop ap scan speed monitor thread!\n')
-        # copy_timer.cancel()
-        # print('Stop data copy thread!\n')
         set_head_timer.cancel()
         print('Stop token update thread!\n')
     except Exception as e:
@@ -279,8 +298,6 @@ def hub_status():
             message = str(line, encoding='utf-8')
             if message.startswith('data'):
                 message = json.loads(message[6:])
-                # print(message['mac'])
-                # print(message['status'])
                 if message['status'] == 'online':
                     print('AP %s 上线，尝试开启扫描...' % message['mac'])
                     threading.Thread(target=scan, args=(None, message['mac'], False)).start()
@@ -297,9 +314,13 @@ def hub_status():
 
 
 def main():
-    global headers, speed_timer
-    init_config()
-    set_header(user, pwd)
+    global headers, speed_timer, server
+    try:
+        host = sys.argv[1]
+        server = host
+    except IndexError:
+        print('未通过命令行获取到server地址，尝试读取配置文件！')
+        init_config()
     try:
         connect_to_server()
     except Exception as e:

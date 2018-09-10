@@ -18,11 +18,13 @@ REDIRECTED = False
 # 代码svn仓库路径为：https://168.168.10.200/svn/QA_versions/自动化测试平台
 
 
-def myprint(string):
+def myprint(*string):
     if REDIRECTED:
-        pass
+        with open('/tmp/performence/log.log', 'a', encoding='utf8') as f:
+            for s in string:
+                f.writelines(str(s) + '\n')
     else:
-        print(string)
+        print(*string)
 
 
 # 性能测试入口
@@ -39,10 +41,10 @@ def performenceTest(name, testplan: dict):
     s = eval(testplan['server'])
     server = host(s[0], s[1], s[2])
     wtps = [host(x[0], x[1], x[2]) for x in eval(testplan['wtps'])]
-    clients = [host(x[0], x[1], x[2]) for x in eval(testplan['client'])]
+    clients = [host(x[0], x[1], x[2]) for x in eval(testplan['clients'])]
 
     # 按照配置文件，开启模拟AP
-    per_wtp_count = int(testplan['start_ap_count'] / len(clients))
+    per_wtp_count = int(testplan['start_ap_count'] / len(wtps))
     for wtp in wtps:
         index = wtps.index(wtp)
         start = index * per_wtp_count
@@ -341,7 +343,7 @@ def main():
         elif plan['test_type'] == 1:
             threading.Thread(target=performenceTest, args=(name, plan,)).start()
         else:
-            myprint('Test paln type is wrong! Please check config file!')
+            myprint('Test paln type is error! Please check config file!')
     try:
         while not EXIT:
             # 监听程序退出

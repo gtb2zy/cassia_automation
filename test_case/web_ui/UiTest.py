@@ -22,12 +22,12 @@ class UiTest(unittest.TestCase):
         self.bs.set_page_load_timeout(20)
         self.action = ActionChains(self.bs)
 
-    def open(self):
+    def open_url(self):
         self.bs.get(HOST)
         self.bs.implicitly_wait(10)
 
     def login(self):
-        self.open()
+        self.open_url()
         self.bs.find_element_by_name('username').send_keys(self._username)
         self.bs.find_element_by_name('password').send_keys(self._password)
         self.bs.find_element_by_tag_name('button').click()

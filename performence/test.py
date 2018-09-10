@@ -14,12 +14,13 @@ counts = 0
 REDIRECTED = True
 
 
-def myprint(string):
+def myprint(*string):
     if REDIRECTED:
         with open('/tmp/performence/log.log', 'a', encoding='utf8') as f:
-            f.writelines(string)
+            for s in string:
+                f.writelines(str(s) + '\n')
     else:
-        print(string)
+        print(*string)
 
 
 def init_config():
@@ -116,6 +117,9 @@ def revive_data():
 
 # 计算AP的sap秒速度，该速度为平均值
 def scan_speed():
+    '''
+    开启进程，计算扫描速度。扫描速度单位为包/每秒
+    '''
     global speed_timer, counts
     per_time = 10
     if len(scanning_aps) > 0:
@@ -253,9 +257,8 @@ def init_monitor_client():
         for file in history_files:
             sftp_client.remove(src + file)
 
+
 # 从AC拷贝数据文件
-
-
 def copy_file():
     global COPY_TIMER
     no = 0
