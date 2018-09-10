@@ -154,7 +154,7 @@ def connect_to_client(sock, addr):
                 data_type = message.split('+')[0].strip()
                 # print(message)
                 send_para(sock, message, data_type, addr)
-            except ConnectionResetError:
+            except Exception as e:
                 sock.close()
         else:
             break

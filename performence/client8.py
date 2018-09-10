@@ -36,7 +36,7 @@ def init_config():
                             server = value
             print('配置文件读取成功,成功获取到server地址！')
     except Exception as e:
-        print('配置文件打开失败,失败原因:\n', e)
+        print('配置文件打开失败,无法连接到服务端，测试异常结束！失败原因:\n', e)
         sys.exit()
 
 
@@ -252,6 +252,10 @@ def hubStatus():
 
 
 def start_test():
+    # 开启子线程监控AP离线
+    t = threading.Thread(target=hub_status)
+    t.setDaemon(True)
+    t.start()
     if test_mode == 0:
         print('开始稳定性测试。。。\n')
         # 开启所有AP扫描
